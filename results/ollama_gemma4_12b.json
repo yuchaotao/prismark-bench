@@ -1,0 +1,4574 @@
+{
+  "tool": "ollama:gemma4:12b",
+  "data": "data/v0/test.jsonl",
+  "seconds_per_example": 1.074460246644445,
+  "scores": {
+    "n_examples": 180,
+    "n_spans": 690,
+    "n_negatives": 210,
+    "protected_recall": 0.9202898550724637,
+    "overlap_recall": 0.9855072463768116,
+    "char_precision": 0.9737550471063257,
+    "char_recall": 0.9310455764075067,
+    "privacy_f1": 0.9462678420629852,
+    "exact_f1": 0.8672438672438673,
+    "negative_fp_rate": 0.04285714285714286,
+    "leakage_rate": 0.014492753623188406,
+    "fragment_leakage_rate": 0.06811594202898551,
+    "negative_keep": 0.9523809523809523,
+    "utility": 0.9686000665954405,
+    "by_tier": {
+      "T1": 0.975609756097561,
+      "T2": 0.96875,
+      "T3": 0.6909090909090909,
+      "T4": 0.4
+    },
+    "by_label": {
+      "AGE": 1.0,
+      "BANK_ACCOUNT": 1.0,
+      "CITY": 1.0,
+      "CREDIT_CARD": 1.0,
+      "CRIMINAL_RECORD": 0.4,
+      "DATE_OF_BIRTH": 1.0,
+      "DRIVER_LICENSE": 1.0,
+      "EMAIL": 1.0,
+      "EMPLOYER": 0.9,
+      "ETHNICITY": 1.0,
+      "HEALTH_CONDITION": 0.825,
+      "INDIRECT_IDENTIFIER": 0.4,
+      "IP_ADDRESS": 1.0,
+      "JOB_TITLE": 0.9,
+      "MEDICAL_RECORD_NUMBER": 1.0,
+      "PASSPORT": 1.0,
+      "PERSON_NAME": 1.0,
+      "PHONE": 0.95,
+      "POLITICAL_AFFILIATION": 0.2,
+      "RELIGION": 0.9,
+      "SEXUAL_ORIENTATION": 1.0,
+      "SSN": 1.0,
+      "STREET_ADDRESS": 1.0,
+      "USERNAME": 0.8,
+      "ZIP_CODE": 1.0
+    },
+    "by_tag": {
+      "form": 1.0,
+      "hard_negative": 0.96,
+      "lowercase": 1.0,
+      "multi_person": 0.9178571428571428,
+      "obfuscated": 0.9333333333333333,
+      "structured": 0.85
+    }
+  },
+  "predictions": {
+    "email-intro-000": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 40,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 69,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 85,
+          "end": 90,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 141,
+          "end": 146,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 94,
+          "end": 120,
+          "label": "EMAIL"
+        },
+        {
+          "start": 124,
+          "end": 139,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 85,
+          "end": 90,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 141,
+          "end": 146,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 166,
+          "end": 174,
+          "label": "CITY"
+        },
+        {
+          "start": 195,
+          "end": 210,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-001": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 37,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 47,
+          "end": 67,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 83,
+          "end": 88,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 92,
+          "end": 109,
+          "label": "EMAIL"
+        },
+        {
+          "start": 113,
+          "end": 125,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 83,
+          "end": 88,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 152,
+          "end": 159,
+          "label": "CITY"
+        },
+        {
+          "start": 180,
+          "end": 195,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-002": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 34,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 44,
+          "end": 63,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 79,
+          "end": 82,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 125,
+          "end": 128,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 86,
+          "end": 105,
+          "label": "EMAIL"
+        },
+        {
+          "start": 109,
+          "end": 123,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 79,
+          "end": 82,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 125,
+          "end": 128,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 148,
+          "end": 154,
+          "label": "CITY"
+        },
+        {
+          "start": 175,
+          "end": 191,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-003": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 37,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 47,
+          "end": 69,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 85,
+          "end": 88,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 125,
+          "end": 128,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 92,
+          "end": 107,
+          "label": "EMAIL"
+        },
+        {
+          "start": 111,
+          "end": 123,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 85,
+          "end": 88,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 125,
+          "end": 128,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 148,
+          "end": 156,
+          "label": "CITY"
+        },
+        {
+          "start": 177,
+          "end": 193,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-004": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 40,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 79,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 34,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 95,
+          "end": 104,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 145,
+          "end": 154,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 108,
+          "end": 125,
+          "label": "EMAIL"
+        },
+        {
+          "start": 129,
+          "end": 143,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 34,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 95,
+          "end": 104,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 145,
+          "end": 154,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 174,
+          "end": 181,
+          "label": "CITY"
+        },
+        {
+          "start": 202,
+          "end": 217,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-005": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 37,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 47,
+          "end": 66,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 82,
+          "end": 85,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 123,
+          "end": 126,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 89,
+          "end": 105,
+          "label": "EMAIL"
+        },
+        {
+          "start": 109,
+          "end": 121,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 82,
+          "end": 85,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 123,
+          "end": 126,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 146,
+          "end": 154,
+          "label": "CITY"
+        },
+        {
+          "start": 175,
+          "end": 191,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-006": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 37,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 59,
+          "end": 71,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 87,
+          "end": 92,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 134,
+          "end": 139,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 96,
+          "end": 113,
+          "label": "EMAIL"
+        },
+        {
+          "start": 117,
+          "end": 132,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 87,
+          "end": 92,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 134,
+          "end": 139,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 159,
+          "end": 170,
+          "label": "CITY"
+        },
+        {
+          "start": 191,
+          "end": 203,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-007": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 40,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 75,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 31,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 91,
+          "end": 97,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 142,
+          "end": 148,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 101,
+          "end": 122,
+          "label": "EMAIL"
+        },
+        {
+          "start": 126,
+          "end": 140,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 31,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 91,
+          "end": 97,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 142,
+          "end": 148,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 168,
+          "end": 175,
+          "label": "CITY"
+        },
+        {
+          "start": 196,
+          "end": 211,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-008": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 37,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 47,
+          "end": 62,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 78,
+          "end": 83,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 87,
+          "end": 106,
+          "label": "EMAIL"
+        },
+        {
+          "start": 110,
+          "end": 122,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 78,
+          "end": 83,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 149,
+          "end": 157,
+          "label": "CITY"
+        },
+        {
+          "start": 178,
+          "end": 194,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-009": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 42,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 52,
+          "end": 71,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 25,
+          "end": 31,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 87,
+          "end": 93,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 145,
+          "end": 151,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 97,
+          "end": 127,
+          "label": "EMAIL"
+        },
+        {
+          "start": 131,
+          "end": 143,
+          "label": "PHONE"
+        },
+        {
+          "start": 25,
+          "end": 31,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 87,
+          "end": 93,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 145,
+          "end": 151,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 171,
+          "end": 179,
+          "label": "CITY"
+        },
+        {
+          "start": 200,
+          "end": 216,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 36,
+          "end": 66,
+          "label": "EMAIL"
+        },
+        {
+          "start": 117,
+          "end": 164,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-001": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 36,
+          "end": 68,
+          "label": "EMAIL"
+        },
+        {
+          "start": 119,
+          "end": 165,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-002": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "label": "EMAIL"
+        },
+        {
+          "start": 109,
+          "end": 157,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 36,
+          "end": 59,
+          "label": "EMAIL"
+        },
+        {
+          "start": 110,
+          "end": 158,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 35,
+          "end": 70,
+          "label": "EMAIL"
+        },
+        {
+          "start": 121,
+          "end": 169,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-005": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 14,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 34,
+          "end": 61,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-006": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 17,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-007": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 14,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 34,
+          "end": 62,
+          "label": "EMAIL"
+        },
+        {
+          "start": 113,
+          "end": 162,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-008": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "label": "EMAIL"
+        },
+        {
+          "start": 111,
+          "end": 158,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-009": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "label": "EMAIL"
+        },
+        {
+          "start": 112,
+          "end": 161,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-000": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 19,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 81,
+          "end": 97,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-001": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 22,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 84,
+          "end": 103,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-002": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-003": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 20,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 82,
+          "end": 98,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-004": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 20,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 82,
+          "end": 101,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-005": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 17,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 79,
+          "end": 98,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-006": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-007": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 18,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 80,
+          "end": 96,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-008": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-009": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 22,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 84,
+          "end": 100,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-000": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 23,
+          "end": 34,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 53,
+          "end": 64,
+          "label": "AGE"
+        },
+        {
+          "start": 65,
+          "end": 85,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 99,
+          "end": 107,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 118,
+          "end": 128,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 171,
+          "end": 185,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 187,
+          "end": 199,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-001": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 22,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 24,
+          "end": 35,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 42,
+          "end": 55,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 57,
+          "end": 68,
+          "label": "AGE"
+        },
+        {
+          "start": 69,
+          "end": 98,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 112,
+          "end": 131,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 202,
+          "end": 219,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 221,
+          "end": 236,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-002": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 41,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 48,
+          "end": 58,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 60,
+          "end": 71,
+          "label": "AGE"
+        },
+        {
+          "start": 72,
+          "end": 94,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 108,
+          "end": 127,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 194,
+          "end": 209,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 211,
+          "end": 223,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-003": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 25,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 45,
+          "end": 57,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 59,
+          "end": 70,
+          "label": "AGE"
+        },
+        {
+          "start": 71,
+          "end": 100,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 114,
+          "end": 132,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 195,
+          "end": 211,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 213,
+          "end": 225,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-004": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 25,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 45,
+          "end": 58,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 60,
+          "end": 71,
+          "label": "AGE"
+        },
+        {
+          "start": 84,
+          "end": 96,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 110,
+          "end": 125,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 136,
+          "end": 149,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 192,
+          "end": 204,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 206,
+          "end": 220,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-005": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 23,
+          "end": 34,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 53,
+          "end": 64,
+          "label": "AGE"
+        },
+        {
+          "start": 65,
+          "end": 84,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 98,
+          "end": 101,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 172,
+          "end": 186,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 188,
+          "end": 200,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-006": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 23,
+          "end": 34,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 53,
+          "end": 64,
+          "label": "AGE"
+        },
+        {
+          "start": 77,
+          "end": 89,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 103,
+          "end": 106,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 173,
+          "end": 188,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 190,
+          "end": 204,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-007": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 25,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 45,
+          "end": 55,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 57,
+          "end": 68,
+          "label": "AGE"
+        },
+        {
+          "start": 69,
+          "end": 98,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 112,
+          "end": 120,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 183,
+          "end": 193,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 195,
+          "end": 207,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-008": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 23,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 25,
+          "end": 36,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 43,
+          "end": 53,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 55,
+          "end": 66,
+          "label": "AGE"
+        },
+        {
+          "start": 67,
+          "end": 92,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 106,
+          "end": 121,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 132,
+          "end": 145,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 188,
+          "end": 205,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 207,
+          "end": 219,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-009": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 24,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 26,
+          "end": 37,
+          "label": "MEDICAL_RECORD_NUMBER"
+        },
+        {
+          "start": 44,
+          "end": 58,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 60,
+          "end": 71,
+          "label": "AGE"
+        },
+        {
+          "start": 72,
+          "end": 101,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 115,
+          "end": 130,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 141,
+          "end": 154,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 197,
+          "end": 209,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 211,
+          "end": 226,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 24,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 62,
+          "end": 81,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 88,
+          "end": 117,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 128,
+          "end": 145,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 147,
+          "end": 155,
+          "label": "CITY"
+        },
+        {
+          "start": 156,
+          "end": 161,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-001": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 23,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 73,
+          "end": 92,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 99,
+          "end": 118,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 129,
+          "end": 146,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 148,
+          "end": 156,
+          "label": "CITY"
+        },
+        {
+          "start": 157,
+          "end": 162,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-002": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 26,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 67,
+          "end": 82,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 89,
+          "end": 108,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 119,
+          "end": 137,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 139,
+          "end": 149,
+          "label": "CITY"
+        },
+        {
+          "start": 150,
+          "end": 155,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 26,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 64,
+          "end": 95,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 102,
+          "end": 121,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 132,
+          "end": 153,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 155,
+          "end": 165,
+          "label": "CITY"
+        },
+        {
+          "start": 166,
+          "end": 171,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 59,
+          "end": 84,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 92,
+          "end": 114,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 133,
+          "end": 154,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 156,
+          "end": 166,
+          "label": "CITY"
+        },
+        {
+          "start": 167,
+          "end": 172,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-005": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 23,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 61,
+          "end": 64,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 71,
+          "end": 90,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 101,
+          "end": 118,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 120,
+          "end": 126,
+          "label": "CITY"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-006": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 25,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 63,
+          "end": 88,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 96,
+          "end": 118,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 137,
+          "end": 158,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 160,
+          "end": 168,
+          "label": "CITY"
+        },
+        {
+          "start": 169,
+          "end": 174,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-007": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 24,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 65,
+          "end": 80,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 94,
+          "end": 117,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 128,
+          "end": 146,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 148,
+          "end": 154,
+          "label": "CITY"
+        },
+        {
+          "start": 155,
+          "end": 160,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-008": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 24,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 62,
+          "end": 83,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 91,
+          "end": 121,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 132,
+          "end": 149,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 151,
+          "end": 158,
+          "label": "CITY"
+        },
+        {
+          "start": 159,
+          "end": 164,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-009": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 20,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 58,
+          "end": 77,
+          "label": "HEALTH_CONDITION"
+        },
+        {
+          "start": 85,
+          "end": 107,
+          "label": "CRIMINAL_RECORD"
+        },
+        {
+          "start": 126,
+          "end": 144,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 146,
+          "end": 152,
+          "label": "CITY"
+        },
+        {
+          "start": 153,
+          "end": 158,
+          "label": "ZIP_CODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-001": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 26,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-002": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 37,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-003": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 32,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-004": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 26,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-007": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 26,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-009": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 32,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-000": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 13,
+          "label": "USERNAME"
+        },
+        {
+          "start": 49,
+          "end": 70,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 80,
+          "end": 87,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 89,
+          "end": 97,
+          "label": "USERNAME"
+        },
+        {
+          "start": 127,
+          "end": 134,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-001": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 83,
+          "end": 91,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 93,
+          "end": 103,
+          "label": "USERNAME"
+        },
+        {
+          "start": 133,
+          "end": 139,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-002": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 48,
+          "end": 71,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 81,
+          "end": 89,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 91,
+          "end": 101,
+          "label": "USERNAME"
+        },
+        {
+          "start": 131,
+          "end": 137,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-003": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 67,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 77,
+          "end": 80,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 82,
+          "end": 92,
+          "label": "USERNAME"
+        },
+        {
+          "start": 122,
+          "end": 127,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-004": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 13,
+          "label": "USERNAME"
+        },
+        {
+          "start": 49,
+          "end": 74,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 84,
+          "end": 93,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 95,
+          "end": 103,
+          "label": "USERNAME"
+        },
+        {
+          "start": 133,
+          "end": 140,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-005": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 70,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 80,
+          "end": 87,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 89,
+          "end": 100,
+          "label": "USERNAME"
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-006": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 10,
+          "label": "USERNAME"
+        },
+        {
+          "start": 46,
+          "end": 69,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 79,
+          "end": 86,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 88,
+          "end": 97,
+          "label": "USERNAME"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-007": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 67,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 77,
+          "end": 86,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 89,
+          "end": 99,
+          "label": "USERNAME"
+        },
+        {
+          "start": 129,
+          "end": 134,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-008": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 83,
+          "end": 91,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 93,
+          "end": 100,
+          "label": "USERNAME"
+        },
+        {
+          "start": 130,
+          "end": 136,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-009": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 68,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 78,
+          "end": 81,
+          "label": "SEXUAL_ORIENTATION"
+        },
+        {
+          "start": 83,
+          "end": 95,
+          "label": "USERNAME"
+        },
+        {
+          "start": 125,
+          "end": 131,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-000": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 62,
+          "label": "RELIGION"
+        },
+        {
+          "start": 102,
+          "end": 118,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 134,
+          "end": 150,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 5,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 49,
+          "end": 61,
+          "label": "RELIGION"
+        },
+        {
+          "start": 107,
+          "end": 128,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-002": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 54,
+          "label": "RELIGION"
+        },
+        {
+          "start": 105,
+          "end": 123,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-003": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 54,
+          "label": "RELIGION"
+        },
+        {
+          "start": 94,
+          "end": 121,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-004": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 51,
+          "end": 57,
+          "label": "RELIGION"
+        },
+        {
+          "start": 103,
+          "end": 124,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-005": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 50,
+          "end": 56,
+          "label": "RELIGION"
+        },
+        {
+          "start": 107,
+          "end": 125,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 5,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 49,
+          "end": 57,
+          "label": "RELIGION"
+        },
+        {
+          "start": 108,
+          "end": 126,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-007": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 6,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 61,
+          "end": 67,
+          "label": "RELIGION"
+        },
+        {
+          "start": 113,
+          "end": 134,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-008": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 5,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 49,
+          "end": 57,
+          "label": "RELIGION"
+        },
+        {
+          "start": 103,
+          "end": 124,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-009": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 51,
+          "end": 57,
+          "label": "RELIGION"
+        },
+        {
+          "start": 97,
+          "end": 124,
+          "label": "POLITICAL_AFFILIATION"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-000": {
+      "spans": [
+        {
+          "start": 45,
+          "end": 67,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 71,
+          "end": 88,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 117,
+          "end": 140,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-001": {
+      "spans": [
+        {
+          "start": 36,
+          "end": 94,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 128,
+          "end": 139,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-002": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 60,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 123,
+          "end": 146,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-003": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 60,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 116,
+          "end": 145,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-004": {
+      "spans": [
+        {
+          "start": 36,
+          "end": 89,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 111,
+          "end": 130,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-005": {
+      "spans": [
+        {
+          "start": 45,
+          "end": 67,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 71,
+          "end": 88,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 117,
+          "end": 140,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-006": {
+      "spans": [
+        {
+          "start": 36,
+          "end": 94,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 123,
+          "end": 146,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-007": {
+      "spans": [
+        {
+          "start": 36,
+          "end": 94,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 141,
+          "end": 146,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-008": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 60,
+          "label": "INDIRECT_IDENTIFIER"
+        },
+        {
+          "start": 123,
+          "end": 146,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-009": {
+      "spans": [
+        {
+          "start": 74,
+          "end": 90,
+          "label": "EMPLOYER"
+        },
+        {
+          "start": 113,
+          "end": 143,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-000": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 19,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 40,
+          "end": 54,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-001": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 18,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 39,
+          "end": 51,
+          "label": "PHONE"
+        },
+        {
+          "start": 4,
+          "end": 9,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-002": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 42,
+          "end": 57,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-003": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 21,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 42,
+          "end": 54,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-004": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 37,
+          "end": 52,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-005": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 20,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 41,
+          "end": 53,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-006": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 19,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 40,
+          "end": 52,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-007": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 20,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 41,
+          "end": 56,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-008": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 20,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 41,
+          "end": 53,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-009": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 19,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 40,
+          "end": 55,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-000": {
+      "spans": [
+        {
+          "start": 55,
+          "end": 72,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-003": {
+      "spans": [
+        {
+          "start": 55,
+          "end": 77,
+          "label": "RELIGION"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-007": {
+      "spans": [
+        {
+          "start": 53,
+          "end": 70,
+          "label": "PERSON_NAME"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-onboarding-000": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 33,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 39,
+          "end": 50,
+          "label": "SSN"
+        },
+        {
+          "start": 66,
+          "end": 76,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 91,
+          "end": 109,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 111,
+          "end": 122,
+          "label": "CITY"
+        },
+        {
+          "start": 123,
+          "end": 128,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 150,
+          "end": 177,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 188,
+          "end": 197,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-001": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 32,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "label": "SSN"
+        },
+        {
+          "start": 63,
+          "end": 73,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 88,
+          "end": 109,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 111,
+          "end": 120,
+          "label": "CITY"
+        },
+        {
+          "start": 121,
+          "end": 126,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 148,
+          "end": 175,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 186,
+          "end": 195,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-002": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 38,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 44,
+          "end": 53,
+          "label": "SSN"
+        },
+        {
+          "start": 69,
+          "end": 86,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 101,
+          "end": 122,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 124,
+          "end": 130,
+          "label": "CITY"
+        },
+        {
+          "start": 131,
+          "end": 136,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 158,
+          "end": 185,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 196,
+          "end": 205,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-003": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 31,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 37,
+          "end": 48,
+          "label": "SSN"
+        },
+        {
+          "start": 64,
+          "end": 81,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 96,
+          "end": 114,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 116,
+          "end": 122,
+          "label": "CITY"
+        },
+        {
+          "start": 123,
+          "end": 128,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 150,
+          "end": 177,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 188,
+          "end": 197,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-004": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 32,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "label": "SSN"
+        },
+        {
+          "start": 65,
+          "end": 75,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 90,
+          "end": 112,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 114,
+          "end": 123,
+          "label": "CITY"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 151,
+          "end": 178,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 189,
+          "end": 198,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-005": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 36,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 42,
+          "end": 51,
+          "label": "SSN"
+        },
+        {
+          "start": 67,
+          "end": 77,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 92,
+          "end": 109,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 111,
+          "end": 120,
+          "label": "CITY"
+        },
+        {
+          "start": 121,
+          "end": 126,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 148,
+          "end": 175,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 186,
+          "end": 195,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-006": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 33,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 39,
+          "end": 50,
+          "label": "SSN"
+        },
+        {
+          "start": 66,
+          "end": 76,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 91,
+          "end": 110,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 112,
+          "end": 120,
+          "label": "CITY"
+        },
+        {
+          "start": 121,
+          "end": 126,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 148,
+          "end": 175,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 186,
+          "end": 195,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-007": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 35,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 41,
+          "end": 50,
+          "label": "SSN"
+        },
+        {
+          "start": 66,
+          "end": 76,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 91,
+          "end": 110,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 112,
+          "end": 123,
+          "label": "CITY"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 151,
+          "end": 178,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 189,
+          "end": 198,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-008": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 34,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 40,
+          "end": 49,
+          "label": "SSN"
+        },
+        {
+          "start": 65,
+          "end": 80,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 95,
+          "end": 116,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 118,
+          "end": 126,
+          "label": "CITY"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 154,
+          "end": 181,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 192,
+          "end": 201,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-009": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 35,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 41,
+          "end": 52,
+          "label": "SSN"
+        },
+        {
+          "start": 68,
+          "end": 78,
+          "label": "DATE_OF_BIRTH"
+        },
+        {
+          "start": 93,
+          "end": 110,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 112,
+          "end": 118,
+          "label": "CITY"
+        },
+        {
+          "start": 119,
+          "end": 124,
+          "label": "ZIP_CODE"
+        },
+        {
+          "start": 146,
+          "end": 173,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 184,
+          "end": 193,
+          "label": "PASSPORT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-000": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 32,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 34,
+          "end": 49,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 89,
+          "end": 96,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 126,
+          "end": 145,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-001": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 50,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 90,
+          "end": 96,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 126,
+          "end": 145,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-002": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 24,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 26,
+          "end": 41,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 81,
+          "end": 85,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 115,
+          "end": 130,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-003": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 27,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 29,
+          "end": 54,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 94,
+          "end": 100,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 130,
+          "end": 149,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-004": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 52,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 92,
+          "end": 98,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 128,
+          "end": 147,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-005": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 27,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 29,
+          "end": 45,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 85,
+          "end": 89,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 119,
+          "end": 127,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-006": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 26,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 28,
+          "end": 48,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 88,
+          "end": 102,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 132,
+          "end": 151,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-007": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 45,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 85,
+          "end": 91,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 121,
+          "end": 124,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-008": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 28,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 54,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 94,
+          "end": 98,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 128,
+          "end": 131,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-009": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 30,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 32,
+          "end": 48,
+          "label": "JOB_TITLE"
+        },
+        {
+          "start": 88,
+          "end": 94,
+          "label": "ETHNICITY"
+        },
+        {
+          "start": 124,
+          "end": 155,
+          "label": "HEALTH_CONDITION"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-000": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 46,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "AGE"
+        },
+        {
+          "start": 139,
+          "end": 158,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-001": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 48,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 67,
+          "end": 81,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 101,
+          "end": 112,
+          "label": "SSN"
+        },
+        {
+          "start": 128,
+          "end": 130,
+          "label": "AGE"
+        },
+        {
+          "start": 141,
+          "end": 161,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-002": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 47,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 66,
+          "end": 80,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 100,
+          "end": 111,
+          "label": "SSN"
+        },
+        {
+          "start": 127,
+          "end": 129,
+          "label": "AGE"
+        },
+        {
+          "start": 140,
+          "end": 165,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-003": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 46,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        },
+        {
+          "start": 66,
+          "end": 68,
+          "label": "AGE"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "AGE"
+        },
+        {
+          "start": 139,
+          "end": 158,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-004": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 44,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 63,
+          "end": 77,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 97,
+          "end": 106,
+          "label": "SSN"
+        },
+        {
+          "start": 122,
+          "end": 124,
+          "label": "AGE"
+        },
+        {
+          "start": 135,
+          "end": 160,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-005": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 46,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "AGE"
+        },
+        {
+          "start": 139,
+          "end": 160,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-006": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 46,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        },
+        {
+          "start": 76,
+          "end": 78,
+          "label": "AGE"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "AGE"
+        },
+        {
+          "start": 139,
+          "end": 162,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-007": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 45,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 64,
+          "end": 78,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 98,
+          "end": 109,
+          "label": "SSN"
+        },
+        {
+          "start": 98,
+          "end": 100,
+          "label": "AGE"
+        },
+        {
+          "start": 125,
+          "end": 127,
+          "label": "AGE"
+        },
+        {
+          "start": 138,
+          "end": 156,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-008": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 44,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 63,
+          "end": 77,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 97,
+          "end": 106,
+          "label": "SSN"
+        },
+        {
+          "start": 122,
+          "end": 124,
+          "label": "AGE"
+        },
+        {
+          "start": 135,
+          "end": 158,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-009": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 46,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVER_LICENSE"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "AGE"
+        },
+        {
+          "start": 139,
+          "end": 157,
+          "label": "EMPLOYER"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-000": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 36,
+          "label": "USERNAME"
+        },
+        {
+          "start": 38,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 119,
+          "end": 132,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-001": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 60,
+          "label": "EMAIL"
+        },
+        {
+          "start": 122,
+          "end": 132,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-002": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 37,
+          "label": "USERNAME"
+        },
+        {
+          "start": 39,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 119,
+          "end": 133,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-003": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 68,
+          "label": "EMAIL"
+        },
+        {
+          "start": 131,
+          "end": 145,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-004": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 58,
+          "label": "EMAIL"
+        },
+        {
+          "start": 121,
+          "end": 132,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-005": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 64,
+          "label": "EMAIL"
+        },
+        {
+          "start": 127,
+          "end": 137,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-006": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 58,
+          "label": "EMAIL"
+        },
+        {
+          "start": 120,
+          "end": 134,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-007": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 61,
+          "label": "EMAIL"
+        },
+        {
+          "start": 122,
+          "end": 135,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-008": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 67,
+          "label": "EMAIL"
+        },
+        {
+          "start": 129,
+          "end": 140,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-009": {
+      "spans": [
+        {
+          "start": 27,
+          "end": 35,
+          "label": "USERNAME"
+        },
+        {
+          "start": 37,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 120,
+          "end": 133,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-000": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 70,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-001": {
+      "spans": [
+        {
+          "start": 44,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 74,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-002": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 74,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-003": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 62,
+          "end": 73,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-004": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 50,
+          "label": "USERNAME"
+        },
+        {
+          "start": 58,
+          "end": 72,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-005": {
+      "spans": [
+        {
+          "start": 44,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 71,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-006": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 62,
+          "end": 75,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-007": {
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 62,
+          "end": 74,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-008": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 62,
+          "end": 75,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-009": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 71,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "log-decoys-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-000": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 17,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 31,
+          "end": 48,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 50,
+          "end": 57,
+          "label": "CITY"
+        },
+        {
+          "start": 65,
+          "end": 67,
+          "label": "AGE"
+        },
+        {
+          "start": 93,
+          "end": 108,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 122,
+          "end": 145,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-001": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 18,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 32,
+          "end": 54,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 56,
+          "end": 63,
+          "label": "CITY"
+        },
+        {
+          "start": 71,
+          "end": 73,
+          "label": "AGE"
+        },
+        {
+          "start": 99,
+          "end": 115,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 147,
+          "end": 152,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-002": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 18,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 32,
+          "end": 54,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 56,
+          "end": 65,
+          "label": "CITY"
+        },
+        {
+          "start": 73,
+          "end": 75,
+          "label": "AGE"
+        },
+        {
+          "start": 101,
+          "end": 116,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 123,
+          "end": 142,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-003": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 47,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "CITY"
+        },
+        {
+          "start": 68,
+          "end": 70,
+          "label": "AGE"
+        },
+        {
+          "start": 96,
+          "end": 113,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 120,
+          "end": 139,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-004": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 17,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 31,
+          "end": 52,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 54,
+          "end": 61,
+          "label": "CITY"
+        },
+        {
+          "start": 69,
+          "end": 71,
+          "label": "AGE"
+        },
+        {
+          "start": 97,
+          "end": 108,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 126,
+          "end": 145,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-005": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 47,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 49,
+          "end": 59,
+          "label": "CITY"
+        },
+        {
+          "start": 67,
+          "end": 69,
+          "label": "AGE"
+        },
+        {
+          "start": 95,
+          "end": 108,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 115,
+          "end": 144,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-006": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 18,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 32,
+          "end": 54,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 56,
+          "end": 64,
+          "label": "CITY"
+        },
+        {
+          "start": 72,
+          "end": 74,
+          "label": "AGE"
+        },
+        {
+          "start": 100,
+          "end": 117,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 131,
+          "end": 154,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-007": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 16,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 30,
+          "end": 47,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "CITY"
+        },
+        {
+          "start": 68,
+          "end": 70,
+          "label": "AGE"
+        },
+        {
+          "start": 96,
+          "end": 105,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 113,
+          "end": 135,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-008": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 14,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 28,
+          "end": 45,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 47,
+          "end": 58,
+          "label": "CITY"
+        },
+        {
+          "start": 66,
+          "end": 68,
+          "label": "AGE"
+        },
+        {
+          "start": 94,
+          "end": 106,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 120,
+          "end": 143,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-009": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 17,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 31,
+          "end": 53,
+          "label": "STREET_ADDRESS"
+        },
+        {
+          "start": 55,
+          "end": 63,
+          "label": "CITY"
+        },
+        {
+          "start": 71,
+          "end": 73,
+          "label": "AGE"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "PERSON_NAME"
+        },
+        {
+          "start": 118,
+          "end": 140,
+          "label": "CRIMINAL_RECORD"
+        }
+      ],
+      "redacted": null
+    }
+  },
+  "parse_errors": 0
+}

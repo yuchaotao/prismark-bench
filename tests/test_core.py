@@ -10,6 +10,7 @@ def test_generated_spans_are_exact_and_labeled():
     for ex in examples:
         for s in ex.spans:
             assert s.label in LABELS
+            assert not ex.text[s.start : s.end].lower().startswith(("a ", "an ", "the "))
             assert ex.text[s.start : s.end] and ex.text[s.start : s.end] == ex.text[s.start : s.end].strip()
         for s in ex.negatives:
             assert s.label in NEGATIVE_LABELS
@@ -54,6 +55,7 @@ def test_partial_name_is_not_protected():
     ex = _example()
     s = score([ex], {"x": Prediction(spans=[Span(5, 10, "PERSON_NAME"), Span(21, 29, "PHONE")])})
     assert s["protected_recall"] == 0.5
+    assert s["overlap_recall"] == 1.0
     assert s["leakage_rate"] == 0.0  # the full name no longer appears verbatim...
     assert s["fragment_leakage_rate"] == 0.5  # ...but the surname does
     assert s["by_label"]["PERSON_NAME"] == 0.0

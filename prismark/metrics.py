@@ -8,6 +8,8 @@ label of each span.
 Detection metrics (from predicted spans):
   protected_recall  - share of gold spans whose every non-space char is covered.
                       Partially masking "Avery Okafor" to "Avery ****" still leaks.
+  overlap_recall    - share of gold spans touched by any prediction (lenient view;
+                      the gap to protected_recall is the cost of partial masking).
   char_precision    - share of predicted chars that fall inside a gold span.
   char_recall       - share of gold chars covered by a prediction.
   exact_f1          - NER-style F1 on exact (start, end) boundaries.
@@ -121,6 +123,7 @@ def _f1(p: float | None, r: float | None) -> float | None:
 
 def score(examples: list[Example], predictions: dict[str, Prediction]) -> dict:
     protected = _Counter()
+    touched = _Counter()
     by_tier: dict[str, _Counter] = defaultdict(_Counter)
     by_label: dict[str, _Counter] = defaultdict(_Counter)
     by_tag: dict[str, _Counter] = defaultdict(_Counter)
@@ -142,6 +145,7 @@ def score(examples: list[Example], predictions: dict[str, Prediction]) -> dict:
             chars = [i for i in range(s.start, s.end) if not ex.text[i].isspace()]
             ok = all(pmask[i] for i in chars)
             protected.add(ok)
+            touched.add(any(pmask[i] for i in chars))
             by_tier[f"T{int(tier_of(s.label))}"].add(ok)
             by_label[s.label].add(ok)
             for tag in ex.tags:
@@ -181,6 +185,7 @@ def score(examples: list[Example], predictions: dict[str, Prediction]) -> dict:
         "n_spans": protected.total,
         "n_negatives": neg_fp.total,
         "protected_recall": protected.rate,
+        "overlap_recall": touched.rate,
         "char_precision": char_precision,
         "char_recall": char_tp / char_gold if char_gold else None,
         "privacy_f1": _f1(char_precision, protected.rate),

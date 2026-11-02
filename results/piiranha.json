@@ -1,0 +1,3971 @@
+{
+  "tool": "piiranha",
+  "data": "data/v0/test.jsonl",
+  "seconds_per_example": 0.017003633616666826,
+  "scores": {
+    "n_examples": 180,
+    "n_spans": 690,
+    "n_negatives": 210,
+    "protected_recall": 0.5666666666666667,
+    "overlap_recall": 0.6304347826086957,
+    "char_precision": 0.8681279195113187,
+    "char_recall": 0.5181769436997319,
+    "privacy_f1": 0.6857276423103572,
+    "exact_f1": 0.3814671814671815,
+    "negative_fp_rate": 0.28095238095238095,
+    "leakage_rate": 0.3710144927536232,
+    "fragment_leakage_rate": 0.40869565217391307,
+    "negative_keep": 0.7142857142857143,
+    "utility": 0.8192158557555047,
+    "by_tier": {
+      "T1": 0.7585365853658537,
+      "T2": 0.5,
+      "T3": 0.0,
+      "T4": 0.0
+    },
+    "by_label": {
+      "AGE": 0.0,
+      "BANK_ACCOUNT": 0.0,
+      "CITY": 1.0,
+      "CREDIT_CARD": 0.9,
+      "CRIMINAL_RECORD": 0.0,
+      "DATE_OF_BIRTH": 1.0,
+      "DRIVER_LICENSE": 1.0,
+      "EMAIL": 0.9333333333333333,
+      "EMPLOYER": 0.0,
+      "ETHNICITY": 0.0,
+      "HEALTH_CONDITION": 0.0,
+      "INDIRECT_IDENTIFIER": 0.0,
+      "IP_ADDRESS": 0.65,
+      "JOB_TITLE": 0.0,
+      "MEDICAL_RECORD_NUMBER": 0.0,
+      "PASSPORT": 0.0,
+      "PERSON_NAME": 0.8333333333333334,
+      "PHONE": 0.575,
+      "POLITICAL_AFFILIATION": 0.0,
+      "RELIGION": 0.0,
+      "SEXUAL_ORIENTATION": 0.0,
+      "SSN": 1.0,
+      "STREET_ADDRESS": 1.0,
+      "USERNAME": 0.7,
+      "ZIP_CODE": 1.0
+    },
+    "by_tag": {
+      "form": 0.6923076923076923,
+      "hard_negative": 0.655,
+      "lowercase": 0.8,
+      "multi_person": 0.5357142857142857,
+      "obfuscated": 0.6,
+      "structured": 0.75
+    }
+  },
+  "predictions": {
+    "email-intro-000": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 30,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 31,
+          "end": 40,
+          "label": "SURNAME"
+        },
+        {
+          "start": 85,
+          "end": 90,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 94,
+          "end": 120,
+          "label": "EMAIL"
+        },
+        {
+          "start": 124,
+          "end": 139,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 141,
+          "end": 146,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 166,
+          "end": 174,
+          "label": "CITY"
+        },
+        {
+          "start": 195,
+          "end": 210,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-001": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 30,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 31,
+          "end": 37,
+          "label": "SURNAME"
+        },
+        {
+          "start": 83,
+          "end": 88,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 92,
+          "end": 109,
+          "label": "EMAIL"
+        },
+        {
+          "start": 113,
+          "end": 125,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 152,
+          "end": 159,
+          "label": "CITY"
+        },
+        {
+          "start": 188,
+          "end": 195,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-002": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 28,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 29,
+          "end": 34,
+          "label": "SURNAME"
+        },
+        {
+          "start": 79,
+          "end": 82,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 86,
+          "end": 105,
+          "label": "EMAIL"
+        },
+        {
+          "start": 109,
+          "end": 123,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 125,
+          "end": 128,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 148,
+          "end": 154,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-003": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 28,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 29,
+          "end": 37,
+          "label": "SURNAME"
+        },
+        {
+          "start": 85,
+          "end": 88,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 92,
+          "end": 107,
+          "label": "EMAIL"
+        },
+        {
+          "start": 148,
+          "end": 156,
+          "label": "CITY"
+        },
+        {
+          "start": 177,
+          "end": 184,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 185,
+          "end": 193,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-004": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 34,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 35,
+          "end": 40,
+          "label": "SURNAME"
+        },
+        {
+          "start": 95,
+          "end": 104,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 108,
+          "end": 125,
+          "label": "EMAIL"
+        },
+        {
+          "start": 129,
+          "end": 144,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 145,
+          "end": 154,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 174,
+          "end": 181,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-005": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 28,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 29,
+          "end": 37,
+          "label": "SURNAME"
+        },
+        {
+          "start": 82,
+          "end": 85,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 89,
+          "end": 105,
+          "label": "EMAIL"
+        },
+        {
+          "start": 123,
+          "end": 126,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 146,
+          "end": 154,
+          "label": "CITY"
+        },
+        {
+          "start": 175,
+          "end": 180,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 181,
+          "end": 191,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-006": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 30,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "label": "SURNAME"
+        },
+        {
+          "start": 87,
+          "end": 92,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 96,
+          "end": 113,
+          "label": "EMAIL"
+        },
+        {
+          "start": 117,
+          "end": 132,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 134,
+          "end": 139,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 159,
+          "end": 170,
+          "label": "CITY"
+        },
+        {
+          "start": 191,
+          "end": 203,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-007": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 31,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 32,
+          "end": 40,
+          "label": "SURNAME"
+        },
+        {
+          "start": 91,
+          "end": 97,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 101,
+          "end": 122,
+          "label": "EMAIL"
+        },
+        {
+          "start": 126,
+          "end": 141,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 142,
+          "end": 148,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 168,
+          "end": 175,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-008": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 30,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 31,
+          "end": 37,
+          "label": "SURNAME"
+        },
+        {
+          "start": 78,
+          "end": 83,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 87,
+          "end": 106,
+          "label": "EMAIL"
+        },
+        {
+          "start": 110,
+          "end": 123,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 149,
+          "end": 157,
+          "label": "CITY"
+        },
+        {
+          "start": 184,
+          "end": 194,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-009": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 31,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 32,
+          "end": 42,
+          "label": "SURNAME"
+        },
+        {
+          "start": 87,
+          "end": 93,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 97,
+          "end": 127,
+          "label": "EMAIL"
+        },
+        {
+          "start": 131,
+          "end": 144,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 145,
+          "end": 151,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 171,
+          "end": 179,
+          "label": "CITY"
+        },
+        {
+          "start": 200,
+          "end": 207,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 36,
+          "end": 66,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-001": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 36,
+          "end": 68,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-002": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 36,
+          "end": 58,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 36,
+          "end": 44,
+          "label": "USERNAME"
+        },
+        {
+          "start": 50,
+          "end": 56,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 35,
+          "end": 70,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-005": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 14,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 34,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 39,
+          "end": 44,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-006": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 17,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 37,
+          "end": 61,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-007": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 14,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 34,
+          "end": 62,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-008": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 35,
+          "end": 60,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-009": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 36,
+          "end": 61,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-000": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 12,
+          "end": 19,
+          "label": "SURNAME"
+        },
+        {
+          "start": 49,
+          "end": 61,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 81,
+          "end": 97,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-001": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 12,
+          "end": 22,
+          "label": "SURNAME"
+        },
+        {
+          "start": 52,
+          "end": 64,
+          "label": "ACCOUNTNUM"
+        },
+        {
+          "start": 84,
+          "end": 103,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-002": {
+      "spans": [
+        {
+          "start": 12,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-003": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 12,
+          "end": 20,
+          "label": "SURNAME"
+        },
+        {
+          "start": 50,
+          "end": 62,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 82,
+          "end": 98,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-004": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 12,
+          "end": 20,
+          "label": "SURNAME"
+        },
+        {
+          "start": 50,
+          "end": 62,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 82,
+          "end": 101,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-005": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 12,
+          "end": 17,
+          "label": "SURNAME"
+        },
+        {
+          "start": 47,
+          "end": 60,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 79,
+          "end": 98,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-006": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 10,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 11,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 51,
+          "end": 64,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-007": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 9,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 10,
+          "end": 18,
+          "label": "SURNAME"
+        },
+        {
+          "start": 48,
+          "end": 60,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 80,
+          "end": 96,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-008": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 10,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 11,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 51,
+          "end": 63,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-009": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 12,
+          "end": 22,
+          "label": "SURNAME"
+        },
+        {
+          "start": 52,
+          "end": 65,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 84,
+          "end": 100,
+          "label": "CREDITCARDNUMBER"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-000": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 194,
+          "end": 199,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-001": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 14,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 15,
+          "end": 22,
+          "label": "SURNAME"
+        },
+        {
+          "start": 42,
+          "end": 55,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 209,
+          "end": 219,
+          "label": "STREET"
+        },
+        {
+          "start": 221,
+          "end": 236,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-002": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 18,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 19,
+          "end": 28,
+          "label": "SURNAME"
+        },
+        {
+          "start": 48,
+          "end": 58,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 200,
+          "end": 209,
+          "label": "SURNAME"
+        },
+        {
+          "start": 211,
+          "end": 214,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 214,
+          "end": 223,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-003": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 25,
+          "label": "SURNAME"
+        },
+        {
+          "start": 45,
+          "end": 57,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 213,
+          "end": 226,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-004": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 14,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 15,
+          "end": 25,
+          "label": "SURNAME"
+        },
+        {
+          "start": 45,
+          "end": 58,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 206,
+          "end": 221,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-005": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 12,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 13,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 188,
+          "end": 200,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-006": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 12,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 13,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 190,
+          "end": 204,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-007": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 25,
+          "label": "SURNAME"
+        },
+        {
+          "start": 45,
+          "end": 55,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 183,
+          "end": 188,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 189,
+          "end": 193,
+          "label": "SURNAME"
+        },
+        {
+          "start": 195,
+          "end": 208,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-008": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 14,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 15,
+          "end": 23,
+          "label": "SURNAME"
+        },
+        {
+          "start": 43,
+          "end": 53,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 207,
+          "end": 220,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-009": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "label": "SURNAME"
+        },
+        {
+          "start": 29,
+          "end": 39,
+          "label": "IDCARDNUM"
+        },
+        {
+          "start": 44,
+          "end": 58,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 197,
+          "end": 201,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 211,
+          "end": 227,
+          "label": "TELEPHONENUM"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "label": "SURNAME"
+        },
+        {
+          "start": 128,
+          "end": 132,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 133,
+          "end": 145,
+          "label": "STREET"
+        },
+        {
+          "start": 147,
+          "end": 155,
+          "label": "CITY"
+        },
+        {
+          "start": 156,
+          "end": 161,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-001": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 17,
+          "end": 23,
+          "label": "SURNAME"
+        },
+        {
+          "start": 129,
+          "end": 133,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 134,
+          "end": 146,
+          "label": "STREET"
+        },
+        {
+          "start": 148,
+          "end": 156,
+          "label": "CITY"
+        },
+        {
+          "start": 157,
+          "end": 163,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-002": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 17,
+          "end": 26,
+          "label": "SURNAME"
+        },
+        {
+          "start": 119,
+          "end": 123,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 124,
+          "end": 137,
+          "label": "STREET"
+        },
+        {
+          "start": 139,
+          "end": 149,
+          "label": "CITY"
+        },
+        {
+          "start": 150,
+          "end": 155,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 21,
+          "end": 25,
+          "label": "SURNAME"
+        },
+        {
+          "start": 132,
+          "end": 136,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 137,
+          "end": 153,
+          "label": "STREET"
+        },
+        {
+          "start": 155,
+          "end": 165,
+          "label": "CITY"
+        },
+        {
+          "start": 166,
+          "end": 172,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 17,
+          "end": 21,
+          "label": "SURNAME"
+        },
+        {
+          "start": 133,
+          "end": 137,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 138,
+          "end": 154,
+          "label": "STREET"
+        },
+        {
+          "start": 156,
+          "end": 166,
+          "label": "CITY"
+        },
+        {
+          "start": 167,
+          "end": 173,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-005": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 17,
+          "end": 23,
+          "label": "SURNAME"
+        },
+        {
+          "start": 101,
+          "end": 105,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 106,
+          "end": 118,
+          "label": "STREET"
+        },
+        {
+          "start": 120,
+          "end": 126,
+          "label": "CITY"
+        },
+        {
+          "start": 127,
+          "end": 133,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-006": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 17,
+          "end": 25,
+          "label": "SURNAME"
+        },
+        {
+          "start": 137,
+          "end": 141,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 142,
+          "end": 158,
+          "label": "STREET"
+        },
+        {
+          "start": 160,
+          "end": 168,
+          "label": "CITY"
+        },
+        {
+          "start": 169,
+          "end": 175,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-007": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 24,
+          "label": "SURNAME"
+        },
+        {
+          "start": 128,
+          "end": 132,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 133,
+          "end": 146,
+          "label": "STREET"
+        },
+        {
+          "start": 148,
+          "end": 154,
+          "label": "CITY"
+        },
+        {
+          "start": 155,
+          "end": 160,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-008": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 17,
+          "end": 24,
+          "label": "SURNAME"
+        },
+        {
+          "start": 132,
+          "end": 136,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 137,
+          "end": 149,
+          "label": "STREET"
+        },
+        {
+          "start": 151,
+          "end": 158,
+          "label": "CITY"
+        },
+        {
+          "start": 159,
+          "end": 164,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-009": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 16,
+          "end": 20,
+          "label": "SURNAME"
+        },
+        {
+          "start": 126,
+          "end": 130,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 131,
+          "end": 144,
+          "label": "STREET"
+        },
+        {
+          "start": 146,
+          "end": 152,
+          "label": "CITY"
+        },
+        {
+          "start": 153,
+          "end": 158,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-009": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 32,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-000": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 13,
+          "label": "USERNAME"
+        },
+        {
+          "start": 49,
+          "end": 56,
+          "label": "CITY"
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "label": "STREET"
+        },
+        {
+          "start": 89,
+          "end": 98,
+          "label": "USERNAME"
+        },
+        {
+          "start": 127,
+          "end": 134,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-001": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 93,
+          "end": 103,
+          "label": "USERNAME"
+        },
+        {
+          "start": 133,
+          "end": 139,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-002": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 131,
+          "end": 137,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-003": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 55,
+          "label": "CITY"
+        },
+        {
+          "start": 83,
+          "end": 92,
+          "label": "USERNAME"
+        },
+        {
+          "start": 122,
+          "end": 127,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-004": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 13,
+          "label": "USERNAME"
+        },
+        {
+          "start": 95,
+          "end": 103,
+          "label": "USERNAME"
+        },
+        {
+          "start": 133,
+          "end": 140,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-005": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 89,
+          "end": 100,
+          "label": "USERNAME"
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-006": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 88,
+          "end": 98,
+          "label": "USERNAME"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-007": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 11,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 55,
+          "label": "CITY"
+        },
+        {
+          "start": 89,
+          "end": 99,
+          "label": "USERNAME"
+        },
+        {
+          "start": 129,
+          "end": 134,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-008": {
+      "spans": [
+        {
+          "start": 2,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 93,
+          "end": 101,
+          "label": "USERNAME"
+        },
+        {
+          "start": 130,
+          "end": 136,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-009": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 12,
+          "label": "USERNAME"
+        },
+        {
+          "start": 47,
+          "end": 55,
+          "label": "CITY"
+        },
+        {
+          "start": 83,
+          "end": 95,
+          "label": "USERNAME"
+        },
+        {
+          "start": 125,
+          "end": 131,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-000": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 6,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 5,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-002": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 6,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-003": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 6,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-005": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 6,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 5,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-000": {
+      "spans": [
+        {
+          "start": 71,
+          "end": 80,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-001": {
+      "spans": [
+        {
+          "start": 76,
+          "end": 83,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-005": {
+      "spans": [
+        {
+          "start": 71,
+          "end": 80,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-006": {
+      "spans": [
+        {
+          "start": 76,
+          "end": 83,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-007": {
+      "spans": [
+        {
+          "start": 76,
+          "end": 83,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-lowercase-000": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 19,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 54,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 76,
+          "end": 93,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 18,
+          "label": "USERNAME"
+        },
+        {
+          "start": 39,
+          "end": 51,
+          "label": "ZIPCODE"
+        },
+        {
+          "start": 69,
+          "end": 80,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-002": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 21,
+          "label": "USERNAME"
+        },
+        {
+          "start": 42,
+          "end": 58,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 79,
+          "end": 96,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-003": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 21,
+          "label": "USERNAME"
+        },
+        {
+          "start": 72,
+          "end": 83,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-004": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 16,
+          "label": "USERNAME"
+        },
+        {
+          "start": 37,
+          "end": 52,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 70,
+          "end": 83,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-005": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 20,
+          "label": "USERNAME"
+        },
+        {
+          "start": 71,
+          "end": 82,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 19,
+          "label": "USERNAME"
+        },
+        {
+          "start": 74,
+          "end": 91,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-007": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 20,
+          "label": "USERNAME"
+        },
+        {
+          "start": 41,
+          "end": 56,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 74,
+          "end": 87,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-008": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 20,
+          "label": "USERNAME"
+        },
+        {
+          "start": 71,
+          "end": 84,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-009": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 19,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 55,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 73,
+          "end": 86,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-000": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 21,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-001": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 21,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-002": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 21,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-003": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 21,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-004": {
+      "spans": [
+        {
+          "start": 12,
+          "end": 29,
+          "label": "CITY"
+        },
+        {
+          "start": 69,
+          "end": 74,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-005": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 21,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-006": {
+      "spans": [
+        {
+          "start": 12,
+          "end": 24,
+          "label": "CITY"
+        },
+        {
+          "start": 64,
+          "end": 69,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-007": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-008": {
+      "spans": [
+        {
+          "start": 12,
+          "end": 24,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-009": {
+      "spans": [
+        {
+          "start": 12,
+          "end": 29,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-000": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 24,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 25,
+          "end": 33,
+          "label": "SURNAME"
+        },
+        {
+          "start": 39,
+          "end": 50,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 66,
+          "end": 76,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 91,
+          "end": 95,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 96,
+          "end": 109,
+          "label": "STREET"
+        },
+        {
+          "start": 111,
+          "end": 122,
+          "label": "CITY"
+        },
+        {
+          "start": 123,
+          "end": 128,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-001": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 25,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 26,
+          "end": 32,
+          "label": "SURNAME"
+        },
+        {
+          "start": 38,
+          "end": 47,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 63,
+          "end": 73,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 88,
+          "end": 92,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 93,
+          "end": 109,
+          "label": "STREET"
+        },
+        {
+          "start": 111,
+          "end": 120,
+          "label": "CITY"
+        },
+        {
+          "start": 121,
+          "end": 126,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-002": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 27,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 28,
+          "end": 38,
+          "label": "SURNAME"
+        },
+        {
+          "start": 44,
+          "end": 53,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 69,
+          "end": 86,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 101,
+          "end": 105,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 106,
+          "end": 122,
+          "label": "STREET"
+        },
+        {
+          "start": 124,
+          "end": 130,
+          "label": "CITY"
+        },
+        {
+          "start": 131,
+          "end": 136,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-003": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 26,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 27,
+          "end": 31,
+          "label": "SURNAME"
+        },
+        {
+          "start": 37,
+          "end": 48,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 64,
+          "end": 81,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 96,
+          "end": 100,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 101,
+          "end": 114,
+          "label": "STREET"
+        },
+        {
+          "start": 116,
+          "end": 122,
+          "label": "CITY"
+        },
+        {
+          "start": 123,
+          "end": 128,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-004": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 25,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 26,
+          "end": 32,
+          "label": "SURNAME"
+        },
+        {
+          "start": 38,
+          "end": 49,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 65,
+          "end": 75,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 90,
+          "end": 94,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 95,
+          "end": 112,
+          "label": "STREET"
+        },
+        {
+          "start": 114,
+          "end": 123,
+          "label": "CITY"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-005": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 26,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 27,
+          "end": 36,
+          "label": "SURNAME"
+        },
+        {
+          "start": 42,
+          "end": 51,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 67,
+          "end": 77,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 92,
+          "end": 96,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 97,
+          "end": 109,
+          "label": "STREET"
+        },
+        {
+          "start": 111,
+          "end": 120,
+          "label": "CITY"
+        },
+        {
+          "start": 121,
+          "end": 126,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-006": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 25,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 26,
+          "end": 33,
+          "label": "SURNAME"
+        },
+        {
+          "start": 39,
+          "end": 50,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 66,
+          "end": 76,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 91,
+          "end": 95,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 96,
+          "end": 110,
+          "label": "STREET"
+        },
+        {
+          "start": 112,
+          "end": 120,
+          "label": "CITY"
+        },
+        {
+          "start": 121,
+          "end": 126,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-007": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 26,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 27,
+          "end": 35,
+          "label": "SURNAME"
+        },
+        {
+          "start": 41,
+          "end": 50,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 66,
+          "end": 76,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 91,
+          "end": 95,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 96,
+          "end": 110,
+          "label": "STREET"
+        },
+        {
+          "start": 112,
+          "end": 123,
+          "label": "CITY"
+        },
+        {
+          "start": 124,
+          "end": 129,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-008": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 24,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 25,
+          "end": 34,
+          "label": "SURNAME"
+        },
+        {
+          "start": 40,
+          "end": 49,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 65,
+          "end": 80,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 95,
+          "end": 99,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 100,
+          "end": 116,
+          "label": "STREET"
+        },
+        {
+          "start": 118,
+          "end": 126,
+          "label": "CITY"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-009": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 25,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 26,
+          "end": 35,
+          "label": "SURNAME"
+        },
+        {
+          "start": 41,
+          "end": 52,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 68,
+          "end": 78,
+          "label": "DATEOFBIRTH"
+        },
+        {
+          "start": 93,
+          "end": 97,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 98,
+          "end": 110,
+          "label": "STREET"
+        },
+        {
+          "start": 112,
+          "end": 118,
+          "label": "CITY"
+        },
+        {
+          "start": 119,
+          "end": 124,
+          "label": "ZIPCODE"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-000": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 21,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 22,
+          "end": 32,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-001": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 19,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 20,
+          "end": 28,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-002": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 17,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 18,
+          "end": 24,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-003": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 18,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 19,
+          "end": 27,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-004": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 19,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 20,
+          "end": 28,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-005": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 18,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 19,
+          "end": 27,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-006": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 19,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 20,
+          "end": 26,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-007": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 18,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 19,
+          "end": 28,
+          "label": "SURNAME"
+        },
+        {
+          "start": 85,
+          "end": 87,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-008": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 17,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 18,
+          "end": 28,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-009": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 20,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 21,
+          "end": 30,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-000": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 36,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "label": "SURNAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-001": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 39,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 40,
+          "end": 48,
+          "label": "SURNAME"
+        },
+        {
+          "start": 67,
+          "end": 81,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 101,
+          "end": 112,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 142,
+          "end": 149,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-002": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 36,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "label": "SURNAME"
+        },
+        {
+          "start": 66,
+          "end": 80,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 100,
+          "end": 112,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-003": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 37,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 38,
+          "end": 46,
+          "label": "SURNAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-004": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 37,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "label": "SURNAME"
+        },
+        {
+          "start": 63,
+          "end": 77,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 97,
+          "end": 106,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-005": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 37,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 38,
+          "end": 46,
+          "label": "SURNAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-006": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 37,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 38,
+          "end": 46,
+          "label": "SURNAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-007": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 38,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 39,
+          "end": 45,
+          "label": "SURNAME"
+        },
+        {
+          "start": 64,
+          "end": 78,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 98,
+          "end": 109,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 138,
+          "end": 147,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-008": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 37,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "label": "SURNAME"
+        },
+        {
+          "start": 63,
+          "end": 77,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 97,
+          "end": 106,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-009": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 36,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "label": "SURNAME"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "DRIVERLICENSENUM"
+        },
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 139,
+          "end": 148,
+          "label": "CITY"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-000": {
+      "spans": [
+        {
+          "start": 7,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 27,
+          "end": 36,
+          "label": "USERNAME"
+        },
+        {
+          "start": 38,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 119,
+          "end": 133,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-001": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 60,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-002": {
+      "spans": [
+        {
+          "start": 7,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 28,
+          "end": 37,
+          "label": "USERNAME"
+        },
+        {
+          "start": 39,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 119,
+          "end": 134,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-003": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 68,
+          "label": "EMAIL"
+        },
+        {
+          "start": 131,
+          "end": 146,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-004": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 58,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-005": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 11,
+          "label": "ZIPCODE"
+        },
+        {
+          "start": 11,
+          "end": 17,
+          "label": "TELEPHONENUM"
+        },
+        {
+          "start": 17,
+          "end": 20,
+          "label": "ZIPCODE"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 64,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-006": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 58,
+          "label": "EMAIL"
+        },
+        {
+          "start": 120,
+          "end": 135,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-007": {
+      "spans": [
+        {
+          "start": 7,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 28,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 61,
+          "label": "EMAIL"
+        },
+        {
+          "start": 122,
+          "end": 135,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-008": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 20,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 28,
+          "end": 38,
+          "label": "USERNAME"
+        },
+        {
+          "start": 40,
+          "end": 67,
+          "label": "EMAIL"
+        },
+        {
+          "start": 129,
+          "end": 140,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-009": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 20,
+          "label": "ZIPCODE"
+        },
+        {
+          "start": 28,
+          "end": 35,
+          "label": "USERNAME"
+        },
+        {
+          "start": 37,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 120,
+          "end": 134,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-000": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-001": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 60,
+          "end": 74,
+          "label": "TAXNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-002": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        },
+        {
+          "start": 60,
+          "end": 74,
+          "label": "TAXNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-003": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-004": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 50,
+          "label": "USERNAME"
+        },
+        {
+          "start": 57,
+          "end": 72,
+          "label": "TAXNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-005": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-006": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 75,
+          "label": "TAXNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-007": {
+      "spans": [
+        {
+          "start": 44,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 62,
+          "end": 74,
+          "label": "TAXNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-008": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "USERNAME"
+        },
+        {
+          "start": 61,
+          "end": 71,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 71,
+          "end": 75,
+          "label": "TAXNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-009": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 53,
+          "label": "USERNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-000": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 63,
+          "label": "ACCOUNTNUM"
+        },
+        {
+          "start": 96,
+          "end": 106,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-001": {
+      "spans": [
+        {
+          "start": 59,
+          "end": 72,
+          "label": "TAXNUM"
+        },
+        {
+          "start": 99,
+          "end": 106,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-002": {
+      "spans": [
+        {
+          "start": 97,
+          "end": 105,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-003": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 102,
+          "end": 106,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-004": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 97,
+          "end": 105,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-005": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "TAXNUM"
+        },
+        {
+          "start": 96,
+          "end": 106,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-006": {
+      "spans": [
+        {
+          "start": 100,
+          "end": 105,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-007": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "SOCIALNUM"
+        },
+        {
+          "start": 96,
+          "end": 106,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-008": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "SOCIALNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-009": {
+      "spans": [
+        {
+          "start": 96,
+          "end": 106,
+          "label": "BUILDINGNUM"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-000": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 8,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 9,
+          "end": 17,
+          "label": "SURNAME"
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 36,
+          "end": 48,
+          "label": "STREET"
+        },
+        {
+          "start": 50,
+          "end": 57,
+          "label": "CITY"
+        },
+        {
+          "start": 93,
+          "end": 98,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 99,
+          "end": 108,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-001": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 18,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 32,
+          "end": 36,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 37,
+          "end": 54,
+          "label": "STREET"
+        },
+        {
+          "start": 56,
+          "end": 63,
+          "label": "CITY"
+        },
+        {
+          "start": 99,
+          "end": 105,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 106,
+          "end": 115,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-002": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 10,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 11,
+          "end": 18,
+          "label": "SURNAME"
+        },
+        {
+          "start": 32,
+          "end": 36,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 37,
+          "end": 54,
+          "label": "STREET"
+        },
+        {
+          "start": 56,
+          "end": 65,
+          "label": "CITY"
+        },
+        {
+          "start": 101,
+          "end": 116,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-003": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 9,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 10,
+          "end": 16,
+          "label": "SURNAME"
+        },
+        {
+          "start": 30,
+          "end": 34,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "label": "STREET"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "CITY"
+        },
+        {
+          "start": 104,
+          "end": 113,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-004": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 7,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "label": "SURNAME"
+        },
+        {
+          "start": 31,
+          "end": 34,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 35,
+          "end": 52,
+          "label": "STREET"
+        },
+        {
+          "start": 54,
+          "end": 61,
+          "label": "CITY"
+        },
+        {
+          "start": 97,
+          "end": 102,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 103,
+          "end": 108,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-005": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 16,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 30,
+          "end": 34,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 35,
+          "end": 47,
+          "label": "STREET"
+        },
+        {
+          "start": 49,
+          "end": 59,
+          "label": "CITY"
+        },
+        {
+          "start": 95,
+          "end": 108,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-006": {
+      "spans": [
+        {
+          "start": 13,
+          "end": 14,
+          "label": "SURNAME"
+        },
+        {
+          "start": 32,
+          "end": 36,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 37,
+          "end": 54,
+          "label": "STREET"
+        },
+        {
+          "start": 56,
+          "end": 64,
+          "label": "CITY"
+        },
+        {
+          "start": 100,
+          "end": 108,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 109,
+          "end": 117,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-007": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 8,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "label": "SURNAME"
+        },
+        {
+          "start": 30,
+          "end": 33,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 34,
+          "end": 47,
+          "label": "STREET"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "CITY"
+        },
+        {
+          "start": 96,
+          "end": 105,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-008": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 7,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 8,
+          "end": 14,
+          "label": "SURNAME"
+        },
+        {
+          "start": 28,
+          "end": 32,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 33,
+          "end": 45,
+          "label": "STREET"
+        },
+        {
+          "start": 47,
+          "end": 58,
+          "label": "CITY"
+        },
+        {
+          "start": 94,
+          "end": 99,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 100,
+          "end": 106,
+          "label": "SURNAME"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-009": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 8,
+          "label": "GIVENNAME"
+        },
+        {
+          "start": 9,
+          "end": 17,
+          "label": "SURNAME"
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "label": "BUILDINGNUM"
+        },
+        {
+          "start": 36,
+          "end": 53,
+          "label": "STREET"
+        },
+        {
+          "start": 55,
+          "end": 63,
+          "label": "CITY"
+        },
+        {
+          "start": 99,
+          "end": 104,
+          "label": "GIVENNAME"
+        }
+      ],
+      "redacted": null
+    }
+  }
+}

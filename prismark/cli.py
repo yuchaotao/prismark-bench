@@ -10,12 +10,13 @@ from pathlib import Path
 
 from prismark import adapters
 from prismark.generate.generator import generate
-from prismark.metrics import score
-from prismark.schema import read_jsonl, write_jsonl
+from prismark.metrics import Prediction, score
+from prismark.schema import Span, read_jsonl, write_jsonl
 
 DEFAULT_DATA = "data/v0/test.jsonl"
 HEADLINE = [
     ("protected_recall", "Protected recall ↑"),
+    ("overlap_recall", "Overlap recall ↑"),
     ("char_precision", "Char precision ↑"),
     ("privacy_f1", "Privacy F1 ↑"),
     ("negative_fp_rate", "Hard-neg FP ↓"),
@@ -49,8 +50,9 @@ def cmd_run(args: argparse.Namespace) -> None:
         "scores": score(examples, predictions),
         "predictions": {k: asdict(v) for k, v in predictions.items()},
     }
-    if hasattr(tool, "refusals"):
-        result["refusals"] = tool.refusals
+    for counter in ("refusals", "parse_errors"):
+        if hasattr(tool, counter):
+            result[counter] = getattr(tool, counter)
     out = Path(args.out or f"results/{tool.name.replace(':', '_')}.json")
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -71,6 +73,21 @@ def _table(results: list[dict]) -> str:
     for r in results:
         lines.append(f"| {r['tool']} | " + " | ".join(_fmt(r["scores"]["by_tier"].get(t)) for t in tiers) + " |")
     return "\n".join(lines)
+
+
+def cmd_rescore(args: argparse.Namespace) -> None:
+    """Recompute scores from saved predictions, e.g. after a metric or gold-span change."""
+    for path in args.results or sorted(Path("results").glob("*.json")):
+        result = json.loads(Path(path).read_text(encoding="utf-8"))
+        # Score only the examples the tool was run on (a run may have used --limit).
+        examples = [ex for ex in read_jsonl(result["data"]) if ex.id in result["predictions"]]
+        predictions = {
+            k: Prediction(spans=[Span(**s) for s in v["spans"]], redacted=v["redacted"])
+            for k, v in result["predictions"].items()
+        }
+        result["scores"] = score(examples, predictions)
+        Path(path).write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
+        print(f"rescored {path}")
 
 
 def cmd_report(args: argparse.Namespace) -> None:
@@ -94,6 +111,10 @@ def main(argv: list[str] | None = None) -> None:
     r.add_argument("--out")
     r.add_argument("--limit", type=int, help="only run the first N examples")
     r.set_defaults(func=cmd_run)
+
+    s = sub.add_parser("rescore", help="recompute scores from saved predictions")
+    s.add_argument("results", nargs="*")
+    s.set_defaults(func=cmd_rescore)
 
     p = sub.add_parser("report", help="print a leaderboard from result files")
     p.add_argument("results", nargs="*")

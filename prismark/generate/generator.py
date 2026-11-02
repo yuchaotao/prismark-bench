@@ -26,6 +26,7 @@ from prismark.schema import Example, Span
 REFERENCE_DATE = date(2026, 1, 1)
 
 SLOT_RE = re.compile(r"\{(!?)([A-Z_]+)(?:@(\d+))?\}")
+ARTICLE_RE = re.compile(r"(?:a|an|the)\s+", re.IGNORECASE)
 
 
 @dataclass
@@ -214,7 +215,9 @@ def render(template: Template, rng: random.Random, example_id: str) -> Example:
             if (slot, pid) not in cache:
                 cache[(slot, pid)] = fill(persona)
             value, slot_tags = cache[(slot, pid)]
-            spans.append(Span(pos, pos + len(value), label))
+            # A leading article is not private ("a 2019 DUI conviction"); keep it out of the gold span.
+            article = ARTICLE_RE.match(value)
+            spans.append(Span(pos + (article.end() if article else 0), pos + len(value), label))
             tags.update(slot_tags)
 
         out.append(value)

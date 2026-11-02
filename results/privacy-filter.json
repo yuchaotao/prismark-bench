@@ -1,0 +1,5956 @@
+{
+  "tool": "privacy-filter",
+  "data": "data/v0/test.jsonl",
+  "seconds_per_example": 0.5329323075833321,
+  "scores": {
+    "n_examples": 180,
+    "n_spans": 690,
+    "n_negatives": 210,
+    "protected_recall": 0.6492753623188405,
+    "overlap_recall": 0.6666666666666666,
+    "char_precision": 0.7876359473382942,
+    "char_recall": 0.5902412868632708,
+    "privacy_f1": 0.7117942654448713,
+    "exact_f1": 0.031877213695395513,
+    "negative_fp_rate": 0.319047619047619,
+    "leakage_rate": 0.336231884057971,
+    "fragment_leakage_rate": 0.35942028985507246,
+    "negative_keep": 0.680952380952381,
+    "utility": 0.8218226122550267,
+    "by_tier": {
+      "T1": 0.9048780487804878,
+      "T2": 0.48125,
+      "T3": 0.0,
+      "T4": 0.0
+    },
+    "by_label": {
+      "AGE": 0.0,
+      "BANK_ACCOUNT": 1.0,
+      "CITY": 0.925,
+      "CREDIT_CARD": 1.0,
+      "CRIMINAL_RECORD": 0.0,
+      "DATE_OF_BIRTH": 1.0,
+      "DRIVER_LICENSE": 1.0,
+      "EMAIL": 0.9666666666666667,
+      "EMPLOYER": 0.0,
+      "ETHNICITY": 0.0,
+      "HEALTH_CONDITION": 0.0,
+      "INDIRECT_IDENTIFIER": 0.0,
+      "IP_ADDRESS": 0.85,
+      "JOB_TITLE": 0.0,
+      "MEDICAL_RECORD_NUMBER": 1.0,
+      "PASSPORT": 1.0,
+      "PERSON_NAME": 0.8722222222222222,
+      "PHONE": 0.8,
+      "POLITICAL_AFFILIATION": 0.0,
+      "RELIGION": 0.0,
+      "SEXUAL_ORIENTATION": 0.0,
+      "SSN": 1.0,
+      "STREET_ADDRESS": 1.0,
+      "USERNAME": 0.9,
+      "ZIP_CODE": 1.0
+    },
+    "by_tag": {
+      "form": 0.8461538461538461,
+      "hard_negative": 0.68,
+      "lowercase": 0.8,
+      "multi_person": 0.6321428571428571,
+      "obfuscated": 0.6333333333333333,
+      "structured": 0.9
+    }
+  },
+  "predictions": {
+    "email-intro-000": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 40,
+          "label": "private_person"
+        },
+        {
+          "start": 85,
+          "end": 88,
+          "label": "private_person"
+        },
+        {
+          "start": 88,
+          "end": 90,
+          "label": "private_person"
+        },
+        {
+          "start": 94,
+          "end": 116,
+          "label": "private_email"
+        },
+        {
+          "start": 116,
+          "end": 120,
+          "label": "private_email"
+        },
+        {
+          "start": 124,
+          "end": 138,
+          "label": "private_phone"
+        },
+        {
+          "start": 138,
+          "end": 139,
+          "label": "private_phone"
+        },
+        {
+          "start": 141,
+          "end": 144,
+          "label": "private_person"
+        },
+        {
+          "start": 144,
+          "end": 146,
+          "label": "private_person"
+        },
+        {
+          "start": 166,
+          "end": 179,
+          "label": "private_date"
+        },
+        {
+          "start": 180,
+          "end": 184,
+          "label": "private_date"
+        },
+        {
+          "start": 195,
+          "end": 206,
+          "label": "private_person"
+        },
+        {
+          "start": 206,
+          "end": 210,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-001": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 83,
+          "end": 86,
+          "label": "private_person"
+        },
+        {
+          "start": 86,
+          "end": 88,
+          "label": "private_person"
+        },
+        {
+          "start": 92,
+          "end": 105,
+          "label": "private_email"
+        },
+        {
+          "start": 105,
+          "end": 109,
+          "label": "private_email"
+        },
+        {
+          "start": 113,
+          "end": 124,
+          "label": "private_phone"
+        },
+        {
+          "start": 124,
+          "end": 125,
+          "label": "private_phone"
+        },
+        {
+          "start": 127,
+          "end": 130,
+          "label": "private_person"
+        },
+        {
+          "start": 130,
+          "end": 132,
+          "label": "private_person"
+        },
+        {
+          "start": 152,
+          "end": 159,
+          "label": "private_date"
+        },
+        {
+          "start": 160,
+          "end": 164,
+          "label": "private_date"
+        },
+        {
+          "start": 165,
+          "end": 169,
+          "label": "private_date"
+        },
+        {
+          "start": 180,
+          "end": 192,
+          "label": "private_person"
+        },
+        {
+          "start": 192,
+          "end": 195,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-002": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 33,
+          "label": "private_person"
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "label": "private_person"
+        },
+        {
+          "start": 86,
+          "end": 101,
+          "label": "private_email"
+        },
+        {
+          "start": 101,
+          "end": 105,
+          "label": "private_email"
+        },
+        {
+          "start": 109,
+          "end": 122,
+          "label": "private_phone"
+        },
+        {
+          "start": 122,
+          "end": 123,
+          "label": "private_phone"
+        },
+        {
+          "start": 148,
+          "end": 159,
+          "label": "private_date"
+        },
+        {
+          "start": 160,
+          "end": 164,
+          "label": "private_date"
+        },
+        {
+          "start": 175,
+          "end": 189,
+          "label": "private_person"
+        },
+        {
+          "start": 189,
+          "end": 191,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-003": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 33,
+          "label": "private_person"
+        },
+        {
+          "start": 33,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 92,
+          "end": 103,
+          "label": "private_email"
+        },
+        {
+          "start": 103,
+          "end": 107,
+          "label": "private_email"
+        },
+        {
+          "start": 111,
+          "end": 122,
+          "label": "private_phone"
+        },
+        {
+          "start": 122,
+          "end": 123,
+          "label": "private_phone"
+        },
+        {
+          "start": 148,
+          "end": 156,
+          "label": "private_address"
+        },
+        {
+          "start": 177,
+          "end": 189,
+          "label": "private_person"
+        },
+        {
+          "start": 189,
+          "end": 193,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-004": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 39,
+          "label": "private_person"
+        },
+        {
+          "start": 39,
+          "end": 40,
+          "label": "private_person"
+        },
+        {
+          "start": 108,
+          "end": 121,
+          "label": "private_email"
+        },
+        {
+          "start": 121,
+          "end": 125,
+          "label": "private_email"
+        },
+        {
+          "start": 129,
+          "end": 142,
+          "label": "private_phone"
+        },
+        {
+          "start": 142,
+          "end": 143,
+          "label": "private_phone"
+        },
+        {
+          "start": 202,
+          "end": 216,
+          "label": "private_person"
+        },
+        {
+          "start": 216,
+          "end": 217,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-005": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 89,
+          "end": 101,
+          "label": "private_email"
+        },
+        {
+          "start": 101,
+          "end": 105,
+          "label": "private_email"
+        },
+        {
+          "start": 109,
+          "end": 120,
+          "label": "private_phone"
+        },
+        {
+          "start": 120,
+          "end": 121,
+          "label": "private_phone"
+        },
+        {
+          "start": 123,
+          "end": 126,
+          "label": "private_person"
+        },
+        {
+          "start": 175,
+          "end": 187,
+          "label": "private_person"
+        },
+        {
+          "start": 187,
+          "end": 191,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-006": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 87,
+          "end": 90,
+          "label": "private_person"
+        },
+        {
+          "start": 90,
+          "end": 92,
+          "label": "private_person"
+        },
+        {
+          "start": 96,
+          "end": 109,
+          "label": "private_email"
+        },
+        {
+          "start": 109,
+          "end": 113,
+          "label": "private_email"
+        },
+        {
+          "start": 117,
+          "end": 131,
+          "label": "private_phone"
+        },
+        {
+          "start": 131,
+          "end": 132,
+          "label": "private_phone"
+        },
+        {
+          "start": 134,
+          "end": 137,
+          "label": "private_person"
+        },
+        {
+          "start": 137,
+          "end": 139,
+          "label": "private_person"
+        },
+        {
+          "start": 171,
+          "end": 175,
+          "label": "private_date"
+        },
+        {
+          "start": 176,
+          "end": 180,
+          "label": "private_date"
+        },
+        {
+          "start": 191,
+          "end": 198,
+          "label": "private_person"
+        },
+        {
+          "start": 198,
+          "end": 203,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-007": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 38,
+          "end": 40,
+          "label": "private_person"
+        },
+        {
+          "start": 91,
+          "end": 94,
+          "label": "private_person"
+        },
+        {
+          "start": 94,
+          "end": 97,
+          "label": "private_person"
+        },
+        {
+          "start": 101,
+          "end": 118,
+          "label": "private_email"
+        },
+        {
+          "start": 118,
+          "end": 122,
+          "label": "private_email"
+        },
+        {
+          "start": 126,
+          "end": 139,
+          "label": "private_phone"
+        },
+        {
+          "start": 139,
+          "end": 140,
+          "label": "private_phone"
+        },
+        {
+          "start": 142,
+          "end": 145,
+          "label": "private_person"
+        },
+        {
+          "start": 145,
+          "end": 148,
+          "label": "private_person"
+        },
+        {
+          "start": 168,
+          "end": 175,
+          "label": "private_date"
+        },
+        {
+          "start": 176,
+          "end": 180,
+          "label": "private_date"
+        },
+        {
+          "start": 181,
+          "end": 185,
+          "label": "private_date"
+        },
+        {
+          "start": 196,
+          "end": 209,
+          "label": "private_person"
+        },
+        {
+          "start": 209,
+          "end": 211,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-008": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 78,
+          "end": 81,
+          "label": "private_person"
+        },
+        {
+          "start": 81,
+          "end": 83,
+          "label": "private_person"
+        },
+        {
+          "start": 87,
+          "end": 102,
+          "label": "private_email"
+        },
+        {
+          "start": 102,
+          "end": 106,
+          "label": "private_email"
+        },
+        {
+          "start": 110,
+          "end": 118,
+          "label": "private_phone"
+        },
+        {
+          "start": 118,
+          "end": 121,
+          "label": "account_number"
+        },
+        {
+          "start": 121,
+          "end": 122,
+          "label": "private_phone"
+        },
+        {
+          "start": 124,
+          "end": 127,
+          "label": "private_person"
+        },
+        {
+          "start": 127,
+          "end": 129,
+          "label": "private_person"
+        },
+        {
+          "start": 149,
+          "end": 162,
+          "label": "private_date"
+        },
+        {
+          "start": 163,
+          "end": 167,
+          "label": "private_date"
+        },
+        {
+          "start": 178,
+          "end": 189,
+          "label": "private_person"
+        },
+        {
+          "start": 189,
+          "end": 194,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-009": {
+      "spans": [
+        {
+          "start": 25,
+          "end": 39,
+          "label": "private_person"
+        },
+        {
+          "start": 39,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 87,
+          "end": 91,
+          "label": "private_person"
+        },
+        {
+          "start": 91,
+          "end": 93,
+          "label": "private_person"
+        },
+        {
+          "start": 97,
+          "end": 123,
+          "label": "private_email"
+        },
+        {
+          "start": 123,
+          "end": 127,
+          "label": "private_email"
+        },
+        {
+          "start": 131,
+          "end": 142,
+          "label": "private_phone"
+        },
+        {
+          "start": 142,
+          "end": 143,
+          "label": "private_phone"
+        },
+        {
+          "start": 145,
+          "end": 149,
+          "label": "private_person"
+        },
+        {
+          "start": 149,
+          "end": 151,
+          "label": "private_person"
+        },
+        {
+          "start": 171,
+          "end": 184,
+          "label": "private_date"
+        },
+        {
+          "start": 185,
+          "end": 189,
+          "label": "private_date"
+        },
+        {
+          "start": 200,
+          "end": 212,
+          "label": "private_person"
+        },
+        {
+          "start": 212,
+          "end": 216,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "private_person"
+        },
+        {
+          "start": 15,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 62,
+          "label": "private_email"
+        },
+        {
+          "start": 62,
+          "end": 66,
+          "label": "private_email"
+        },
+        {
+          "start": 117,
+          "end": 121,
+          "label": "private_phone"
+        },
+        {
+          "start": 128,
+          "end": 155,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-001": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 65,
+          "label": "private_email"
+        },
+        {
+          "start": 65,
+          "end": 68,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-002": {
+      "spans": [
+        {
+          "start": 36,
+          "end": 51,
+          "label": "private_email"
+        },
+        {
+          "start": 52,
+          "end": 55,
+          "label": "private_email"
+        },
+        {
+          "start": 109,
+          "end": 152,
+          "label": "private_phone"
+        },
+        {
+          "start": 153,
+          "end": 157,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 56,
+          "label": "private_email"
+        },
+        {
+          "start": 56,
+          "end": 59,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 15,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 67,
+          "label": "private_email"
+        },
+        {
+          "start": 67,
+          "end": 70,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-005": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 14,
+          "label": "private_person"
+        },
+        {
+          "start": 34,
+          "end": 58,
+          "label": "private_email"
+        },
+        {
+          "start": 58,
+          "end": 61,
+          "label": "private_email"
+        },
+        {
+          "start": 112,
+          "end": 153,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-006": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 37,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 57,
+          "end": 61,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-007": {
+      "spans": [
+        {
+          "start": 34,
+          "end": 59,
+          "label": "private_email"
+        },
+        {
+          "start": 59,
+          "end": 62,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-008": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 15,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 57,
+          "end": 60,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-009": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 57,
+          "end": 61,
+          "label": "private_email"
+        },
+        {
+          "start": 112,
+          "end": 156,
+          "label": "private_phone"
+        },
+        {
+          "start": 157,
+          "end": 161,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-000": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 12,
+          "end": 19,
+          "label": "private_person"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "account_number"
+        },
+        {
+          "start": 60,
+          "end": 61,
+          "label": "account_number"
+        },
+        {
+          "start": 81,
+          "end": 96,
+          "label": "account_number"
+        },
+        {
+          "start": 96,
+          "end": 97,
+          "label": "account_number"
+        },
+        {
+          "start": 142,
+          "end": 159,
+          "label": "account_number"
+        },
+        {
+          "start": 159,
+          "end": 160,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-001": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 12,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 52,
+          "end": 63,
+          "label": "account_number"
+        },
+        {
+          "start": 63,
+          "end": 64,
+          "label": "account_number"
+        },
+        {
+          "start": 84,
+          "end": 102,
+          "label": "account_number"
+        },
+        {
+          "start": 102,
+          "end": 103,
+          "label": "account_number"
+        },
+        {
+          "start": 148,
+          "end": 165,
+          "label": "account_number"
+        },
+        {
+          "start": 165,
+          "end": 166,
+          "label": "account_number"
+        },
+        {
+          "start": 195,
+          "end": 201,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-002": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 18,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 51,
+          "end": 62,
+          "label": "account_number"
+        },
+        {
+          "start": 62,
+          "end": 63,
+          "label": "account_number"
+        },
+        {
+          "start": 83,
+          "end": 101,
+          "label": "account_number"
+        },
+        {
+          "start": 101,
+          "end": 102,
+          "label": "account_number"
+        },
+        {
+          "start": 147,
+          "end": 164,
+          "label": "account_number"
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-003": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 8,
+          "label": "private_person"
+        },
+        {
+          "start": 8,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 12,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 50,
+          "end": 61,
+          "label": "account_number"
+        },
+        {
+          "start": 61,
+          "end": 62,
+          "label": "account_number"
+        },
+        {
+          "start": 82,
+          "end": 97,
+          "label": "account_number"
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "label": "account_number"
+        },
+        {
+          "start": 143,
+          "end": 160,
+          "label": "account_number"
+        },
+        {
+          "start": 160,
+          "end": 161,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-004": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 15,
+          "label": "private_person"
+        },
+        {
+          "start": 15,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 50,
+          "end": 61,
+          "label": "account_number"
+        },
+        {
+          "start": 61,
+          "end": 62,
+          "label": "account_number"
+        },
+        {
+          "start": 82,
+          "end": 100,
+          "label": "account_number"
+        },
+        {
+          "start": 100,
+          "end": 101,
+          "label": "account_number"
+        },
+        {
+          "start": 146,
+          "end": 163,
+          "label": "account_number"
+        },
+        {
+          "start": 163,
+          "end": 164,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-005": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 47,
+          "end": 58,
+          "label": "account_number"
+        },
+        {
+          "start": 58,
+          "end": 59,
+          "label": "account_number"
+        },
+        {
+          "start": 79,
+          "end": 97,
+          "label": "account_number"
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "label": "account_number"
+        },
+        {
+          "start": 143,
+          "end": 160,
+          "label": "account_number"
+        },
+        {
+          "start": 160,
+          "end": 161,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-006": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 51,
+          "end": 62,
+          "label": "account_number"
+        },
+        {
+          "start": 62,
+          "end": 63,
+          "label": "account_number"
+        },
+        {
+          "start": 83,
+          "end": 101,
+          "label": "account_number"
+        },
+        {
+          "start": 101,
+          "end": 102,
+          "label": "account_number"
+        },
+        {
+          "start": 147,
+          "end": 164,
+          "label": "account_number"
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-007": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 48,
+          "end": 59,
+          "label": "account_number"
+        },
+        {
+          "start": 59,
+          "end": 60,
+          "label": "account_number"
+        },
+        {
+          "start": 80,
+          "end": 95,
+          "label": "account_number"
+        },
+        {
+          "start": 95,
+          "end": 96,
+          "label": "account_number"
+        },
+        {
+          "start": 141,
+          "end": 158,
+          "label": "account_number"
+        },
+        {
+          "start": 158,
+          "end": 159,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-008": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 51,
+          "end": 62,
+          "label": "account_number"
+        },
+        {
+          "start": 62,
+          "end": 63,
+          "label": "account_number"
+        },
+        {
+          "start": 83,
+          "end": 101,
+          "label": "account_number"
+        },
+        {
+          "start": 101,
+          "end": 102,
+          "label": "account_number"
+        },
+        {
+          "start": 147,
+          "end": 164,
+          "label": "account_number"
+        },
+        {
+          "start": 164,
+          "end": 165,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-009": {
+      "spans": [
+        {
+          "start": 5,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 18,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 52,
+          "end": 63,
+          "label": "account_number"
+        },
+        {
+          "start": 63,
+          "end": 64,
+          "label": "account_number"
+        },
+        {
+          "start": 84,
+          "end": 99,
+          "label": "account_number"
+        },
+        {
+          "start": 99,
+          "end": 100,
+          "label": "account_number"
+        },
+        {
+          "start": 145,
+          "end": 162,
+          "label": "account_number"
+        },
+        {
+          "start": 162,
+          "end": 163,
+          "label": "account_number"
+        },
+        {
+          "start": 192,
+          "end": 198,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-000": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 20,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 23,
+          "end": 33,
+          "label": "account_number"
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "label": "account_number"
+        },
+        {
+          "start": 41,
+          "end": 50,
+          "label": "private_date"
+        },
+        {
+          "start": 50,
+          "end": 51,
+          "label": "private_date"
+        },
+        {
+          "start": 171,
+          "end": 177,
+          "label": "private_person"
+        },
+        {
+          "start": 178,
+          "end": 185,
+          "label": "private_person"
+        },
+        {
+          "start": 187,
+          "end": 198,
+          "label": "private_phone"
+        },
+        {
+          "start": 198,
+          "end": 199,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-001": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 14,
+          "label": "private_person"
+        },
+        {
+          "start": 15,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 34,
+          "label": "account_number"
+        },
+        {
+          "start": 34,
+          "end": 35,
+          "label": "account_number"
+        },
+        {
+          "start": 42,
+          "end": 54,
+          "label": "private_date"
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "label": "private_date"
+        },
+        {
+          "start": 202,
+          "end": 215,
+          "label": "private_person"
+        },
+        {
+          "start": 215,
+          "end": 219,
+          "label": "private_person"
+        },
+        {
+          "start": 221,
+          "end": 235,
+          "label": "private_phone"
+        },
+        {
+          "start": 235,
+          "end": 236,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-002": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 28,
+          "label": "private_person"
+        },
+        {
+          "start": 30,
+          "end": 41,
+          "label": "account_number"
+        },
+        {
+          "start": 41,
+          "end": 43,
+          "label": "account_number"
+        },
+        {
+          "start": 48,
+          "end": 56,
+          "label": "private_date"
+        },
+        {
+          "start": 56,
+          "end": 58,
+          "label": "private_date"
+        },
+        {
+          "start": 194,
+          "end": 206,
+          "label": "private_person"
+        },
+        {
+          "start": 206,
+          "end": 209,
+          "label": "private_person"
+        },
+        {
+          "start": 211,
+          "end": 222,
+          "label": "private_phone"
+        },
+        {
+          "start": 222,
+          "end": 223,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-003": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 21,
+          "end": 25,
+          "label": "private_person"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "account_number"
+        },
+        {
+          "start": 45,
+          "end": 56,
+          "label": "private_date"
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "label": "private_date"
+        },
+        {
+          "start": 195,
+          "end": 206,
+          "label": "private_person"
+        },
+        {
+          "start": 206,
+          "end": 211,
+          "label": "private_person"
+        },
+        {
+          "start": 213,
+          "end": 217,
+          "label": "account_number"
+        },
+        {
+          "start": 217,
+          "end": 224,
+          "label": "private_phone"
+        },
+        {
+          "start": 224,
+          "end": 225,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-004": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 20,
+          "end": 25,
+          "label": "private_person"
+        },
+        {
+          "start": 27,
+          "end": 37,
+          "label": "account_number"
+        },
+        {
+          "start": 37,
+          "end": 38,
+          "label": "account_number"
+        },
+        {
+          "start": 45,
+          "end": 57,
+          "label": "private_date"
+        },
+        {
+          "start": 57,
+          "end": 58,
+          "label": "private_date"
+        },
+        {
+          "start": 192,
+          "end": 202,
+          "label": "private_person"
+        },
+        {
+          "start": 202,
+          "end": 204,
+          "label": "private_person"
+        },
+        {
+          "start": 206,
+          "end": 219,
+          "label": "private_phone"
+        },
+        {
+          "start": 219,
+          "end": 220,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-005": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 23,
+          "end": 33,
+          "label": "account_number"
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "label": "account_number"
+        },
+        {
+          "start": 41,
+          "end": 49,
+          "label": "private_date"
+        },
+        {
+          "start": 49,
+          "end": 51,
+          "label": "private_date"
+        },
+        {
+          "start": 172,
+          "end": 182,
+          "label": "private_person"
+        },
+        {
+          "start": 182,
+          "end": 186,
+          "label": "private_person"
+        },
+        {
+          "start": 188,
+          "end": 199,
+          "label": "private_phone"
+        },
+        {
+          "start": 199,
+          "end": 200,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-006": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 18,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 23,
+          "end": 33,
+          "label": "account_number"
+        },
+        {
+          "start": 33,
+          "end": 34,
+          "label": "account_number"
+        },
+        {
+          "start": 41,
+          "end": 49,
+          "label": "private_date"
+        },
+        {
+          "start": 49,
+          "end": 51,
+          "label": "private_date"
+        },
+        {
+          "start": 173,
+          "end": 185,
+          "label": "private_person"
+        },
+        {
+          "start": 185,
+          "end": 188,
+          "label": "private_person"
+        },
+        {
+          "start": 190,
+          "end": 203,
+          "label": "private_phone"
+        },
+        {
+          "start": 203,
+          "end": 204,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-007": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 23,
+          "label": "private_person"
+        },
+        {
+          "start": 23,
+          "end": 25,
+          "label": "private_person"
+        },
+        {
+          "start": 27,
+          "end": 38,
+          "label": "account_number"
+        },
+        {
+          "start": 38,
+          "end": 40,
+          "label": "account_number"
+        },
+        {
+          "start": 45,
+          "end": 54,
+          "label": "private_date"
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "label": "private_date"
+        },
+        {
+          "start": 183,
+          "end": 190,
+          "label": "private_person"
+        },
+        {
+          "start": 190,
+          "end": 193,
+          "label": "private_person"
+        },
+        {
+          "start": 195,
+          "end": 206,
+          "label": "account_number"
+        },
+        {
+          "start": 206,
+          "end": 207,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-008": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 22,
+          "end": 23,
+          "label": "private_person"
+        },
+        {
+          "start": 25,
+          "end": 35,
+          "label": "account_number"
+        },
+        {
+          "start": 35,
+          "end": 36,
+          "label": "account_number"
+        },
+        {
+          "start": 43,
+          "end": 52,
+          "label": "private_date"
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "label": "private_date"
+        },
+        {
+          "start": 188,
+          "end": 203,
+          "label": "private_person"
+        },
+        {
+          "start": 203,
+          "end": 205,
+          "label": "private_person"
+        },
+        {
+          "start": 207,
+          "end": 218,
+          "label": "private_phone"
+        },
+        {
+          "start": 218,
+          "end": 219,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-009": {
+      "spans": [
+        {
+          "start": 9,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 22,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 26,
+          "end": 36,
+          "label": "account_number"
+        },
+        {
+          "start": 36,
+          "end": 37,
+          "label": "account_number"
+        },
+        {
+          "start": 44,
+          "end": 57,
+          "label": "private_date"
+        },
+        {
+          "start": 57,
+          "end": 58,
+          "label": "private_date"
+        },
+        {
+          "start": 197,
+          "end": 201,
+          "label": "private_person"
+        },
+        {
+          "start": 202,
+          "end": 209,
+          "label": "private_person"
+        },
+        {
+          "start": 211,
+          "end": 225,
+          "label": "private_phone"
+        },
+        {
+          "start": 225,
+          "end": 226,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 22,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 128,
+          "end": 159,
+          "label": "private_address"
+        },
+        {
+          "start": 159,
+          "end": 161,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-001": {
+      "spans": [
+        {
+          "start": 129,
+          "end": 160,
+          "label": "private_address"
+        },
+        {
+          "start": 160,
+          "end": 162,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-002": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 22,
+          "end": 26,
+          "label": "private_person"
+        },
+        {
+          "start": 89,
+          "end": 92,
+          "label": "private_date"
+        },
+        {
+          "start": 92,
+          "end": 93,
+          "label": "private_date"
+        },
+        {
+          "start": 119,
+          "end": 153,
+          "label": "private_address"
+        },
+        {
+          "start": 153,
+          "end": 155,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 21,
+          "end": 26,
+          "label": "private_person"
+        },
+        {
+          "start": 102,
+          "end": 105,
+          "label": "private_date"
+        },
+        {
+          "start": 105,
+          "end": 106,
+          "label": "private_date"
+        },
+        {
+          "start": 132,
+          "end": 169,
+          "label": "private_address"
+        },
+        {
+          "start": 169,
+          "end": 171,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 18,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 118,
+          "end": 121,
+          "label": "private_date"
+        },
+        {
+          "start": 121,
+          "end": 122,
+          "label": "private_date"
+        },
+        {
+          "start": 133,
+          "end": 170,
+          "label": "private_address"
+        },
+        {
+          "start": 170,
+          "end": 172,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-005": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 21,
+          "end": 23,
+          "label": "private_person"
+        },
+        {
+          "start": 101,
+          "end": 130,
+          "label": "private_address"
+        },
+        {
+          "start": 130,
+          "end": 132,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-006": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 21,
+          "end": 25,
+          "label": "private_person"
+        },
+        {
+          "start": 122,
+          "end": 125,
+          "label": "private_date"
+        },
+        {
+          "start": 125,
+          "end": 126,
+          "label": "private_date"
+        },
+        {
+          "start": 137,
+          "end": 172,
+          "label": "private_address"
+        },
+        {
+          "start": 172,
+          "end": 174,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-007": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 23,
+          "label": "private_person"
+        },
+        {
+          "start": 23,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 128,
+          "end": 158,
+          "label": "private_address"
+        },
+        {
+          "start": 158,
+          "end": 160,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-008": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 22,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 132,
+          "end": 162,
+          "label": "private_address"
+        },
+        {
+          "start": 162,
+          "end": 164,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-009": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 111,
+          "end": 114,
+          "label": "private_date"
+        },
+        {
+          "start": 114,
+          "end": 115,
+          "label": "private_date"
+        },
+        {
+          "start": 126,
+          "end": 156,
+          "label": "private_address"
+        },
+        {
+          "start": 156,
+          "end": 158,
+          "label": "private_address"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-000": {
+      "spans": [
+        {
+          "start": 34,
+          "end": 36,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-001": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 26,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-002": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 36,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-003": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 23,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 32,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-004": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 26,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-007": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 26,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-008": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 37,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-public-009": {
+      "spans": [
+        {
+          "start": 15,
+          "end": 23,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 32,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-000": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 10,
+          "label": "private_person"
+        },
+        {
+          "start": 10,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 89,
+          "end": 95,
+          "label": "private_person"
+        },
+        {
+          "start": 95,
+          "end": 97,
+          "label": "private_person"
+        },
+        {
+          "start": 127,
+          "end": 131,
+          "label": "private_person"
+        },
+        {
+          "start": 131,
+          "end": 134,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 11,
+          "end": 12,
+          "label": "private_person"
+        },
+        {
+          "start": 93,
+          "end": 100,
+          "label": "private_person"
+        },
+        {
+          "start": 100,
+          "end": 103,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-002": {
+      "spans": [
+        {
+          "start": 131,
+          "end": 135,
+          "label": "private_person"
+        },
+        {
+          "start": 135,
+          "end": 137,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-003": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 8,
+          "label": "private_person"
+        },
+        {
+          "start": 8,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 81,
+          "end": 91,
+          "label": "private_person"
+        },
+        {
+          "start": 91,
+          "end": 92,
+          "label": "private_person"
+        },
+        {
+          "start": 122,
+          "end": 125,
+          "label": "private_person"
+        },
+        {
+          "start": 125,
+          "end": 127,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-004": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 12,
+          "label": "private_person"
+        },
+        {
+          "start": 12,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 95,
+          "end": 101,
+          "label": "private_person"
+        },
+        {
+          "start": 101,
+          "end": 103,
+          "label": "private_person"
+        },
+        {
+          "start": 133,
+          "end": 137,
+          "label": "private_person"
+        },
+        {
+          "start": 137,
+          "end": 140,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-005": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 8,
+          "label": "private_person"
+        },
+        {
+          "start": 8,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 88,
+          "end": 97,
+          "label": "private_person"
+        },
+        {
+          "start": 97,
+          "end": 100,
+          "label": "private_person"
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 8,
+          "label": "private_person"
+        },
+        {
+          "start": 8,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 87,
+          "end": 95,
+          "label": "private_person"
+        },
+        {
+          "start": 95,
+          "end": 97,
+          "label": "private_person"
+        },
+        {
+          "start": 127,
+          "end": 132,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-007": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 8,
+          "label": "private_person"
+        },
+        {
+          "start": 8,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 87,
+          "end": 98,
+          "label": "private_person"
+        },
+        {
+          "start": 98,
+          "end": 99,
+          "label": "private_person"
+        },
+        {
+          "start": 129,
+          "end": 134,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-008": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 11,
+          "end": 12,
+          "label": "private_person"
+        },
+        {
+          "start": 92,
+          "end": 93,
+          "label": "private_person"
+        },
+        {
+          "start": 93,
+          "end": 98,
+          "label": "private_person"
+        },
+        {
+          "start": 98,
+          "end": 100,
+          "label": "private_person"
+        },
+        {
+          "start": 130,
+          "end": 135,
+          "label": "private_person"
+        },
+        {
+          "start": 135,
+          "end": 136,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-coming-out-009": {
+      "spans": [
+        {
+          "start": 1,
+          "end": 9,
+          "label": "private_person"
+        },
+        {
+          "start": 9,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 83,
+          "end": 93,
+          "label": "private_person"
+        },
+        {
+          "start": 93,
+          "end": 95,
+          "label": "private_person"
+        },
+        {
+          "start": 125,
+          "end": 129,
+          "label": "private_person"
+        },
+        {
+          "start": 129,
+          "end": 131,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 4,
+          "label": "private_person"
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-004": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "private_person"
+        },
+        {
+          "start": 3,
+          "end": 7,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "private_person"
+        },
+        {
+          "start": 3,
+          "end": 5,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-007": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 2,
+          "label": "private_person"
+        },
+        {
+          "start": 2,
+          "end": 6,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-008": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "private_person"
+        },
+        {
+          "start": 3,
+          "end": 5,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-faith-009": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 3,
+          "label": "private_person"
+        },
+        {
+          "start": 3,
+          "end": 7,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-001": {
+      "spans": [
+        {
+          "start": 143,
+          "end": 146,
+          "label": "private_date"
+        },
+        {
+          "start": 146,
+          "end": 147,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-indirect-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-lowercase-000": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 19,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 53,
+          "label": "private_phone"
+        },
+        {
+          "start": 53,
+          "end": 54,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-001": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 14,
+          "label": "private_person"
+        },
+        {
+          "start": 14,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 39,
+          "end": 50,
+          "label": "private_phone"
+        },
+        {
+          "start": 50,
+          "end": 51,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-002": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 18,
+          "end": 21,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 56,
+          "label": "private_phone"
+        },
+        {
+          "start": 56,
+          "end": 57,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-003": {
+      "spans": [
+        {
+          "start": 42,
+          "end": 53,
+          "label": "private_phone"
+        },
+        {
+          "start": 53,
+          "end": 54,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-004": {
+      "spans": [
+        {
+          "start": 37,
+          "end": 51,
+          "label": "private_phone"
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-005": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 18,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 41,
+          "end": 52,
+          "label": "private_phone"
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "label": "private_phone"
+        },
+        {
+          "start": 88,
+          "end": 97,
+          "label": "private_person"
+        },
+        {
+          "start": 97,
+          "end": 99,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-006": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 19,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 51,
+          "label": "private_phone"
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "label": "private_phone"
+        },
+        {
+          "start": 97,
+          "end": 106,
+          "label": "private_person"
+        },
+        {
+          "start": 106,
+          "end": 109,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-007": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 55,
+          "label": "private_phone"
+        },
+        {
+          "start": 55,
+          "end": 56,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-008": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 52,
+          "label": "private_phone"
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "label": "private_phone"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-009": {
+      "spans": [
+        {
+          "start": 4,
+          "end": 15,
+          "label": "private_person"
+        },
+        {
+          "start": 15,
+          "end": 19,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 54,
+          "label": "private_phone"
+        },
+        {
+          "start": 54,
+          "end": 55,
+          "label": "private_phone"
+        },
+        {
+          "start": 92,
+          "end": 101,
+          "label": "private_person"
+        },
+        {
+          "start": 101,
+          "end": 103,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-onboarding-000": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 29,
+          "label": "private_person"
+        },
+        {
+          "start": 29,
+          "end": 33,
+          "label": "private_person"
+        },
+        {
+          "start": 39,
+          "end": 49,
+          "label": "account_number"
+        },
+        {
+          "start": 49,
+          "end": 50,
+          "label": "account_number"
+        },
+        {
+          "start": 66,
+          "end": 74,
+          "label": "private_date"
+        },
+        {
+          "start": 74,
+          "end": 76,
+          "label": "private_date"
+        },
+        {
+          "start": 91,
+          "end": 122,
+          "label": "private_address"
+        },
+        {
+          "start": 123,
+          "end": 126,
+          "label": "private_address"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "private_address"
+        },
+        {
+          "start": 150,
+          "end": 175,
+          "label": "account_number"
+        },
+        {
+          "start": 175,
+          "end": 177,
+          "label": "account_number"
+        },
+        {
+          "start": 188,
+          "end": 195,
+          "label": "account_number"
+        },
+        {
+          "start": 195,
+          "end": 197,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-001": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 30,
+          "label": "private_person"
+        },
+        {
+          "start": 30,
+          "end": 32,
+          "label": "private_person"
+        },
+        {
+          "start": 38,
+          "end": 44,
+          "label": "account_number"
+        },
+        {
+          "start": 44,
+          "end": 47,
+          "label": "account_number"
+        },
+        {
+          "start": 63,
+          "end": 71,
+          "label": "private_date"
+        },
+        {
+          "start": 71,
+          "end": 73,
+          "label": "private_date"
+        },
+        {
+          "start": 88,
+          "end": 124,
+          "label": "private_address"
+        },
+        {
+          "start": 124,
+          "end": 126,
+          "label": "private_address"
+        },
+        {
+          "start": 148,
+          "end": 173,
+          "label": "account_number"
+        },
+        {
+          "start": 173,
+          "end": 175,
+          "label": "account_number"
+        },
+        {
+          "start": 186,
+          "end": 193,
+          "label": "account_number"
+        },
+        {
+          "start": 193,
+          "end": 195,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-002": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 34,
+          "label": "private_person"
+        },
+        {
+          "start": 34,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 44,
+          "end": 50,
+          "label": "account_number"
+        },
+        {
+          "start": 50,
+          "end": 53,
+          "label": "account_number"
+        },
+        {
+          "start": 69,
+          "end": 85,
+          "label": "private_date"
+        },
+        {
+          "start": 85,
+          "end": 86,
+          "label": "private_date"
+        },
+        {
+          "start": 101,
+          "end": 123,
+          "label": "private_address"
+        },
+        {
+          "start": 124,
+          "end": 130,
+          "label": "private_address"
+        },
+        {
+          "start": 131,
+          "end": 134,
+          "label": "private_address"
+        },
+        {
+          "start": 134,
+          "end": 136,
+          "label": "private_address"
+        },
+        {
+          "start": 158,
+          "end": 183,
+          "label": "account_number"
+        },
+        {
+          "start": 183,
+          "end": 185,
+          "label": "account_number"
+        },
+        {
+          "start": 196,
+          "end": 203,
+          "label": "account_number"
+        },
+        {
+          "start": 203,
+          "end": 205,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-003": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 28,
+          "label": "private_person"
+        },
+        {
+          "start": 28,
+          "end": 31,
+          "label": "private_person"
+        },
+        {
+          "start": 37,
+          "end": 47,
+          "label": "account_number"
+        },
+        {
+          "start": 47,
+          "end": 48,
+          "label": "account_number"
+        },
+        {
+          "start": 64,
+          "end": 80,
+          "label": "private_date"
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "label": "private_date"
+        },
+        {
+          "start": 96,
+          "end": 126,
+          "label": "private_address"
+        },
+        {
+          "start": 126,
+          "end": 128,
+          "label": "private_address"
+        },
+        {
+          "start": 150,
+          "end": 175,
+          "label": "account_number"
+        },
+        {
+          "start": 175,
+          "end": 177,
+          "label": "account_number"
+        },
+        {
+          "start": 188,
+          "end": 195,
+          "label": "account_number"
+        },
+        {
+          "start": 195,
+          "end": 197,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-004": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 30,
+          "label": "private_person"
+        },
+        {
+          "start": 30,
+          "end": 32,
+          "label": "private_person"
+        },
+        {
+          "start": 38,
+          "end": 48,
+          "label": "account_number"
+        },
+        {
+          "start": 48,
+          "end": 49,
+          "label": "account_number"
+        },
+        {
+          "start": 65,
+          "end": 74,
+          "label": "private_date"
+        },
+        {
+          "start": 74,
+          "end": 75,
+          "label": "private_date"
+        },
+        {
+          "start": 90,
+          "end": 127,
+          "label": "private_address"
+        },
+        {
+          "start": 127,
+          "end": 129,
+          "label": "private_address"
+        },
+        {
+          "start": 151,
+          "end": 176,
+          "label": "account_number"
+        },
+        {
+          "start": 176,
+          "end": 178,
+          "label": "account_number"
+        },
+        {
+          "start": 189,
+          "end": 196,
+          "label": "account_number"
+        },
+        {
+          "start": 196,
+          "end": 198,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-005": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 33,
+          "label": "private_person"
+        },
+        {
+          "start": 33,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 48,
+          "label": "account_number"
+        },
+        {
+          "start": 48,
+          "end": 51,
+          "label": "account_number"
+        },
+        {
+          "start": 67,
+          "end": 76,
+          "label": "private_date"
+        },
+        {
+          "start": 76,
+          "end": 77,
+          "label": "private_date"
+        },
+        {
+          "start": 92,
+          "end": 124,
+          "label": "private_address"
+        },
+        {
+          "start": 124,
+          "end": 126,
+          "label": "private_address"
+        },
+        {
+          "start": 148,
+          "end": 173,
+          "label": "account_number"
+        },
+        {
+          "start": 173,
+          "end": 175,
+          "label": "account_number"
+        },
+        {
+          "start": 186,
+          "end": 193,
+          "label": "account_number"
+        },
+        {
+          "start": 193,
+          "end": 195,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-006": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 31,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 33,
+          "label": "private_person"
+        },
+        {
+          "start": 39,
+          "end": 49,
+          "label": "account_number"
+        },
+        {
+          "start": 49,
+          "end": 50,
+          "label": "account_number"
+        },
+        {
+          "start": 66,
+          "end": 75,
+          "label": "private_date"
+        },
+        {
+          "start": 75,
+          "end": 76,
+          "label": "private_date"
+        },
+        {
+          "start": 91,
+          "end": 124,
+          "label": "private_address"
+        },
+        {
+          "start": 124,
+          "end": 126,
+          "label": "private_address"
+        },
+        {
+          "start": 148,
+          "end": 173,
+          "label": "account_number"
+        },
+        {
+          "start": 173,
+          "end": 175,
+          "label": "account_number"
+        },
+        {
+          "start": 186,
+          "end": 193,
+          "label": "account_number"
+        },
+        {
+          "start": 193,
+          "end": 195,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-007": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 31,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 41,
+          "end": 47,
+          "label": "account_number"
+        },
+        {
+          "start": 47,
+          "end": 50,
+          "label": "account_number"
+        },
+        {
+          "start": 66,
+          "end": 74,
+          "label": "private_date"
+        },
+        {
+          "start": 74,
+          "end": 76,
+          "label": "private_date"
+        },
+        {
+          "start": 91,
+          "end": 111,
+          "label": "private_address"
+        },
+        {
+          "start": 112,
+          "end": 123,
+          "label": "private_address"
+        },
+        {
+          "start": 124,
+          "end": 124,
+          "label": "private_address"
+        },
+        {
+          "start": 124,
+          "end": 127,
+          "label": "private_address"
+        },
+        {
+          "start": 127,
+          "end": 129,
+          "label": "private_address"
+        },
+        {
+          "start": 151,
+          "end": 176,
+          "label": "account_number"
+        },
+        {
+          "start": 176,
+          "end": 178,
+          "label": "account_number"
+        },
+        {
+          "start": 189,
+          "end": 196,
+          "label": "account_number"
+        },
+        {
+          "start": 196,
+          "end": 198,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-008": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 31,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 34,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 46,
+          "label": "account_number"
+        },
+        {
+          "start": 46,
+          "end": 49,
+          "label": "account_number"
+        },
+        {
+          "start": 65,
+          "end": 79,
+          "label": "private_date"
+        },
+        {
+          "start": 79,
+          "end": 80,
+          "label": "private_date"
+        },
+        {
+          "start": 95,
+          "end": 130,
+          "label": "private_address"
+        },
+        {
+          "start": 130,
+          "end": 132,
+          "label": "private_address"
+        },
+        {
+          "start": 154,
+          "end": 179,
+          "label": "account_number"
+        },
+        {
+          "start": 179,
+          "end": 181,
+          "label": "account_number"
+        },
+        {
+          "start": 192,
+          "end": 199,
+          "label": "account_number"
+        },
+        {
+          "start": 199,
+          "end": 201,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-009": {
+      "spans": [
+        {
+          "start": 20,
+          "end": 31,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 41,
+          "end": 51,
+          "label": "account_number"
+        },
+        {
+          "start": 51,
+          "end": 52,
+          "label": "account_number"
+        },
+        {
+          "start": 68,
+          "end": 77,
+          "label": "private_date"
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "label": "private_date"
+        },
+        {
+          "start": 93,
+          "end": 122,
+          "label": "private_address"
+        },
+        {
+          "start": 122,
+          "end": 124,
+          "label": "private_address"
+        },
+        {
+          "start": 146,
+          "end": 171,
+          "label": "account_number"
+        },
+        {
+          "start": 171,
+          "end": 173,
+          "label": "account_number"
+        },
+        {
+          "start": 184,
+          "end": 191,
+          "label": "account_number"
+        },
+        {
+          "start": 191,
+          "end": 193,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-000": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 28,
+          "label": "private_person"
+        },
+        {
+          "start": 28,
+          "end": 32,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-003": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 26,
+          "label": "private_person"
+        },
+        {
+          "start": 26,
+          "end": 27,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-004": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 26,
+          "label": "private_person"
+        },
+        {
+          "start": 26,
+          "end": 28,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-005": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 22,
+          "label": "private_person"
+        },
+        {
+          "start": 22,
+          "end": 27,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-006": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 26,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-007": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 24,
+          "label": "private_person"
+        },
+        {
+          "start": 24,
+          "end": 28,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-009": {
+      "spans": [
+        {
+          "start": 14,
+          "end": 28,
+          "label": "private_person"
+        },
+        {
+          "start": 28,
+          "end": 30,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-000": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "label": "private_person"
+        },
+        {
+          "start": 65,
+          "end": 78,
+          "label": "account_number"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "label": "account_number"
+        },
+        {
+          "start": 99,
+          "end": 109,
+          "label": "account_number"
+        },
+        {
+          "start": 109,
+          "end": 110,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-001": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 44,
+          "label": "private_person"
+        },
+        {
+          "start": 44,
+          "end": 48,
+          "label": "private_person"
+        },
+        {
+          "start": 67,
+          "end": 80,
+          "label": "account_number"
+        },
+        {
+          "start": 80,
+          "end": 81,
+          "label": "account_number"
+        },
+        {
+          "start": 101,
+          "end": 111,
+          "label": "account_number"
+        },
+        {
+          "start": 111,
+          "end": 112,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-002": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 44,
+          "label": "private_person"
+        },
+        {
+          "start": 44,
+          "end": 47,
+          "label": "private_person"
+        },
+        {
+          "start": 66,
+          "end": 79,
+          "label": "account_number"
+        },
+        {
+          "start": 79,
+          "end": 80,
+          "label": "account_number"
+        },
+        {
+          "start": 100,
+          "end": 110,
+          "label": "account_number"
+        },
+        {
+          "start": 110,
+          "end": 111,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-003": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "label": "private_person"
+        },
+        {
+          "start": 65,
+          "end": 78,
+          "label": "account_number"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "label": "account_number"
+        },
+        {
+          "start": 95,
+          "end": 97,
+          "label": "account_number"
+        },
+        {
+          "start": 99,
+          "end": 109,
+          "label": "account_number"
+        },
+        {
+          "start": 109,
+          "end": 110,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-004": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 44,
+          "label": "private_person"
+        },
+        {
+          "start": 63,
+          "end": 76,
+          "label": "account_number"
+        },
+        {
+          "start": 76,
+          "end": 77,
+          "label": "account_number"
+        },
+        {
+          "start": 97,
+          "end": 103,
+          "label": "account_number"
+        },
+        {
+          "start": 103,
+          "end": 106,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-005": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "label": "private_person"
+        },
+        {
+          "start": 65,
+          "end": 78,
+          "label": "account_number"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "label": "account_number"
+        },
+        {
+          "start": 99,
+          "end": 109,
+          "label": "account_number"
+        },
+        {
+          "start": 109,
+          "end": 110,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-006": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "label": "private_person"
+        },
+        {
+          "start": 65,
+          "end": 78,
+          "label": "account_number"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "label": "account_number"
+        },
+        {
+          "start": 99,
+          "end": 109,
+          "label": "account_number"
+        },
+        {
+          "start": 109,
+          "end": 110,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-007": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 43,
+          "label": "private_person"
+        },
+        {
+          "start": 43,
+          "end": 45,
+          "label": "private_person"
+        },
+        {
+          "start": 64,
+          "end": 77,
+          "label": "account_number"
+        },
+        {
+          "start": 77,
+          "end": 78,
+          "label": "account_number"
+        },
+        {
+          "start": 98,
+          "end": 108,
+          "label": "account_number"
+        },
+        {
+          "start": 108,
+          "end": 109,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-008": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 44,
+          "label": "private_person"
+        },
+        {
+          "start": 63,
+          "end": 76,
+          "label": "account_number"
+        },
+        {
+          "start": 76,
+          "end": 77,
+          "label": "account_number"
+        },
+        {
+          "start": 93,
+          "end": 95,
+          "label": "account_number"
+        },
+        {
+          "start": 97,
+          "end": 97,
+          "label": "account_number"
+        },
+        {
+          "start": 97,
+          "end": 103,
+          "label": "account_number"
+        },
+        {
+          "start": 103,
+          "end": 106,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-009": {
+      "spans": [
+        {
+          "start": 31,
+          "end": 42,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 46,
+          "label": "private_person"
+        },
+        {
+          "start": 65,
+          "end": 78,
+          "label": "account_number"
+        },
+        {
+          "start": 78,
+          "end": 79,
+          "label": "account_number"
+        },
+        {
+          "start": 99,
+          "end": 109,
+          "label": "account_number"
+        },
+        {
+          "start": 109,
+          "end": 110,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-000": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 34,
+          "label": "private_person"
+        },
+        {
+          "start": 34,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 38,
+          "end": 53,
+          "label": "private_email"
+        },
+        {
+          "start": 53,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 92,
+          "end": 98,
+          "label": "private_url"
+        },
+        {
+          "start": 98,
+          "end": 101,
+          "label": "private_url"
+        },
+        {
+          "start": 119,
+          "end": 130,
+          "label": "private_url"
+        },
+        {
+          "start": 130,
+          "end": 132,
+          "label": "private_url"
+        },
+        {
+          "start": 147,
+          "end": 157,
+          "label": "account_number"
+        },
+        {
+          "start": 157,
+          "end": 160,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-001": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 56,
+          "label": "private_email"
+        },
+        {
+          "start": 56,
+          "end": 60,
+          "label": "private_email"
+        },
+        {
+          "start": 95,
+          "end": 101,
+          "label": "account_number"
+        },
+        {
+          "start": 101,
+          "end": 104,
+          "label": "account_number"
+        },
+        {
+          "start": 122,
+          "end": 130,
+          "label": "private_url"
+        },
+        {
+          "start": 130,
+          "end": 132,
+          "label": "private_url"
+        },
+        {
+          "start": 147,
+          "end": 157,
+          "label": "account_number"
+        },
+        {
+          "start": 157,
+          "end": 160,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-002": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 28,
+          "label": "private_person"
+        },
+        {
+          "start": 28,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 39,
+          "end": 53,
+          "label": "private_email"
+        },
+        {
+          "start": 53,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 92,
+          "end": 94,
+          "label": "private_url"
+        },
+        {
+          "start": 97,
+          "end": 98,
+          "label": "private_url"
+        },
+        {
+          "start": 122,
+          "end": 130,
+          "label": "private_url"
+        },
+        {
+          "start": 130,
+          "end": 133,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-003": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 64,
+          "label": "private_email"
+        },
+        {
+          "start": 64,
+          "end": 68,
+          "label": "private_email"
+        },
+        {
+          "start": 131,
+          "end": 142,
+          "label": "private_url"
+        },
+        {
+          "start": 142,
+          "end": 145,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-004": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 35,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 54,
+          "label": "private_email"
+        },
+        {
+          "start": 54,
+          "end": 58,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-005": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 60,
+          "label": "private_email"
+        },
+        {
+          "start": 60,
+          "end": 64,
+          "label": "private_email"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-006": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 36,
+          "label": "private_person"
+        },
+        {
+          "start": 36,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 54,
+          "label": "private_email"
+        },
+        {
+          "start": 54,
+          "end": 58,
+          "label": "private_email"
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "label": "account_number"
+        },
+        {
+          "start": 94,
+          "end": 99,
+          "label": "private_url"
+        },
+        {
+          "start": 99,
+          "end": 102,
+          "label": "private_url"
+        },
+        {
+          "start": 120,
+          "end": 131,
+          "label": "private_url"
+        },
+        {
+          "start": 131,
+          "end": 134,
+          "label": "private_url"
+        },
+        {
+          "start": 149,
+          "end": 152,
+          "label": "account_number"
+        },
+        {
+          "start": 153,
+          "end": 159,
+          "label": "account_number"
+        },
+        {
+          "start": 159,
+          "end": 162,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-007": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 37,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 57,
+          "end": 61,
+          "label": "private_email"
+        },
+        {
+          "start": 96,
+          "end": 102,
+          "label": "private_url"
+        },
+        {
+          "start": 102,
+          "end": 104,
+          "label": "private_url"
+        },
+        {
+          "start": 122,
+          "end": 132,
+          "label": "private_url"
+        },
+        {
+          "start": 132,
+          "end": 135,
+          "label": "private_url"
+        },
+        {
+          "start": 150,
+          "end": 160,
+          "label": "account_number"
+        },
+        {
+          "start": 160,
+          "end": 163,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-008": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 28,
+          "label": "private_person"
+        },
+        {
+          "start": 28,
+          "end": 37,
+          "label": "private_person"
+        },
+        {
+          "start": 37,
+          "end": 38,
+          "label": "private_person"
+        },
+        {
+          "start": 40,
+          "end": 63,
+          "label": "private_email"
+        },
+        {
+          "start": 63,
+          "end": 67,
+          "label": "private_email"
+        },
+        {
+          "start": 102,
+          "end": 108,
+          "label": "private_url"
+        },
+        {
+          "start": 108,
+          "end": 111,
+          "label": "private_url"
+        },
+        {
+          "start": 129,
+          "end": 137,
+          "label": "private_url"
+        },
+        {
+          "start": 137,
+          "end": 140,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-009": {
+      "spans": [
+        {
+          "start": 8,
+          "end": 19,
+          "label": "account_number"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "account_number"
+        },
+        {
+          "start": 27,
+          "end": 34,
+          "label": "private_person"
+        },
+        {
+          "start": 34,
+          "end": 35,
+          "label": "private_person"
+        },
+        {
+          "start": 37,
+          "end": 53,
+          "label": "private_email"
+        },
+        {
+          "start": 53,
+          "end": 57,
+          "label": "private_email"
+        },
+        {
+          "start": 92,
+          "end": 99,
+          "label": "private_url"
+        },
+        {
+          "start": 99,
+          "end": 102,
+          "label": "private_url"
+        },
+        {
+          "start": 120,
+          "end": 130,
+          "label": "private_url"
+        },
+        {
+          "start": 130,
+          "end": 133,
+          "label": "private_url"
+        },
+        {
+          "start": 148,
+          "end": 158,
+          "label": "account_number"
+        },
+        {
+          "start": 158,
+          "end": 161,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-000": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 61,
+          "end": 77,
+          "label": "private_url"
+        },
+        {
+          "start": 78,
+          "end": 81,
+          "label": "private_url"
+        },
+        {
+          "start": 82,
+          "end": 99,
+          "label": "private_url"
+        },
+        {
+          "start": 99,
+          "end": 102,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "label": "private_person"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 49,
+          "label": "secret"
+        },
+        {
+          "start": 49,
+          "end": 52,
+          "label": "private_person"
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "label": "private_person"
+        },
+        {
+          "start": 61,
+          "end": 102,
+          "label": "private_url"
+        },
+        {
+          "start": 102,
+          "end": 105,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-002": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 4,
+          "label": "private_person"
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "label": "private_date"
+        },
+        {
+          "start": 5,
+          "end": 7,
+          "label": "private_person"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 51,
+          "label": "private_person"
+        },
+        {
+          "start": 51,
+          "end": 53,
+          "label": "private_person"
+        },
+        {
+          "start": 61,
+          "end": 103,
+          "label": "private_url"
+        },
+        {
+          "start": 103,
+          "end": 106,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-003": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 52,
+          "label": "secret"
+        },
+        {
+          "start": 52,
+          "end": 54,
+          "label": "secret"
+        },
+        {
+          "start": 62,
+          "end": 104,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-004": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "label": "private_person"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 43,
+          "end": 48,
+          "label": "private_person"
+        },
+        {
+          "start": 48,
+          "end": 50,
+          "label": "private_person"
+        },
+        {
+          "start": 58,
+          "end": 101,
+          "label": "private_url"
+        },
+        {
+          "start": 101,
+          "end": 104,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-005": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 4,
+          "label": "private_person"
+        },
+        {
+          "start": 4,
+          "end": 5,
+          "label": "private_date"
+        },
+        {
+          "start": 5,
+          "end": 7,
+          "label": "private_person"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 10,
+          "label": "private_person"
+        },
+        {
+          "start": 10,
+          "end": 11,
+          "label": "private_date"
+        },
+        {
+          "start": 11,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 52,
+          "label": "private_person"
+        },
+        {
+          "start": 52,
+          "end": 53,
+          "label": "private_person"
+        },
+        {
+          "start": 57,
+          "end": 60,
+          "label": "private_url"
+        },
+        {
+          "start": 61,
+          "end": 100,
+          "label": "private_url"
+        },
+        {
+          "start": 100,
+          "end": 103,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 4,
+          "label": "private_person"
+        },
+        {
+          "start": 4,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 10,
+          "label": "private_person"
+        },
+        {
+          "start": 10,
+          "end": 11,
+          "label": "private_date"
+        },
+        {
+          "start": 11,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 16,
+          "label": "private_date"
+        },
+        {
+          "start": 16,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 62,
+          "end": 75,
+          "label": "private_url"
+        },
+        {
+          "start": 82,
+          "end": 83,
+          "label": "private_url"
+        },
+        {
+          "start": 87,
+          "end": 95,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-007": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 19,
+          "label": "private_person"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 50,
+          "label": "secret"
+        },
+        {
+          "start": 50,
+          "end": 53,
+          "label": "private_person"
+        },
+        {
+          "start": 53,
+          "end": 54,
+          "label": "private_person"
+        },
+        {
+          "start": 55,
+          "end": 61,
+          "label": "private_url"
+        },
+        {
+          "start": 62,
+          "end": 102,
+          "label": "private_url"
+        },
+        {
+          "start": 102,
+          "end": 105,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-008": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "label": "private_person"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 16,
+          "label": "private_date"
+        },
+        {
+          "start": 16,
+          "end": 19,
+          "label": "private_person"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 42,
+          "end": 47,
+          "label": "private_person"
+        },
+        {
+          "start": 47,
+          "end": 52,
+          "label": "private_url"
+        },
+        {
+          "start": 52,
+          "end": 54,
+          "label": "private_person"
+        },
+        {
+          "start": 55,
+          "end": 103,
+          "label": "private_url"
+        },
+        {
+          "start": 103,
+          "end": 106,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-009": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 7,
+          "label": "private_person"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 8,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 19,
+          "end": 20,
+          "label": "private_person"
+        },
+        {
+          "start": 43,
+          "end": 51,
+          "label": "private_person"
+        },
+        {
+          "start": 51,
+          "end": 53,
+          "label": "private_person"
+        },
+        {
+          "start": 54,
+          "end": 60,
+          "label": "private_url"
+        },
+        {
+          "start": 61,
+          "end": 100,
+          "label": "private_url"
+        },
+        {
+          "start": 100,
+          "end": 103,
+          "label": "private_url"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-000": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 20,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-001": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-002": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 5,
+          "label": "private_date"
+        },
+        {
+          "start": 7,
+          "end": 8,
+          "label": "private_date"
+        },
+        {
+          "start": 13,
+          "end": 16,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-003": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-004": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 20,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-005": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 60,
+          "end": 63,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-006": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-007": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 20,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-008": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-009": {
+      "spans": [
+        {
+          "start": 0,
+          "end": 17,
+          "label": "private_date"
+        },
+        {
+          "start": 17,
+          "end": 19,
+          "label": "private_date"
+        },
+        {
+          "start": 37,
+          "end": 46,
+          "label": "account_number"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-000": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 49,
+          "label": "private_address"
+        },
+        {
+          "start": 50,
+          "end": 57,
+          "label": "private_address"
+        },
+        {
+          "start": 93,
+          "end": 104,
+          "label": "private_person"
+        },
+        {
+          "start": 104,
+          "end": 108,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-001": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 15,
+          "label": "private_person"
+        },
+        {
+          "start": 15,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 32,
+          "end": 55,
+          "label": "private_address"
+        },
+        {
+          "start": 56,
+          "end": 63,
+          "label": "private_address"
+        },
+        {
+          "start": 99,
+          "end": 112,
+          "label": "private_person"
+        },
+        {
+          "start": 112,
+          "end": 115,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-002": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 32,
+          "end": 55,
+          "label": "private_address"
+        },
+        {
+          "start": 56,
+          "end": 65,
+          "label": "private_address"
+        },
+        {
+          "start": 101,
+          "end": 114,
+          "label": "private_person"
+        },
+        {
+          "start": 114,
+          "end": 116,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-003": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 14,
+          "label": "private_person"
+        },
+        {
+          "start": 14,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 30,
+          "end": 48,
+          "label": "private_address"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "private_address"
+        },
+        {
+          "start": 96,
+          "end": 108,
+          "label": "private_person"
+        },
+        {
+          "start": 108,
+          "end": 113,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-004": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 12,
+          "label": "private_person"
+        },
+        {
+          "start": 12,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 53,
+          "label": "private_address"
+        },
+        {
+          "start": 54,
+          "end": 61,
+          "label": "private_address"
+        },
+        {
+          "start": 97,
+          "end": 107,
+          "label": "private_person"
+        },
+        {
+          "start": 107,
+          "end": 108,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-005": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 11,
+          "label": "private_person"
+        },
+        {
+          "start": 11,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 30,
+          "end": 48,
+          "label": "private_address"
+        },
+        {
+          "start": 49,
+          "end": 59,
+          "label": "private_address"
+        },
+        {
+          "start": 95,
+          "end": 106,
+          "label": "private_person"
+        },
+        {
+          "start": 106,
+          "end": 108,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-006": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 16,
+          "end": 18,
+          "label": "private_person"
+        },
+        {
+          "start": 32,
+          "end": 55,
+          "label": "private_address"
+        },
+        {
+          "start": 56,
+          "end": 64,
+          "label": "private_address"
+        },
+        {
+          "start": 100,
+          "end": 113,
+          "label": "private_person"
+        },
+        {
+          "start": 113,
+          "end": 117,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-007": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 8,
+          "label": "private_person"
+        },
+        {
+          "start": 9,
+          "end": 16,
+          "label": "private_person"
+        },
+        {
+          "start": 30,
+          "end": 48,
+          "label": "private_address"
+        },
+        {
+          "start": 49,
+          "end": 60,
+          "label": "private_address"
+        },
+        {
+          "start": 96,
+          "end": 102,
+          "label": "private_person"
+        },
+        {
+          "start": 102,
+          "end": 105,
+          "label": "private_person"
+        },
+        {
+          "start": 139,
+          "end": 142,
+          "label": "private_date"
+        },
+        {
+          "start": 142,
+          "end": 143,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-008": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 12,
+          "label": "private_person"
+        },
+        {
+          "start": 12,
+          "end": 14,
+          "label": "private_person"
+        },
+        {
+          "start": 28,
+          "end": 46,
+          "label": "private_address"
+        },
+        {
+          "start": 47,
+          "end": 58,
+          "label": "private_address"
+        },
+        {
+          "start": 94,
+          "end": 104,
+          "label": "private_person"
+        },
+        {
+          "start": 104,
+          "end": 106,
+          "label": "private_person"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-009": {
+      "spans": [
+        {
+          "start": 3,
+          "end": 13,
+          "label": "private_person"
+        },
+        {
+          "start": 13,
+          "end": 17,
+          "label": "private_person"
+        },
+        {
+          "start": 31,
+          "end": 54,
+          "label": "private_address"
+        },
+        {
+          "start": 55,
+          "end": 63,
+          "label": "private_address"
+        },
+        {
+          "start": 99,
+          "end": 107,
+          "label": "private_person"
+        },
+        {
+          "start": 107,
+          "end": 110,
+          "label": "private_person"
+        },
+        {
+          "start": 144,
+          "end": 147,
+          "label": "private_date"
+        },
+        {
+          "start": 147,
+          "end": 148,
+          "label": "private_date"
+        }
+      ],
+      "redacted": null
+    }
+  }
+}

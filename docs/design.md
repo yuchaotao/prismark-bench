@@ -48,6 +48,7 @@ recall and is useless; the negatives expose that.
 1. A T2 or T3 span is private only when it attaches to a specific person in the text.
    "Diabetes is common" has no private span; "Avery has diabetes" does.
 2. A span is protected only if all of it is masked. Partial masking still counts as a miss.
+   Leading articles ("a", "an", "the") are not part of the span.
 3. Obfuscated forms ("jane at gmail dot com", spelled-out digits) carry the same label as
    the plain form.
 4. A public figure is a negative only in a public-role context.
@@ -89,6 +90,11 @@ See the [README](../README.md#metrics) for definitions. Design choices:
 - **Utility.** Word-level similarity to the gold redaction penalizes both missed spans and
   over-redaction, and works for tools that rewrite text instead of returning spans.
 
+**Open question:** full coverage is strict for long descriptive spans. A model that masks
+"arrest for shoplifting" but not "in 2021" gets no credit. Options: annotate a required
+core inside each T3/T4 span, or accept a coverage threshold for those tiers.
+Overlap recall is reported alongside so the size of the gap stays visible.
+
 **Open question:** one headline number. Candidates: Privacy F1 (current), a tier-weighted
 recall (T1 > T3 > T2 > T4?), or a combination of leakage and utility.
 
@@ -98,14 +104,20 @@ recall (T1 > T3 > T2 > T4?), or a combination of leakage and utility.
 |---|---|---|
 | Regex baseline | span | done |
 | Microsoft Presidio | span | done |
+| openai/privacy-filter | span (token classifier) | done |
+| nvidia/gliner-pii, urchade/gliner_multi_pii-v1 | span (zero-shot, prompted with the taxonomy) | done |
+| piiranha-v1 | span (token classifier) | done |
+| Local LLMs via Ollama (Qwen 3.5 9B, Gemma 4 12B) | span (LLM as detector) | done |
 | Claude (LLM as detector) | span | adapter written, not yet run |
 | Google Cloud DLP, AWS Comprehend, Azure AI Language PII | span | planned |
-| spaCy / GLiNER / fine-tuned NER models | span | planned |
 | Private AI, Tonic Textual, other commercial redactors | span or text | planned |
 
-The LLM adapter's system prompt includes the taxonomy and the negative rules, so it is
-tested against the same boundary definition the benchmark publishes. Refusal fallbacks
-are off so results are never silently produced by a different model.
+All LLM adapters (Claude and local models) share one system prompt that includes the
+taxonomy and the negative rules ([prismark/adapters/prompt.py](../prismark/adapters/prompt.py)),
+so they are tested against the same boundary definition the benchmark publishes. GLiNER
+models get the taxonomy labels as their entity types. Token classifiers (privacy-filter,
+piiranha) run with their own fixed label sets, since they cannot be prompted.
+Claude refusal fallbacks are off so results are never silently produced by a different model.
 
 ## 6. Roadmap
 
