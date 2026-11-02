@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "prismark-bench"
+version = "0.1.0"
+description = "PrisMark: a benchmark that defines privacy problem boundaries and evaluates privacy tools."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+presidio = ["presidio-analyzer>=2.2", "presidio-anonymizer>=2.2"]
+llm = ["anthropic>=1.0"]
+dev = ["pytest>=8"]
+
+[project.scripts]
+prismark = "prismark.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["prismark*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

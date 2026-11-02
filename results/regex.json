@@ -1,0 +1,1569 @@
+{
+  "tool": "regex",
+  "data": "data/v0/test.jsonl",
+  "seconds_per_example": 2.411111102749904e-05,
+  "scores": {
+    "n_examples": 180,
+    "n_spans": 690,
+    "n_negatives": 210,
+    "protected_recall": 0.14492753623188406,
+    "char_precision": 0.8070739549839229,
+    "char_recall": 0.159736953754773,
+    "privacy_f1": 0.24572911057809976,
+    "exact_f1": 0.24096385542168677,
+    "negative_fp_rate": 0.14285714285714285,
+    "leakage_rate": 0.855072463768116,
+    "fragment_leakage_rate": 0.8623188405797102,
+    "negative_keep": 0.8523809523809524,
+    "utility": 0.7656791284275588,
+    "by_tier": {
+      "T1": 0.24390243902439024,
+      "T2": 0.0,
+      "T3": 0.0,
+      "T4": 0.0
+    },
+    "by_label": {
+      "AGE": 0.0,
+      "BANK_ACCOUNT": 1.0,
+      "CITY": 0.0,
+      "CREDIT_CARD": 1.0,
+      "CRIMINAL_RECORD": 0.0,
+      "DATE_OF_BIRTH": 0.0,
+      "DRIVER_LICENSE": 0.0,
+      "EMAIL": 0.6666666666666666,
+      "EMPLOYER": 0.0,
+      "ETHNICITY": 0.0,
+      "HEALTH_CONDITION": 0.0,
+      "INDIRECT_IDENTIFIER": 0.0,
+      "IP_ADDRESS": 1.0,
+      "JOB_TITLE": 0.0,
+      "MEDICAL_RECORD_NUMBER": 0.0,
+      "PASSPORT": 0.0,
+      "PERSON_NAME": 0.0,
+      "PHONE": 0.75,
+      "POLITICAL_AFFILIATION": 0.0,
+      "RELIGION": 0.0,
+      "SEXUAL_ORIENTATION": 0.0,
+      "SSN": 0.5,
+      "STREET_ADDRESS": 0.0,
+      "USERNAME": 0.0,
+      "ZIP_CODE": 0.0
+    },
+    "by_tag": {
+      "form": 0.15384615384615385,
+      "hard_negative": 0.25,
+      "lowercase": 0.5,
+      "multi_person": 0.10714285714285714,
+      "obfuscated": 0.0,
+      "structured": 0.5
+    }
+  },
+  "predictions": {
+    "email-intro-000": {
+      "spans": [
+        {
+          "start": 94,
+          "end": 120,
+          "label": "EMAIL"
+        },
+        {
+          "start": 124,
+          "end": 139,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-001": {
+      "spans": [
+        {
+          "start": 92,
+          "end": 109,
+          "label": "EMAIL"
+        },
+        {
+          "start": 113,
+          "end": 125,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-002": {
+      "spans": [
+        {
+          "start": 86,
+          "end": 105,
+          "label": "EMAIL"
+        },
+        {
+          "start": 109,
+          "end": 123,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-003": {
+      "spans": [
+        {
+          "start": 92,
+          "end": 107,
+          "label": "EMAIL"
+        },
+        {
+          "start": 111,
+          "end": 123,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-004": {
+      "spans": [
+        {
+          "start": 108,
+          "end": 125,
+          "label": "EMAIL"
+        },
+        {
+          "start": 129,
+          "end": 143,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-005": {
+      "spans": [
+        {
+          "start": 89,
+          "end": 105,
+          "label": "EMAIL"
+        },
+        {
+          "start": 109,
+          "end": 121,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-006": {
+      "spans": [
+        {
+          "start": 96,
+          "end": 113,
+          "label": "EMAIL"
+        },
+        {
+          "start": 117,
+          "end": 132,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-007": {
+      "spans": [
+        {
+          "start": 101,
+          "end": 122,
+          "label": "EMAIL"
+        },
+        {
+          "start": 126,
+          "end": 140,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-008": {
+      "spans": [
+        {
+          "start": 87,
+          "end": 106,
+          "label": "EMAIL"
+        },
+        {
+          "start": 110,
+          "end": 122,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-009": {
+      "spans": [
+        {
+          "start": 97,
+          "end": 127,
+          "label": "EMAIL"
+        },
+        {
+          "start": 131,
+          "end": 143,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-obfuscated-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-obfuscated-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "email-payment-000": {
+      "spans": [
+        {
+          "start": 49,
+          "end": 61,
+          "label": "PHONE"
+        },
+        {
+          "start": 81,
+          "end": 97,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-001": {
+      "spans": [
+        {
+          "start": 52,
+          "end": 64,
+          "label": "PHONE"
+        },
+        {
+          "start": 84,
+          "end": 103,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-002": {
+      "spans": [
+        {
+          "start": 51,
+          "end": 63,
+          "label": "PHONE"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-003": {
+      "spans": [
+        {
+          "start": 50,
+          "end": 62,
+          "label": "PHONE"
+        },
+        {
+          "start": 82,
+          "end": 98,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-004": {
+      "spans": [
+        {
+          "start": 50,
+          "end": 62,
+          "label": "PHONE"
+        },
+        {
+          "start": 82,
+          "end": 101,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-005": {
+      "spans": [
+        {
+          "start": 47,
+          "end": 59,
+          "label": "PHONE"
+        },
+        {
+          "start": 79,
+          "end": 98,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-006": {
+      "spans": [
+        {
+          "start": 51,
+          "end": 63,
+          "label": "PHONE"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-007": {
+      "spans": [
+        {
+          "start": 48,
+          "end": 60,
+          "label": "PHONE"
+        },
+        {
+          "start": 80,
+          "end": 96,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-008": {
+      "spans": [
+        {
+          "start": 51,
+          "end": 63,
+          "label": "PHONE"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-009": {
+      "spans": [
+        {
+          "start": 52,
+          "end": 64,
+          "label": "PHONE"
+        },
+        {
+          "start": 84,
+          "end": 100,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-000": {
+      "spans": [
+        {
+          "start": 187,
+          "end": 199,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-001": {
+      "spans": [
+        {
+          "start": 221,
+          "end": 236,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-002": {
+      "spans": [
+        {
+          "start": 211,
+          "end": 223,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-003": {
+      "spans": [
+        {
+          "start": 213,
+          "end": 225,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-004": {
+      "spans": [
+        {
+          "start": 206,
+          "end": 220,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-005": {
+      "spans": [
+        {
+          "start": 188,
+          "end": 200,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-006": {
+      "spans": [
+        {
+          "start": 190,
+          "end": 204,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-007": {
+      "spans": [
+        {
+          "start": 195,
+          "end": 207,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-008": {
+      "spans": [
+        {
+          "start": 207,
+          "end": 219,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-009": {
+      "spans": [
+        {
+          "start": 211,
+          "end": 226,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-public-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-faith-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-indirect-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-lowercase-000": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 54,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-001": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 51,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-002": {
+      "spans": [
+        {
+          "start": 42,
+          "end": 57,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-003": {
+      "spans": [
+        {
+          "start": 42,
+          "end": 54,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-004": {
+      "spans": [
+        {
+          "start": 37,
+          "end": 52,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-005": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 53,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-006": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 52,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-007": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 56,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-008": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 53,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "chat-lowercase-009": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 55,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "social-public-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "social-public-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-onboarding-000": {
+      "spans": [
+        {
+          "start": 155,
+          "end": 174,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 150,
+          "end": 177,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-001": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 52,
+          "label": "SSN"
+        },
+        {
+          "start": 161,
+          "end": 180,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 156,
+          "end": 183,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-002": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 52,
+          "label": "SSN"
+        },
+        {
+          "start": 152,
+          "end": 171,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 147,
+          "end": 174,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-003": {
+      "spans": [
+        {
+          "start": 154,
+          "end": 173,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 149,
+          "end": 176,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-004": {
+      "spans": [
+        {
+          "start": 154,
+          "end": 173,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 149,
+          "end": 176,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-005": {
+      "spans": [
+        {
+          "start": 162,
+          "end": 181,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 157,
+          "end": 184,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-006": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "SSN"
+        },
+        {
+          "start": 162,
+          "end": 181,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 157,
+          "end": 184,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-007": {
+      "spans": [
+        {
+          "start": 148,
+          "end": 167,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 143,
+          "end": 170,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-008": {
+      "spans": [
+        {
+          "start": 160,
+          "end": 179,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 155,
+          "end": 182,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-onboarding-009": {
+      "spans": [
+        {
+          "start": 43,
+          "end": 54,
+          "label": "SSN"
+        },
+        {
+          "start": 159,
+          "end": 178,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 154,
+          "end": 181,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "hr-complaint-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "finance-kyc-000": {
+      "spans": [
+        {
+          "start": 98,
+          "end": 109,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-001": {
+      "spans": [
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-002": {
+      "spans": [
+        {
+          "start": 98,
+          "end": 109,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-003": {
+      "spans": [
+        {
+          "start": 99,
+          "end": 110,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "finance-kyc-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "finance-kyc-006": {
+      "spans": [
+        {
+          "start": 97,
+          "end": 108,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "finance-kyc-008": {
+      "spans": [
+        {
+          "start": 97,
+          "end": 108,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "finance-kyc-009": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-ticket-000": {
+      "spans": [
+        {
+          "start": 35,
+          "end": 53,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 115,
+          "end": 128,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-001": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 59,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 121,
+          "end": 134,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-002": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 63,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 126,
+          "end": 136,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-003": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 68,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 130,
+          "end": 141,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-004": {
+      "spans": [
+        {
+          "start": 37,
+          "end": 58,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 121,
+          "end": 132,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-005": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 65,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 128,
+          "end": 138,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-006": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 56,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 119,
+          "end": 132,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-007": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 63,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 124,
+          "end": 138,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-008": {
+      "spans": [
+        {
+          "start": 41,
+          "end": 60,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 123,
+          "end": 134,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-009": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 57,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 119,
+          "end": 132,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-000": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 73,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-001": {
+      "spans": [
+        {
+          "start": 59,
+          "end": 70,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-002": {
+      "spans": [
+        {
+          "start": 62,
+          "end": 76,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-003": {
+      "spans": [
+        {
+          "start": 62,
+          "end": 75,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-004": {
+      "spans": [
+        {
+          "start": 62,
+          "end": 72,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-005": {
+      "spans": [
+        {
+          "start": 57,
+          "end": 68,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-006": {
+      "spans": [
+        {
+          "start": 62,
+          "end": 73,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-007": {
+      "spans": [
+        {
+          "start": 58,
+          "end": 70,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-008": {
+      "spans": [
+        {
+          "start": 62,
+          "end": 73,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-auth-009": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 73,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-000": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-001": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-002": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-003": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-004": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-005": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-006": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-007": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-008": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-009": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-005": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-006": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-007": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-009": {
+      "spans": [],
+      "redacted": null
+    }
+  }
+}
