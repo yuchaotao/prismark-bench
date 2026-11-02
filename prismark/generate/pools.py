@@ -57,6 +57,8 @@ ORIENTATIONS = ["gay", "lesbian", "bisexual", "asexual", "pansexual"]
 POLITICAL = [
     "a registered Green Party member", "a local Democratic Socialists organizer",
     "a precinct captain for the county Republican Party", "a Libertarian Party volunteer",
+    "a donor to the state Democratic Party", "an active member of a far-right militia group",
+    "a Proud Boys supporter", "a Communist Party member",
 ]
 
 ETHNICITIES = ["Hmong", "Roma", "Somali", "Navajo", "Kurdish", "Afro-Caribbean"]
@@ -73,6 +75,12 @@ INDIRECT = [
     "the night janitor on the fourth floor of our building",
     "my neighbor's eldest son who just got back from deployment",
     "the only Portuguese-speaking teacher at Elmwood Elementary",
+    "the guy in 4B who drives the yellow Hummer",
+    "the head nurse on the night shift in the Riverside ICU",
+    "our CFO's twin sister",
+    "the only left-handed pitcher on the Bayside Tigers",
+    "the woman who runs the bakery across from the Oak Street station",
+    "the new principal of Westbrook High",
 ]
 
 # --- Hard negatives -------------------------------------------------------
@@ -88,5 +96,11 @@ ORGANIZATIONS = [
 ]
 
 PLACES = ["the Grand Canyon", "Lake Superior", "Yellowstone", "the Mississippi River", "Mount Rainier"]
+
+GENERIC_HEALTH = ["type 2 diabetes", "depression", "HIV", "Alzheimer's disease", "breast cancer", "opioid addiction"]
+
+GENERIC_RELIGIONS = ["Muslim", "Jewish", "Sikh", "Hindu", "Orthodox Christian"]
+
+GENERIC_POLITICS = ["Green Party ballot access", "the Libertarian platform", "democratic socialism", "Republican tax plans"]
 
 GENERIC_ROLES = ["a pharmacist", "the on-call engineer", "our account manager", "a customer", "the landlord"]

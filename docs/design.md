@@ -59,22 +59,71 @@ record) be positive? v0 avoids generating such cases.
 **Open question:** should a T3 span count as protected when the person it attaches to is
 already masked? Today it does not: the span itself must be masked.
 
+**Open question:** are case, claim, and ticket numbers private? Today they are decoys. But a
+case number attached to a person's claim links back to that person, the way an MRN does.
+privacy-filter flags 80% of them in v1. Options: keep them as decoys only when not tied to a
+person (an order number in a log), or move person-linked ones into T1 as record identifiers.
+
 ## 3. Data
 
-v0 uses template-based synthetic data ([prismark/generate](../prismark/generate)):
+All data is synthetic and template-based ([prismark/generate](../prismark/generate)):
 
-- Templates across 9 domains: email, medical, chat, social, HR, finance, support, logs, legal.
 - Fictional value pools; numbers use reserved ranges (555-01xx phones, documentation IP
-  blocks, Luhn-valid test card numbers).
+  blocks, Luhn-valid test card numbers, IBANs with valid check digits).
 - Values about the same person stay consistent within an example (name, email, DOB, age).
 - Gold spans are exact by construction, so no human annotation is needed.
-- Tags mark difficulty: `obfuscated`, `lowercase`, `multi_person`, `form`, `structured`, `no_pii`.
+- Tags mark difficulty: `obfuscated`, `lowercase`, `multi_person`, `form`, `structured`,
+  `partial_identifier`, `long`, `generic_attribute`, `no_pii`, `llm_template`.
 
-Synthetic data is safe to publish and cheap to scale, but templates are narrow. Planned:
+### Versions
 
-- LLM-written free-form examples, annotated by the generating model and verified by a
-  second model plus human spot checks.
-- A held-out private test split, to limit tuning to the public set.
+| Version | Templates | Splits | Status |
+|---|---|---|---|
+| v0 | 18 hand-written | test (180 examples) | archived in `data/v0`; no longer reproducible from the current generator |
+| v1 | 33 hand-written + 83 LLM-written | dev (195 examples, 39 templates) / test (385 examples, 77 templates) | current |
+
+### LLM-written templates (v1)
+
+Hand-written templates are narrow. v1 adds templates written by a local LLM
+([llm_templates.py](../prismark/generate/llm_templates.py)). The key design choice: **the LLM
+writes templates, not data.** Every person-specific detail must be a placeholder, which the
+generator fills with fictional values. So the text gets the variety of free-form writing,
+while the gold spans stay exact and no model output is ever trusted as a label.
+
+The authoring model is gpt-oss:20b, which is not a tool under test. Using a tool under test
+would bias the data toward that tool's own style.
+
+Each template passes five checks before it is kept:
+
+1. **Syntax**: only known placeholders, required ones present, at least two private ones,
+   and no article in front of phrase placeholders ("a {POLITICAL}" would render "a a ...").
+2. **Patterns**: no email, phone, card, SSN, IP, street address, or long number in the
+   literal text. Literal PII would be unlabeled and would penalize tools that catch it.
+3. **Leak judge**: a model call reads the literal text with placeholders masked and must find
+   no private information outside them.
+4. **Coherence judge**: the template is filled once; a model call checks that every value is
+   the right kind of thing for its position.
+5. **Negative judge**: each hard negative is marked in a filled sample; a model call checks
+   it is not actually about a private person ("{FIRST_NAME} has a history of
+   {!GENERIC_HEALTH}" would turn a negative into a private fact).
+
+After the automatic checks, every template was also reviewed by hand (by Claude, reading all
+of them). Of 140 authored templates, 57 were removed, almost all for a placeholder used with
+the wrong meaning: a criminal record as a claim number, a person's name as a car model,
+sexual orientation as a class topic. Such a template mislabels its spans, and the judges
+missed these. Removed templates and reasons are kept in `llm_templates_rejected.jsonl`.
+In v1 the authoring run took 368 model attempts for 140 automatic passes, and 83 survived review.
+
+Accepted templates are committed in `llm_templates.jsonl`, so the dataset regenerates without
+a model.
+
+### Splits
+
+Templates, not examples, are assigned to dev or test (by a hash of the template id), so no
+template appears in both. Each template has its own seeded RNG, so adding a template never
+changes the examples of another.
+
+Planned: a held-out private test split, to limit tuning to the public set.
 
 ## 4. Metrics
 
@@ -121,7 +170,7 @@ Claude refusal fallbacks are off so results are never silently produced by a dif
 
 ## 6. Roadmap
 
-- v0.1: run Presidio and Claude; publish the first leaderboard.
-- v0.2: LLM-generated free-form data; cloud DLP adapters; latency and cost columns.
+- v0.1: run Presidio and open-source models; publish the first leaderboard. (done)
+- v0.2: LLM-written templates, dev/test splits (done); cloud DLP adapters; Claude.
 - v0.3: re-identification attacks on redacted output (can a model recover the person?).
 - v1: expand scope to guardrails and agent contextual privacy.

@@ -17,5 +17,6 @@ jobs:
       - run: pytest -q
       - name: Check the committed dataset matches the generator
         run: |
-          prismark generate --out /tmp/test.jsonl
-          diff -q /tmp/test.jsonl data/v0/test.jsonl
+          prismark generate --out-dir /tmp/v1
+          diff -q /tmp/v1/dev.jsonl data/v1/dev.jsonl
+          diff -q /tmp/v1/test.jsonl data/v1/test.jsonl

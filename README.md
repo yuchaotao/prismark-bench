@@ -7,7 +7,8 @@ PrisMark is a benchmark for **privacy tools**. It has two goals:
 2. **Measure how well real tools respect that boundary.** Tools are scored on what they
    protect, what they leak, and what they destroy along the way.
 
-v0 focuses on **PII detection and redaction in English text**, using fully synthetic data.
+The current version (v1) focuses on **PII detection and redaction in English text**, using
+fully synthetic data from hand-written and LLM-written templates, with dev and test splits.
 See [docs/design.md](docs/design.md) for the design and the open questions.
 
 ## The boundary at a glance
@@ -26,9 +27,9 @@ Full definitions live in [prismark/taxonomy.py](prismark/taxonomy.py).
 
 ```bash
 pip install -e ".[dev]"
-prismark generate                 # writes data/v0/test.jsonl (fixed seed)
+prismark generate                 # writes data/v1/{dev,test}.jsonl (fixed seed)
 prismark run --tool regex         # dependency-free baseline
-prismark report                   # leaderboard from results/*.json
+prismark report                   # leaderboard from results/v1/test/*.json
 ```
 
 Other tools:
@@ -66,33 +67,50 @@ prismark run --tool claude:claude-haiku-5-5      # any model id
 
 Scores are also broken down by tier, by label, and by tag (`obfuscated`, `lowercase`, `multi_person`, ...).
 
-## Current results (v0 data, 180 examples)
+## Current results (v1 test: 385 examples, 77 templates, 2,120 private spans, 300 hard negatives)
 
-Sorted by Privacy F1.
+Sorted by Privacy F1. Archived v0 results are in [results/v0](results/v0/test).
 
 | Tool | Type | Protected recall ↑ | Overlap recall ↑ | Char precision ↑ | Privacy F1 ↑ | Hard-neg FP ↓ | Leakage ↓ | Fragment leakage ↓ | Utility ↑ | ms / example |
 |---|---|---|---|---|---|---|---|---|---|---|
-| ollama:gemma4:12b | local LLM | 0.920 | 0.986 | 0.974 | **0.946** | **0.043** | **0.014** | **0.068** | **0.969** | 1075 |
-| gliner-nvidia | GLiNER | 0.883 | 0.977 | 0.880 | 0.881 | 0.381 | 0.023 | 0.101 | 0.925 | 36 |
-| ollama:qwen3.5:9b | local LLM | 0.823 | 0.888 | 0.941 | 0.878 | 0.129 | 0.112 | 0.186 | 0.929 | 973 |
-| gliner-urchade | GLiNER | 0.668 | 0.712 | 0.841 | 0.745 | 0.252 | 0.290 | 0.341 | 0.873 | 46 |
-| privacy-filter | token classifier | 0.649 | 0.667 | 0.788 | 0.712 | 0.319 | 0.336 | 0.359 | 0.822 | 533 |
-| piiranha | token classifier | 0.567 | 0.630 | 0.868 | 0.686 | 0.281 | 0.371 | 0.409 | 0.819 | 17 |
-| presidio | rules + NER | 0.596 | 0.684 | 0.691 | 0.640 | 0.357 | 0.328 | 0.410 | 0.794 | 9 |
-| regex | rules | 0.136 | 0.136 | 0.800 | 0.233 | 0.143 | 0.864 | 0.870 | 0.772 | 0 |
+| ollama:gemma4:12b | local LLM | **0.936** | **0.956** | **0.983** | **0.959** | **0.063** | **0.044** | **0.062** | **0.972** | 1255 |
+| ollama:qwen3.5:9b | local LLM | 0.873 | 0.902 | 0.952 | 0.911 | 0.163 | 0.102 | 0.140 | 0.946 | 1251 |
+| gliner-nvidia | GLiNER | 0.879 | 0.943 | 0.884 | 0.882 | 0.510 | 0.059 | 0.122 | 0.927 | 30 |
+| privacy-filter | token classifier | 0.669 | 0.690 | 0.846 | 0.747 | 0.507 | 0.319 | 0.343 | 0.883 | 559 |
+| piiranha | token classifier | 0.563 | 0.626 | 0.904 | 0.694 | 0.397 | 0.386 | 0.438 | 0.871 | 17 |
+| gliner-urchade | GLiNER | 0.577 | 0.615 | 0.845 | 0.686 | 0.350 | 0.402 | 0.455 | 0.892 | 21 |
+| presidio | rules + NER | 0.565 | 0.633 | 0.730 | 0.637 | 0.557 | 0.402 | 0.481 | 0.852 | 14 |
+| regex | rules | 0.144 | 0.144 | 0.903 | 0.248 | 0.150 | 0.856 | 0.864 | 0.829 | 0 |
 
 Protected recall by tier:
 
 | Tool | T1 Direct | T2 Quasi | T3 Sensitive | T4 Contextual |
 |---|---|---|---|---|
-| ollama:gemma4:12b | 0.976 | 0.969 | 0.691 | 0.400 |
-| gliner-nvidia | 0.937 | 0.963 | 0.645 | 0.000 |
-| ollama:qwen3.5:9b | 0.893 | 0.838 | 0.618 | 0.000 |
-| gliner-urchade | 0.541 | 0.969 | 0.764 | 0.000 |
-| privacy-filter | 0.905 | 0.481 | 0.000 | 0.000 |
-| piiranha | 0.759 | 0.500 | 0.000 | 0.000 |
-| presidio | 0.739 | 0.562 | 0.164 | 0.000 |
-| regex | 0.229 | 0.000 | 0.000 | 0.000 |
+| ollama:gemma4:12b | 0.971 | 0.918 | 0.861 | 0.160 |
+| ollama:qwen3.5:9b | 0.942 | 0.792 | 0.735 | 0.000 |
+| gliner-nvidia | 0.917 | 0.949 | 0.690 | 0.000 |
+| privacy-filter | 0.921 | 0.328 | 0.016 | 0.000 |
+| piiranha | 0.735 | 0.410 | 0.029 | 0.000 |
+| gliner-urchade | 0.470 | 0.918 | 0.681 | 0.000 |
+| presidio | 0.697 | 0.482 | 0.119 | 0.000 |
+| regex | 0.219 | 0.000 | 0.000 | 0.000 |
+
+Hard negatives flagged, by type:
+
+| Tool | Decoy number | Generic attribute | Generic role | Organization | Place | Public figure |
+|---|---|---|---|---|---|---|
+| ollama:gemma4:12b | 3/175 | 12/40 | 0/20 | 0/20 | 4/25 | 0/20 |
+| ollama:qwen3.5:9b | 27/175 | 8/40 | 0/20 | 1/20 | 5/25 | 8/20 |
+| gliner-nvidia | 78/175 | 39/40 | 11/20 | 2/20 | 10/25 | 13/20 |
+| privacy-filter | 140/175 | 0/40 | 0/20 | 1/20 | 0/25 | 11/20 |
+| piiranha | 96/175 | 0/40 | 0/20 | 0/20 | 22/25 | 1/20 |
+| gliner-urchade | 41/175 | 34/40 | 13/20 | 14/20 | 3/25 | 0/20 |
+| presidio | 114/175 | 12/40 | 0/20 | 0/20 | 21/25 | 20/20 |
+| regex | 45/175 | 0/40 | 0/20 | 0/20 | 0/25 | 0/20 |
+
+Protected recall is about the same on hand-written and LLM-written templates for every tool
+(e.g. gemma4 0.929 vs 0.938, gliner-nvidia 0.888 vs 0.876), so the LLM templates are not an
+easier or harder subset.
 
 Setup: one RTX 4070 Ti SUPER (16 GB), WSL2 Ubuntu 22.04. Timings are single-example, unbatched.
 
@@ -104,9 +122,10 @@ Setup: one RTX 4070 Ti SUPER (16 GB), WSL2 Ubuntu 22.04. Timings are single-exam
 - ollama models: Ollama 0.40.13, default quantization, temperature 0, thinking off, JSON-schema output,
   shared prompt ([prompt.py](prismark/adapters/prompt.py)).
 
-Caveats: v0 data is template-based and small. GLiNER results depend on the label wording
-(gliner-urchade finds only 17% of names with the label "person name"). Token classifiers
-cannot be told about the taxonomy, so they are judged on a boundary they were not trained on.
+Caveats: all data is synthetic. GLiNER results depend on the label wording (gliner-urchade
+finds few names with the label "person name"). Token classifiers cannot be told about the
+taxonomy, so they are judged on a boundary they were not trained on. Most decoy numbers are
+case and claim numbers, whose status is an open question (see [docs/design.md](docs/design.md)).
 
 ## Adding a tool
 
@@ -120,11 +139,13 @@ Subclass `prismark.adapters.base.Adapter` and implement `detect(text) -> list[Sp
 prismark/
   taxonomy.py         the privacy boundary: labels, tiers, hard negatives
   schema.py           Example / Span data model, JSONL I/O
-  generate/           synthetic data: value pools, templates, generator
-  adapters/           tool wrappers: regex baseline, Presidio, Claude
+  generate/           synthetic data: value pools, templates, generator, LLM template author
+  adapters/           tool wrappers: regex, Presidio, HF token classifiers, GLiNER, Ollama, Claude
   metrics.py          scoring
-  cli.py              `prismark generate | run | report`
-data/v0/test.jsonl    the generated v0 test set
+  cli.py              `prismark generate | run | rescore | report`
+data/v1/              current dev and test sets
+data/v0/              archived v0 test set
+results/<version>/<split>/   one JSON per tool: scores and raw predictions
 docs/design.md        design rationale and roadmap
 ```
 

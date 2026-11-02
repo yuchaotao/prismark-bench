@@ -1,0 +1,3836 @@
+{
+  "tool": "regex",
+  "data": "data/v1/test.jsonl",
+  "seconds_per_example": 4.7579672726979794e-05,
+  "scores": {
+    "n_examples": 385,
+    "n_spans": 2120,
+    "n_negatives": 300,
+    "protected_recall": 0.14386792452830188,
+    "overlap_recall": 0.14386792452830188,
+    "char_precision": 0.9026325279480707,
+    "char_recall": 0.16570671962926184,
+    "privacy_f1": 0.24817928764451305,
+    "exact_f1": 0.24158415841584158,
+    "negative_fp_rate": 0.15,
+    "leakage_rate": 0.8561320754716981,
+    "fragment_leakage_rate": 0.8641509433962264,
+    "negative_keep": 0.85,
+    "utility": 0.829335126578905,
+    "by_tier": {
+      "T1": 0.21863799283154123,
+      "T2": 0.0,
+      "T3": 0.0,
+      "T4": 0.0
+    },
+    "by_label": {
+      "AGE": 0.0,
+      "BANK_ACCOUNT": 1.0,
+      "CITY": 0.0,
+      "CREDIT_CARD": 1.0,
+      "CRIMINAL_RECORD": 0.0,
+      "DATE_OF_BIRTH": 0.0,
+      "DRIVER_LICENSE": 0.0,
+      "EMAIL": 0.4,
+      "EMPLOYER": 0.0,
+      "ETHNICITY": 0.0,
+      "HEALTH_CONDITION": 0.0,
+      "INDIRECT_IDENTIFIER": 0.0,
+      "IP_ADDRESS": 1.0,
+      "JOB_TITLE": 0.0,
+      "MEDICAL_RECORD_NUMBER": 0.0,
+      "PASSPORT": 0.0,
+      "PERSON_NAME": 0.0,
+      "PHONE": 0.6538461538461539,
+      "POLITICAL_AFFILIATION": 0.0,
+      "RELIGION": 0.0,
+      "SEXUAL_ORIENTATION": 0.0,
+      "SSN": 0.16666666666666666,
+      "STREET_ADDRESS": 0.0,
+      "USERNAME": 0.0,
+      "ZIP_CODE": 0.0
+    },
+    "by_tag": {
+      "generic_attribute": 0.0,
+      "hard_negative": 0.14339622641509434,
+      "llm_template": 0.14803625377643503,
+      "long": 0.2727272727272727,
+      "lowercase": 0.0875,
+      "multi_person": 0.07317073170731707,
+      "obfuscated": 0.14133333333333334,
+      "partial_identifier": 0.0,
+      "structured": 0.21428571428571427
+    }
+  },
+  "predictions": {
+    "email-intro-000": {
+      "spans": [
+        {
+          "start": 95,
+          "end": 114,
+          "label": "EMAIL"
+        },
+        {
+          "start": 118,
+          "end": 132,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-001": {
+      "spans": [
+        {
+          "start": 95,
+          "end": 120,
+          "label": "EMAIL"
+        },
+        {
+          "start": 124,
+          "end": 136,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-002": {
+      "spans": [
+        {
+          "start": 98,
+          "end": 117,
+          "label": "EMAIL"
+        },
+        {
+          "start": 121,
+          "end": 133,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-003": {
+      "spans": [
+        {
+          "start": 95,
+          "end": 116,
+          "label": "EMAIL"
+        },
+        {
+          "start": 120,
+          "end": 132,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-intro-004": {
+      "spans": [
+        {
+          "start": 94,
+          "end": 113,
+          "label": "EMAIL"
+        },
+        {
+          "start": 117,
+          "end": 129,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-000": {
+      "spans": [
+        {
+          "start": 49,
+          "end": 61,
+          "label": "PHONE"
+        },
+        {
+          "start": 81,
+          "end": 97,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-001": {
+      "spans": [
+        {
+          "start": 51,
+          "end": 63,
+          "label": "PHONE"
+        },
+        {
+          "start": 83,
+          "end": 102,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-002": {
+      "spans": [
+        {
+          "start": 49,
+          "end": 61,
+          "label": "PHONE"
+        },
+        {
+          "start": 81,
+          "end": 100,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-003": {
+      "spans": [
+        {
+          "start": 50,
+          "end": 62,
+          "label": "PHONE"
+        },
+        {
+          "start": 82,
+          "end": 98,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "email-payment-004": {
+      "spans": [
+        {
+          "start": 49,
+          "end": 61,
+          "label": "PHONE"
+        },
+        {
+          "start": 81,
+          "end": 100,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-000": {
+      "spans": [
+        {
+          "start": 214,
+          "end": 228,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-001": {
+      "spans": [
+        {
+          "start": 206,
+          "end": 218,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-002": {
+      "spans": [
+        {
+          "start": 213,
+          "end": 225,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-003": {
+      "spans": [
+        {
+          "start": 206,
+          "end": 218,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-note-004": {
+      "spans": [
+        {
+          "start": 201,
+          "end": 215,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "medical-referral-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "medical-referral-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "chat-coming-out-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-complaint-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-ticket-000": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 60,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 123,
+          "end": 136,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-001": {
+      "spans": [
+        {
+          "start": 40,
+          "end": 61,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 124,
+          "end": 138,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-002": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 64,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 127,
+          "end": 141,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-003": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 66,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 129,
+          "end": 140,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "support-ticket-004": {
+      "spans": [
+        {
+          "start": 39,
+          "end": 65,
+          "label": "EMAIL"
+        },
+        {
+          "start": 8,
+          "end": 20,
+          "label": "PHONE"
+        },
+        {
+          "start": 128,
+          "end": 140,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-000": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-001": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-002": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-003": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "log-decoys-004": {
+      "spans": [
+        {
+          "start": 60,
+          "end": 72,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "legal-affidavit-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "legal-affidavit-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-group-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-group-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-group-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-group-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "support-group-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-policy-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-policy-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-policy-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-policy-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-policy-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-religion-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-religion-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-religion-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-religion-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "hr-religion-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "board-politics-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "board-politics-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "board-politics-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "board-politics-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "board-politics-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "gossip-indirect-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "gossip-indirect-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "gossip-indirect-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "gossip-indirect-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "gossip-indirect-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "review-indirect-000": {
+      "spans": [
+        {
+          "start": 85,
+          "end": 97,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "review-indirect-001": {
+      "spans": [
+        {
+          "start": 117,
+          "end": 129,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "review-indirect-002": {
+      "spans": [
+        {
+          "start": 118,
+          "end": 130,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "review-indirect-003": {
+      "spans": [
+        {
+          "start": 106,
+          "end": 118,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "review-indirect-004": {
+      "spans": [
+        {
+          "start": 122,
+          "end": 134,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "intern-hero-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "intern-hero-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "intern-hero-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "intern-hero-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "intern-hero-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "call-transcript-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "call-transcript-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "call-transcript-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "call-transcript-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "call-transcript-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "config-file-000": {
+      "spans": [
+        {
+          "start": 44,
+          "end": 65,
+          "label": "EMAIL"
+        },
+        {
+          "start": 78,
+          "end": 90,
+          "label": "PHONE"
+        },
+        {
+          "start": 123,
+          "end": 137,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "config-file-001": {
+      "spans": [
+        {
+          "start": 44,
+          "end": 59,
+          "label": "EMAIL"
+        },
+        {
+          "start": 72,
+          "end": 86,
+          "label": "PHONE"
+        },
+        {
+          "start": 119,
+          "end": 129,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "config-file-002": {
+      "spans": [
+        {
+          "start": 45,
+          "end": 68,
+          "label": "EMAIL"
+        },
+        {
+          "start": 81,
+          "end": 96,
+          "label": "PHONE"
+        },
+        {
+          "start": 127,
+          "end": 140,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "config-file-003": {
+      "spans": [
+        {
+          "start": 45,
+          "end": 66,
+          "label": "EMAIL"
+        },
+        {
+          "start": 79,
+          "end": 91,
+          "label": "PHONE"
+        },
+        {
+          "start": 125,
+          "end": 138,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "config-file-004": {
+      "spans": [
+        {
+          "start": 45,
+          "end": 65,
+          "label": "EMAIL"
+        },
+        {
+          "start": 78,
+          "end": 92,
+          "label": "PHONE"
+        },
+        {
+          "start": 125,
+          "end": 139,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "csv-export-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "csv-export-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "csv-export-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "csv-export-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "csv-export-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "insurance-claim-000": {
+      "spans": [
+        {
+          "start": 373,
+          "end": 396,
+          "label": "EMAIL"
+        },
+        {
+          "start": 400,
+          "end": 412,
+          "label": "PHONE"
+        },
+        {
+          "start": 324,
+          "end": 343,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 319,
+          "end": 346,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "insurance-claim-001": {
+      "spans": [
+        {
+          "start": 364,
+          "end": 385,
+          "label": "EMAIL"
+        },
+        {
+          "start": 389,
+          "end": 401,
+          "label": "PHONE"
+        },
+        {
+          "start": 315,
+          "end": 334,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 310,
+          "end": 337,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "insurance-claim-002": {
+      "spans": [
+        {
+          "start": 379,
+          "end": 401,
+          "label": "EMAIL"
+        },
+        {
+          "start": 405,
+          "end": 419,
+          "label": "PHONE"
+        },
+        {
+          "start": 330,
+          "end": 349,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 325,
+          "end": 352,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "insurance-claim-003": {
+      "spans": [
+        {
+          "start": 359,
+          "end": 378,
+          "label": "EMAIL"
+        },
+        {
+          "start": 382,
+          "end": 394,
+          "label": "PHONE"
+        },
+        {
+          "start": 310,
+          "end": 329,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 305,
+          "end": 332,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "insurance-claim-004": {
+      "spans": [
+        {
+          "start": 364,
+          "end": 386,
+          "label": "EMAIL"
+        },
+        {
+          "start": 390,
+          "end": 402,
+          "label": "PHONE"
+        },
+        {
+          "start": 315,
+          "end": 334,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 310,
+          "end": 337,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "dating-profile-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "dating-profile-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "dating-profile-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "dating-profile-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "dating-profile-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "moving-story-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "moving-story-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "moving-story-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "moving-story-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "moving-story-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-001-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-001-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-001-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-001-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-001-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-001-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-001-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-001-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-001-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-001-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-legal-001-000": {
+      "spans": [
+        {
+          "start": 149,
+          "end": 162,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-001-001": {
+      "spans": [
+        {
+          "start": 148,
+          "end": 159,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-001-002": {
+      "spans": [
+        {
+          "start": 147,
+          "end": 160,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-001-003": {
+      "spans": [
+        {
+          "start": 148,
+          "end": 161,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-001-004": {
+      "spans": [
+        {
+          "start": 147,
+          "end": 160,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-001-000": {
+      "spans": [
+        {
+          "start": 104,
+          "end": 123,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 317,
+          "end": 336,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 99,
+          "end": 126,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 312,
+          "end": 339,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-001-001": {
+      "spans": [
+        {
+          "start": 107,
+          "end": 126,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 338,
+          "end": 357,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 102,
+          "end": 129,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 333,
+          "end": 360,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-001-002": {
+      "spans": [
+        {
+          "start": 104,
+          "end": 123,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 350,
+          "end": 369,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 99,
+          "end": 126,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 345,
+          "end": 372,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-001-003": {
+      "spans": [
+        {
+          "start": 118,
+          "end": 137,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 364,
+          "end": 383,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 113,
+          "end": 140,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 359,
+          "end": 386,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-001-004": {
+      "spans": [
+        {
+          "start": 104,
+          "end": 123,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 323,
+          "end": 342,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 99,
+          "end": 126,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 318,
+          "end": 345,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-001-000": {
+      "spans": [
+        {
+          "start": 455,
+          "end": 471,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 503,
+          "end": 522,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 498,
+          "end": 525,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-001-001": {
+      "spans": [
+        {
+          "start": 449,
+          "end": 468,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 500,
+          "end": 519,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 495,
+          "end": 522,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-001-002": {
+      "spans": [
+        {
+          "start": 451,
+          "end": 470,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 502,
+          "end": 521,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 497,
+          "end": 524,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-001-003": {
+      "spans": [
+        {
+          "start": 447,
+          "end": 463,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 495,
+          "end": 514,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 490,
+          "end": 517,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-001-004": {
+      "spans": [
+        {
+          "start": 459,
+          "end": 475,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 507,
+          "end": 526,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 502,
+          "end": 529,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-002-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-002-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-002-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-002-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-002-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-real_estate-001-000": {
+      "spans": [
+        {
+          "start": 178,
+          "end": 192,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-real_estate-001-001": {
+      "spans": [
+        {
+          "start": 177,
+          "end": 190,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-real_estate-001-002": {
+      "spans": [
+        {
+          "start": 178,
+          "end": 191,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-real_estate-001-003": {
+      "spans": [
+        {
+          "start": 182,
+          "end": 194,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-real_estate-001-004": {
+      "spans": [
+        {
+          "start": 187,
+          "end": 201,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-001-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-001-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-001-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-001-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-001-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-002-000": {
+      "spans": [
+        {
+          "start": 310,
+          "end": 321,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-002-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-002-002": {
+      "spans": [
+        {
+          "start": 323,
+          "end": 334,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-002-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-002-004": {
+      "spans": [
+        {
+          "start": 313,
+          "end": 324,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-004-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-004-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-004-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-004-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-004-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-003-000": {
+      "spans": [
+        {
+          "start": 222,
+          "end": 235,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-003-001": {
+      "spans": [
+        {
+          "start": 240,
+          "end": 251,
+          "label": "SSN"
+        },
+        {
+          "start": 224,
+          "end": 234,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-003-002": {
+      "spans": [
+        {
+          "start": 217,
+          "end": 228,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-003-003": {
+      "spans": [
+        {
+          "start": 214,
+          "end": 225,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-003-004": {
+      "spans": [
+        {
+          "start": 216,
+          "end": 229,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-002-000": {
+      "spans": [
+        {
+          "start": 266,
+          "end": 294,
+          "label": "EMAIL"
+        },
+        {
+          "start": 221,
+          "end": 240,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 216,
+          "end": 243,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-002-001": {
+      "spans": [
+        {
+          "start": 267,
+          "end": 286,
+          "label": "EMAIL"
+        },
+        {
+          "start": 222,
+          "end": 241,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 217,
+          "end": 244,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-002-002": {
+      "spans": [
+        {
+          "start": 260,
+          "end": 279,
+          "label": "EMAIL"
+        },
+        {
+          "start": 215,
+          "end": 234,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 210,
+          "end": 237,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-002-003": {
+      "spans": [
+        {
+          "start": 266,
+          "end": 283,
+          "label": "EMAIL"
+        },
+        {
+          "start": 221,
+          "end": 240,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 216,
+          "end": 243,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-002-004": {
+      "spans": [
+        {
+          "start": 263,
+          "end": 284,
+          "label": "EMAIL"
+        },
+        {
+          "start": 218,
+          "end": 237,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 213,
+          "end": 240,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-004-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-004-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-004-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-004-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-004-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-004-000": {
+      "spans": [
+        {
+          "start": 158,
+          "end": 173,
+          "label": "PHONE"
+        },
+        {
+          "start": 116,
+          "end": 132,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-004-001": {
+      "spans": [
+        {
+          "start": 160,
+          "end": 172,
+          "label": "PHONE"
+        },
+        {
+          "start": 115,
+          "end": 134,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-004-002": {
+      "spans": [
+        {
+          "start": 158,
+          "end": 172,
+          "label": "PHONE"
+        },
+        {
+          "start": 116,
+          "end": 132,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-004-003": {
+      "spans": [
+        {
+          "start": 165,
+          "end": 180,
+          "label": "PHONE"
+        },
+        {
+          "start": 120,
+          "end": 139,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-004-004": {
+      "spans": [
+        {
+          "start": 159,
+          "end": 174,
+          "label": "PHONE"
+        },
+        {
+          "start": 117,
+          "end": 133,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-007-000": {
+      "spans": [
+        {
+          "start": 410,
+          "end": 422,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-007-001": {
+      "spans": [
+        {
+          "start": 406,
+          "end": 420,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-007-002": {
+      "spans": [
+        {
+          "start": 384,
+          "end": 396,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-007-003": {
+      "spans": [
+        {
+          "start": 403,
+          "end": 417,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-007-004": {
+      "spans": [
+        {
+          "start": 400,
+          "end": 412,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-001-000": {
+      "spans": [
+        {
+          "start": 170,
+          "end": 184,
+          "label": "PHONE"
+        },
+        {
+          "start": 311,
+          "end": 325,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-001-001": {
+      "spans": [
+        {
+          "start": 169,
+          "end": 184,
+          "label": "PHONE"
+        },
+        {
+          "start": 311,
+          "end": 326,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-001-002": {
+      "spans": [
+        {
+          "start": 172,
+          "end": 187,
+          "label": "PHONE"
+        },
+        {
+          "start": 316,
+          "end": 331,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-001-003": {
+      "spans": [
+        {
+          "start": 172,
+          "end": 184,
+          "label": "PHONE"
+        },
+        {
+          "start": 316,
+          "end": 328,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-001-004": {
+      "spans": [
+        {
+          "start": 172,
+          "end": 187,
+          "label": "PHONE"
+        },
+        {
+          "start": 315,
+          "end": 330,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-004-000": {
+      "spans": [
+        {
+          "start": 510,
+          "end": 525,
+          "label": "PHONE"
+        },
+        {
+          "start": 456,
+          "end": 475,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 451,
+          "end": 478,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-004-001": {
+      "spans": [
+        {
+          "start": 501,
+          "end": 516,
+          "label": "PHONE"
+        },
+        {
+          "start": 447,
+          "end": 466,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 442,
+          "end": 469,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-004-002": {
+      "spans": [
+        {
+          "start": 539,
+          "end": 551,
+          "label": "PHONE"
+        },
+        {
+          "start": 485,
+          "end": 504,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 480,
+          "end": 507,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-004-003": {
+      "spans": [
+        {
+          "start": 529,
+          "end": 544,
+          "label": "PHONE"
+        },
+        {
+          "start": 475,
+          "end": 494,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 470,
+          "end": 497,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-004-004": {
+      "spans": [
+        {
+          "start": 501,
+          "end": 515,
+          "label": "PHONE"
+        },
+        {
+          "start": 447,
+          "end": 466,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 442,
+          "end": 469,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-003-000": {
+      "spans": [
+        {
+          "start": 241,
+          "end": 256,
+          "label": "PHONE"
+        },
+        {
+          "start": 323,
+          "end": 342,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 359,
+          "end": 375,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 318,
+          "end": 345,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-003-001": {
+      "spans": [
+        {
+          "start": 211,
+          "end": 225,
+          "label": "PHONE"
+        },
+        {
+          "start": 292,
+          "end": 311,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 328,
+          "end": 344,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 287,
+          "end": 314,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-003-002": {
+      "spans": [
+        {
+          "start": 235,
+          "end": 247,
+          "label": "PHONE"
+        },
+        {
+          "start": 314,
+          "end": 333,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 350,
+          "end": 369,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 309,
+          "end": 336,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-003-003": {
+      "spans": [
+        {
+          "start": 221,
+          "end": 235,
+          "label": "PHONE"
+        },
+        {
+          "start": 302,
+          "end": 321,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 338,
+          "end": 357,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 297,
+          "end": 324,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-003-004": {
+      "spans": [
+        {
+          "start": 235,
+          "end": 249,
+          "label": "PHONE"
+        },
+        {
+          "start": 316,
+          "end": 335,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 352,
+          "end": 371,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 311,
+          "end": 338,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-005-000": {
+      "spans": [
+        {
+          "start": 398,
+          "end": 410,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-005-001": {
+      "spans": [
+        {
+          "start": 402,
+          "end": 414,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-005-002": {
+      "spans": [
+        {
+          "start": 397,
+          "end": 409,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-005-003": {
+      "spans": [
+        {
+          "start": 410,
+          "end": 422,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-005-004": {
+      "spans": [
+        {
+          "start": 399,
+          "end": 413,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-006-000": {
+      "spans": [
+        {
+          "start": 165,
+          "end": 184,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 214,
+          "end": 227,
+          "label": "IP_ADDRESS"
+        },
+        {
+          "start": 160,
+          "end": 187,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-006-001": {
+      "spans": [
+        {
+          "start": 152,
+          "end": 171,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 201,
+          "end": 213,
+          "label": "IP_ADDRESS"
+        },
+        {
+          "start": 147,
+          "end": 174,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-006-002": {
+      "spans": [
+        {
+          "start": 169,
+          "end": 188,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 218,
+          "end": 228,
+          "label": "IP_ADDRESS"
+        },
+        {
+          "start": 164,
+          "end": 191,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-006-003": {
+      "spans": [
+        {
+          "start": 154,
+          "end": 173,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 203,
+          "end": 214,
+          "label": "IP_ADDRESS"
+        },
+        {
+          "start": 149,
+          "end": 176,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-006-004": {
+      "spans": [
+        {
+          "start": 167,
+          "end": 186,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 216,
+          "end": 227,
+          "label": "IP_ADDRESS"
+        },
+        {
+          "start": 162,
+          "end": 189,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-003-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-003-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-003-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-003-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-003-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-005-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-005-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-005-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-005-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-005-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-005-000": {
+      "spans": [
+        {
+          "start": 26,
+          "end": 38,
+          "label": "PHONE"
+        },
+        {
+          "start": 163,
+          "end": 174,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-005-001": {
+      "spans": [
+        {
+          "start": 26,
+          "end": 38,
+          "label": "PHONE"
+        },
+        {
+          "start": 173,
+          "end": 183,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-005-002": {
+      "spans": [
+        {
+          "start": 26,
+          "end": 38,
+          "label": "PHONE"
+        },
+        {
+          "start": 166,
+          "end": 179,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-005-003": {
+      "spans": [
+        {
+          "start": 26,
+          "end": 38,
+          "label": "PHONE"
+        },
+        {
+          "start": 166,
+          "end": 179,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-005-004": {
+      "spans": [
+        {
+          "start": 26,
+          "end": 38,
+          "label": "PHONE"
+        },
+        {
+          "start": 166,
+          "end": 176,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-006-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-006-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-006-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-006-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-006-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-004-000": {
+      "spans": [
+        {
+          "start": 183,
+          "end": 198,
+          "label": "EMAIL"
+        },
+        {
+          "start": 203,
+          "end": 215,
+          "label": "PHONE"
+        },
+        {
+          "start": 249,
+          "end": 268,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-email-004-001": {
+      "spans": [
+        {
+          "start": 191,
+          "end": 208,
+          "label": "EMAIL"
+        },
+        {
+          "start": 213,
+          "end": 225,
+          "label": "PHONE"
+        },
+        {
+          "start": 259,
+          "end": 275,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-email-004-002": {
+      "spans": [
+        {
+          "start": 196,
+          "end": 216,
+          "label": "EMAIL"
+        },
+        {
+          "start": 221,
+          "end": 233,
+          "label": "PHONE"
+        },
+        {
+          "start": 267,
+          "end": 286,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-email-004-003": {
+      "spans": [
+        {
+          "start": 190,
+          "end": 212,
+          "label": "EMAIL"
+        },
+        {
+          "start": 217,
+          "end": 231,
+          "label": "PHONE"
+        },
+        {
+          "start": 265,
+          "end": 284,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-email-004-004": {
+      "spans": [
+        {
+          "start": 197,
+          "end": 218,
+          "label": "EMAIL"
+        },
+        {
+          "start": 223,
+          "end": 235,
+          "label": "PHONE"
+        },
+        {
+          "start": 269,
+          "end": 288,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-007-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-007-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-007-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-007-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-007-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-finance-002-000": {
+      "spans": [
+        {
+          "start": 289,
+          "end": 313,
+          "label": "EMAIL"
+        },
+        {
+          "start": 99,
+          "end": 115,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 190,
+          "end": 206,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-002-001": {
+      "spans": [
+        {
+          "start": 293,
+          "end": 315,
+          "label": "EMAIL"
+        },
+        {
+          "start": 97,
+          "end": 116,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 191,
+          "end": 210,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-002-002": {
+      "spans": [
+        {
+          "start": 291,
+          "end": 317,
+          "label": "EMAIL"
+        },
+        {
+          "start": 101,
+          "end": 117,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 192,
+          "end": 208,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-002-003": {
+      "spans": [
+        {
+          "start": 297,
+          "end": 323,
+          "label": "EMAIL"
+        },
+        {
+          "start": 101,
+          "end": 120,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 195,
+          "end": 214,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-002-004": {
+      "spans": [
+        {
+          "start": 294,
+          "end": 319,
+          "label": "EMAIL"
+        },
+        {
+          "start": 98,
+          "end": 117,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 192,
+          "end": 211,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-004-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-education-004-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-education-004-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-education-004-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-education-004-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-005-000": {
+      "spans": [
+        {
+          "start": 205,
+          "end": 221,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-005-001": {
+      "spans": [
+        {
+          "start": 209,
+          "end": 228,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-005-002": {
+      "spans": [
+        {
+          "start": 208,
+          "end": 224,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-005-003": {
+      "spans": [
+        {
+          "start": 205,
+          "end": 221,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-005-004": {
+      "spans": [
+        {
+          "start": 211,
+          "end": 227,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-004-000": {
+      "spans": [
+        {
+          "start": 289,
+          "end": 308,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 284,
+          "end": 311,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-004-001": {
+      "spans": [
+        {
+          "start": 297,
+          "end": 316,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 292,
+          "end": 319,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-004-002": {
+      "spans": [
+        {
+          "start": 292,
+          "end": 311,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 287,
+          "end": 314,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-004-003": {
+      "spans": [
+        {
+          "start": 290,
+          "end": 309,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 285,
+          "end": 312,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-004-004": {
+      "spans": [
+        {
+          "start": 292,
+          "end": 311,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 287,
+          "end": 314,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-007-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-007-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-007-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-007-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-007-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-finance-003-000": {
+      "spans": [
+        {
+          "start": 178,
+          "end": 189,
+          "label": "SSN"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-finance-003-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-finance-003-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-finance-003-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-finance-003-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-government-008-000": {
+      "spans": [
+        {
+          "start": 326,
+          "end": 338,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-008-001": {
+      "spans": [
+        {
+          "start": 337,
+          "end": 349,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-008-002": {
+      "spans": [
+        {
+          "start": 339,
+          "end": 351,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-008-003": {
+      "spans": [
+        {
+          "start": 334,
+          "end": 346,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-government-008-004": {
+      "spans": [
+        {
+          "start": 326,
+          "end": 340,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-email-006-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-006-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-006-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-006-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-006-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-code-006-000": {
+      "spans": [
+        {
+          "start": 192,
+          "end": 211,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-006-001": {
+      "spans": [
+        {
+          "start": 205,
+          "end": 224,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-006-002": {
+      "spans": [
+        {
+          "start": 219,
+          "end": 235,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-006-003": {
+      "spans": [
+        {
+          "start": 195,
+          "end": 211,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-code-006-004": {
+      "spans": [
+        {
+          "start": 206,
+          "end": 222,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-013-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-013-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-013-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-013-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-013-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-support-005-000": {
+      "spans": [
+        {
+          "start": 113,
+          "end": 125,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-005-001": {
+      "spans": [
+        {
+          "start": 107,
+          "end": 119,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-005-002": {
+      "spans": [
+        {
+          "start": 116,
+          "end": 128,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-005-003": {
+      "spans": [
+        {
+          "start": 114,
+          "end": 126,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-005-004": {
+      "spans": [
+        {
+          "start": 115,
+          "end": 127,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-006-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-support-006-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-support-006-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-support-006-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-support-006-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-social-008-000": {
+      "spans": [
+        {
+          "start": 314,
+          "end": 326,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-008-001": {
+      "spans": [
+        {
+          "start": 290,
+          "end": 302,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-008-002": {
+      "spans": [
+        {
+          "start": 295,
+          "end": 307,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-008-003": {
+      "spans": [
+        {
+          "start": 293,
+          "end": 305,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-social-008-004": {
+      "spans": [
+        {
+          "start": 299,
+          "end": 314,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-hr-010-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-010-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-010-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-010-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-010-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-government-013-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-government-013-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-government-013-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-government-013-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-government-013-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-legal-005-000": {
+      "spans": [
+        {
+          "start": 114,
+          "end": 126,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-005-001": {
+      "spans": [
+        {
+          "start": 114,
+          "end": 126,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-005-002": {
+      "spans": [
+        {
+          "start": 114,
+          "end": 124,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-005-003": {
+      "spans": [
+        {
+          "start": 114,
+          "end": 127,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-005-004": {
+      "spans": [
+        {
+          "start": 110,
+          "end": 124,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-008-000": {
+      "spans": [
+        {
+          "start": 236,
+          "end": 255,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-008-001": {
+      "spans": [
+        {
+          "start": 232,
+          "end": 248,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-008-002": {
+      "spans": [
+        {
+          "start": 244,
+          "end": 263,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-008-003": {
+      "spans": [
+        {
+          "start": 234,
+          "end": 253,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-008-004": {
+      "spans": [
+        {
+          "start": 246,
+          "end": 265,
+          "label": "CREDIT_CARD"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-insurance-011-000": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-insurance-011-001": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-insurance-011-002": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-insurance-011-003": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-insurance-011-004": {
+      "spans": [
+        {
+          "start": 10,
+          "end": 22,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-014-000": {
+      "spans": [
+        {
+          "start": 421,
+          "end": 435,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-014-001": {
+      "spans": [
+        {
+          "start": 417,
+          "end": 429,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-014-002": {
+      "spans": [
+        {
+          "start": 436,
+          "end": 451,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-014-003": {
+      "spans": [
+        {
+          "start": 421,
+          "end": 433,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-014-004": {
+      "spans": [
+        {
+          "start": 448,
+          "end": 462,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-007-000": {
+      "spans": [
+        {
+          "start": 149,
+          "end": 161,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-007-001": {
+      "spans": [
+        {
+          "start": 150,
+          "end": 163,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-007-002": {
+      "spans": [
+        {
+          "start": 150,
+          "end": 161,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-007-003": {
+      "spans": [
+        {
+          "start": 147,
+          "end": 161,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-007-004": {
+      "spans": [
+        {
+          "start": 146,
+          "end": 158,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-009-000": {
+      "spans": [
+        {
+          "start": 351,
+          "end": 363,
+          "label": "PHONE"
+        },
+        {
+          "start": 175,
+          "end": 189,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-009-001": {
+      "spans": [
+        {
+          "start": 362,
+          "end": 377,
+          "label": "PHONE"
+        },
+        {
+          "start": 184,
+          "end": 198,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-009-002": {
+      "spans": [
+        {
+          "start": 356,
+          "end": 368,
+          "label": "PHONE"
+        },
+        {
+          "start": 184,
+          "end": 197,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-009-003": {
+      "spans": [
+        {
+          "start": 358,
+          "end": 370,
+          "label": "PHONE"
+        },
+        {
+          "start": 184,
+          "end": 197,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-009-004": {
+      "spans": [
+        {
+          "start": 366,
+          "end": 378,
+          "label": "PHONE"
+        },
+        {
+          "start": 189,
+          "end": 199,
+          "label": "IP_ADDRESS"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-email-009-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-009-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-009-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-009-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-email-009-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-education-011-000": {
+      "spans": [
+        {
+          "start": 309,
+          "end": 326,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-011-001": {
+      "spans": [
+        {
+          "start": 310,
+          "end": 335,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-011-002": {
+      "spans": [
+        {
+          "start": 302,
+          "end": 329,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-011-003": {
+      "spans": [
+        {
+          "start": 301,
+          "end": 316,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-education-011-004": {
+      "spans": [
+        {
+          "start": 308,
+          "end": 325,
+          "label": "EMAIL"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-travel-003-000": {
+      "spans": [
+        {
+          "start": 338,
+          "end": 360,
+          "label": "EMAIL"
+        },
+        {
+          "start": 142,
+          "end": 154,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-travel-003-001": {
+      "spans": [
+        {
+          "start": 312,
+          "end": 330,
+          "label": "EMAIL"
+        },
+        {
+          "start": 139,
+          "end": 151,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-travel-003-002": {
+      "spans": [
+        {
+          "start": 328,
+          "end": 347,
+          "label": "EMAIL"
+        },
+        {
+          "start": 138,
+          "end": 150,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-travel-003-003": {
+      "spans": [
+        {
+          "start": 328,
+          "end": 345,
+          "label": "EMAIL"
+        },
+        {
+          "start": 140,
+          "end": 152,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-travel-003-004": {
+      "spans": [
+        {
+          "start": 327,
+          "end": 350,
+          "label": "EMAIL"
+        },
+        {
+          "start": 139,
+          "end": 151,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-chat-011-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-011-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-011-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-011-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-chat-011-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-012-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-012-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-012-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-012-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-hr-012-004": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-support-009-000": {
+      "spans": [
+        {
+          "start": 488,
+          "end": 500,
+          "label": "PHONE"
+        },
+        {
+          "start": 141,
+          "end": 160,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 218,
+          "end": 237,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 255,
+          "end": 274,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 396,
+          "end": 415,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 136,
+          "end": 163,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 250,
+          "end": 277,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-009-001": {
+      "spans": [
+        {
+          "start": 488,
+          "end": 500,
+          "label": "PHONE"
+        },
+        {
+          "start": 141,
+          "end": 160,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 218,
+          "end": 237,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 255,
+          "end": 274,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 396,
+          "end": 415,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 136,
+          "end": 163,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 250,
+          "end": 277,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-009-002": {
+      "spans": [
+        {
+          "start": 479,
+          "end": 491,
+          "label": "PHONE"
+        },
+        {
+          "start": 138,
+          "end": 157,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 215,
+          "end": 231,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 249,
+          "end": 268,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 390,
+          "end": 406,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 133,
+          "end": 160,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 244,
+          "end": 271,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-009-003": {
+      "spans": [
+        {
+          "start": 483,
+          "end": 495,
+          "label": "PHONE"
+        },
+        {
+          "start": 136,
+          "end": 155,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 213,
+          "end": 232,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 250,
+          "end": 269,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 391,
+          "end": 410,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 131,
+          "end": 158,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 245,
+          "end": 272,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-support-009-004": {
+      "spans": [
+        {
+          "start": 486,
+          "end": 498,
+          "label": "PHONE"
+        },
+        {
+          "start": 139,
+          "end": 158,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 216,
+          "end": 235,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 253,
+          "end": 272,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 394,
+          "end": 413,
+          "label": "CREDIT_CARD"
+        },
+        {
+          "start": 134,
+          "end": 161,
+          "label": "BANK_ACCOUNT"
+        },
+        {
+          "start": 248,
+          "end": 275,
+          "label": "BANK_ACCOUNT"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-008-000": {
+      "spans": [
+        {
+          "start": 456,
+          "end": 483,
+          "label": "EMAIL"
+        },
+        {
+          "start": 258,
+          "end": 270,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-008-001": {
+      "spans": [
+        {
+          "start": 453,
+          "end": 479,
+          "label": "EMAIL"
+        },
+        {
+          "start": 252,
+          "end": 266,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-008-002": {
+      "spans": [
+        {
+          "start": 455,
+          "end": 482,
+          "label": "EMAIL"
+        },
+        {
+          "start": 258,
+          "end": 270,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-008-003": {
+      "spans": [
+        {
+          "start": 459,
+          "end": 477,
+          "label": "EMAIL"
+        },
+        {
+          "start": 258,
+          "end": 272,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-legal-008-004": {
+      "spans": [
+        {
+          "start": 459,
+          "end": 478,
+          "label": "EMAIL"
+        },
+        {
+          "start": 256,
+          "end": 271,
+          "label": "PHONE"
+        }
+      ],
+      "redacted": null
+    },
+    "llm-news-015-000": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-015-001": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-015-002": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-015-003": {
+      "spans": [],
+      "redacted": null
+    },
+    "llm-news-015-004": {
+      "spans": [],
+      "redacted": null
+    }
+  }
+}

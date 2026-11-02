@@ -9,11 +9,12 @@ from dataclasses import asdict
 from pathlib import Path
 
 from prismark import adapters
-from prismark.generate.generator import generate
+from prismark.generate.generator import SPLITS, generate
 from prismark.metrics import Prediction, score
 from prismark.schema import Span, read_jsonl, write_jsonl
 
-DEFAULT_DATA = "data/v0/test.jsonl"
+DEFAULT_DATA_DIR = "data/v1"
+DEFAULT_DATA = f"{DEFAULT_DATA_DIR}/test.jsonl"
 HEADLINE = [
     ("protected_recall", "Protected recall ↑"),
     ("overlap_recall", "Overlap recall ↑"),
@@ -26,10 +27,18 @@ HEADLINE = [
 ]
 
 
+def results_dir(data: str) -> Path:
+    """data/v1/test.jsonl -> results/v1/test"""
+    p = Path(data)
+    return Path("results") / p.parent.name / p.stem
+
+
 def cmd_generate(args: argparse.Namespace) -> None:
-    examples = generate(n_per_template=args.n, seed=args.seed)
-    write_jsonl(args.out, examples)
-    print(f"wrote {len(examples)} examples to {args.out}")
+    for split in SPLITS:
+        examples = generate(split, n_per_template=args.n, seed=args.seed)
+        out = Path(args.out_dir) / f"{split}.jsonl"
+        write_jsonl(out, examples)
+        print(f"wrote {len(examples)} examples ({len({e.id.rsplit('-', 1)[0] for e in examples})} templates) to {out}")
 
 
 def cmd_run(args: argparse.Namespace) -> None:
@@ -53,7 +62,7 @@ def cmd_run(args: argparse.Namespace) -> None:
     for counter in ("refusals", "parse_errors"):
         if hasattr(tool, counter):
             result[counter] = getattr(tool, counter)
-    out = Path(args.out or f"results/{tool.name.replace(':', '_')}.json")
+    out = Path(args.out) if args.out else results_dir(args.data) / f"{tool.name.replace(':', '_')}.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2, ensure_ascii=False), encoding="utf-8")
     print(_table([result]))
@@ -77,7 +86,7 @@ def _table(results: list[dict]) -> str:
 
 def cmd_rescore(args: argparse.Namespace) -> None:
     """Recompute scores from saved predictions, e.g. after a metric or gold-span change."""
-    for path in args.results or sorted(Path("results").glob("*.json")):
+    for path in args.results or sorted(results_dir(DEFAULT_DATA).glob("*.json")):
         result = json.loads(Path(path).read_text(encoding="utf-8"))
         # Score only the examples the tool was run on (a run may have used --limit).
         examples = [ex for ex in read_jsonl(result["data"]) if ex.id in result["predictions"]]
@@ -91,7 +100,7 @@ def cmd_rescore(args: argparse.Namespace) -> None:
 
 
 def cmd_report(args: argparse.Namespace) -> None:
-    paths = args.results or sorted(Path("results").glob("*.json"))
+    paths = args.results or sorted(results_dir(DEFAULT_DATA).glob("*.json"))
     print(_table([json.loads(Path(p).read_text(encoding="utf-8")) for p in paths]))
 
 
@@ -100,8 +109,8 @@ def main(argv: list[str] | None = None) -> None:
     sub = parser.add_subparsers(dest="command", required=True)
 
     g = sub.add_parser("generate", help="generate the synthetic dataset")
-    g.add_argument("--out", default=DEFAULT_DATA)
-    g.add_argument("--n", type=int, default=10, help="examples per template")
+    g.add_argument("--out-dir", default=DEFAULT_DATA_DIR)
+    g.add_argument("--n", type=int, default=5, help="examples per template")
     g.add_argument("--seed", type=int, default=0)
     g.set_defaults(func=cmd_generate)
 

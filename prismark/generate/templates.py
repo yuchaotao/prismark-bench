@@ -1,8 +1,17 @@
-"""Templates for the synthetic dataset. See generator.py for the slot syntax."""
+"""Templates for the synthetic dataset. See generator.py for the slot syntax.
+
+Hand-written templates live in this file. LLM-written templates live in
+llm_templates.jsonl, produced by llm_templates.py and committed, so the
+dataset can be regenerated without running a model.
+"""
 
 from __future__ import annotations
 
+import json
 from dataclasses import dataclass, field
+from pathlib import Path
+
+LLM_TEMPLATES_PATH = Path(__file__).with_name("llm_templates.jsonl")
 
 
 @dataclass(frozen=True)
@@ -11,6 +20,15 @@ class Template:
     domain: str
     text: str
     tags: tuple[str, ...] = field(default_factory=tuple)
+    source: str = "hand"
+
+
+def load_llm_templates(path: Path = LLM_TEMPLATES_PATH) -> list[Template]:
+    if not path.exists():
+        return []
+    with open(path, encoding="utf-8") as f:
+        rows = [json.loads(line) for line in f if line.strip()]
+    return [Template(r["id"], r["domain"], r["text"], tuple(r.get("tags", [])) + ("llm_template",), r["source"]) for r in rows]
 
 
 TEMPLATES: list[Template] = [
@@ -118,5 +136,89 @@ TEMPLATES: list[Template] = [
         "I, {PERSON_NAME}, residing at {STREET_ADDRESS}, {CITY}, being {AGE} years of age, state that "
         "{PERSON_NAME@2} has {CRIMINAL} and should not have custody.",
         ("multi_person",),
+    ),
+    # --- added in v1: boundary cases ---------------------------------------
+    Template(
+        "medical-bulletin", "medical",
+        "Public health bulletin: cases of {!GENERIC_HEALTH} rose 12% this year near {!PLACE}. "
+        "{!ORGANIZATION} recommends that {!GENERIC_ROLE} offer free screening.",
+        ("no_pii", "generic_attribute"),
+    ),
+    Template(
+        "support-group", "medical",
+        "Our support group discusses {!GENERIC_HEALTH} every Tuesday. This week {FIRST_NAME} shared that "
+        "they were diagnosed with {HEALTH} last spring and now take {MEDICATION}.",
+        ("generic_attribute",),
+    ),
+    Template(
+        "hr-policy", "hr",
+        "Policy reminder: employees who observe {!GENERIC_RELIGION} holidays may request leave through "
+        "{!GENERIC_ROLE}. Requests are confidential.",
+        ("no_pii", "generic_attribute"),
+    ),
+    Template(
+        "hr-religion", "hr",
+        "{PERSON_NAME} asked for Fridays off because they are a {RELIGION}. Their manager, {PERSON_NAME@2}, "
+        "said the team should be told it is for a medical appointment.",
+        ("multi_person",),
+    ),
+    Template(
+        "board-politics", "email",
+        "Please don't bring up the election with {PERSON_NAME} at the {EMPLOYER} board dinner - they are "
+        "{POLITICAL} and the donors would not take it well.",
+    ),
+    Template(
+        "debate-notes", "social",
+        "Tonight's debate covered {!GENERIC_POLITICS}, housing costs, and a long quote from {!PUBLIC_FIGURE}.",
+        ("no_pii", "generic_attribute"),
+    ),
+    Template(
+        "gossip-indirect", "chat",
+        "Keep this between us: {INDIRECT} was just diagnosed with {HEALTH}.",
+    ),
+    Template(
+        "review-indirect", "support",
+        "Store feedback: {INDIRECT} was rude to customers again on Saturday. Order {!ORDER_ID} was refunded.",
+    ),
+    Template(
+        "intern-hero", "chat",
+        "Our new intern {PERSON_NAME} says {!PUBLIC_FIGURE} is their hero and wants to study at {!ORGANIZATION}.",
+    ),
+    Template(
+        "call-transcript", "support",
+        "Agent: For verification, can I get the last four of your social?\nCaller: Sure, it's {SSN_LAST4}.\n"
+        "Agent: Thanks, {FIRST_NAME}. I see a case number {!CASE_NUMBER} on your account.",
+        ("partial_identifier",),
+    ),
+    Template(
+        "config-file", "code",
+        "# deploy.env\nDB_USER={USERNAME}\nADMIN_EMAIL={EMAIL}\nADMIN_PHONE={PHONE}\nAPP_VERSION={!VERSION}\n"
+        "ALLOWED_IP={IP_ADDRESS}",
+        ("structured",),
+    ),
+    Template(
+        "csv-export", "code",
+        "patient_id,name,dob,zip,diagnosis\n{MRN},{PERSON_NAME},{DOB},{ZIP_CODE},{HEALTH}\n"
+        "{MRN@2},{PERSON_NAME@2},{DOB@2},{ZIP_CODE@2},{HEALTH@2}",
+        ("structured", "multi_person"),
+    ),
+    Template(
+        "insurance-claim", "finance",
+        "Claim summary\n\nThe claimant, {PERSON_NAME}, a {AGE}-year-old {JOB_TITLE} at {EMPLOYER}, reported "
+        "water damage at {STREET_ADDRESS}, {CITY} {ZIP_CODE} on March 3. The adjuster noted that the claimant "
+        "had {CRIMINAL}, which does not affect eligibility. Reimbursement will go to account {BANK_ACCOUNT}. "
+        "Questions can be sent to {EMAIL} or {PHONE}. Reference: {!CASE_NUMBER}.",
+        ("long",),
+    ),
+    Template(
+        "dating-profile", "social",
+        "{FIRST_NAME}, {AGE}, {CITY}. {ORIENTATION} {ETHNICITY} {JOB_TITLE} who loves hiking near {!PLACE}. "
+        "Message me at {USERNAME}.",
+    ),
+    Template(
+        "moving-story", "social",
+        "I moved into {STREET_ADDRESS} after my divorce. My neighbor {NAME_LOWER} keeps asking about my "
+        "{HEALTH} treatment, which is none of their business.",
+        ("lowercase",),
     ),
 ]

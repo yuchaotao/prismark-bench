@@ -76,6 +76,7 @@ NEGATIVE_LABELS: dict[str, str] = {
     "DECOY_NUMBER": "An order ID, SKU, version, or other number shaped like an identifier.",
     "GENERIC_ROLE": "A role or title that does not single out anyone.",
     "PLACE": "A place name that is not a person's location.",
+    "GENERIC_ATTRIBUTE": "A sensitive topic (health, religion, politics) discussed without attaching it to a person.",
 }
 
 

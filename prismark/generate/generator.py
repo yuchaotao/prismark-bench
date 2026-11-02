@@ -15,12 +15,13 @@ from __future__ import annotations
 
 import random
 import re
+import zlib
 from dataclasses import dataclass
 from datetime import date
 from typing import Callable
 
 from prismark.generate import pools
-from prismark.generate.templates import TEMPLATES, Template
+from prismark.generate.templates import TEMPLATES, Template, load_llm_templates
 from prismark.schema import Example, Span
 
 REFERENCE_DATE = date(2026, 1, 1)
@@ -149,6 +150,7 @@ SLOTS: dict[str, tuple[str, Callable[[Persona], tuple[str, list[str]]]]] = {
     "PHONE": ("PHONE", _phone),
     "PHONE_SPELLED": ("PHONE", _phone_spelled),
     "SSN": ("SSN", _ssn),
+    "SSN_LAST4": ("SSN", _const(lambda p: f"{p.rng.randint(1000, 9999)}", ["partial_identifier"])),
     "PASSPORT": ("PASSPORT", _const(lambda p: f"{p.rng.choice('ACEX')}{_digits(p.rng, 8)}")),
     "DRIVER_LICENSE": ("DRIVER_LICENSE", _const(lambda p: f"{p.last[0]}{_digits(p.rng, 3)}-{_digits(p.rng, 4)}-{_digits(p.rng, 4)}")),
     "CREDIT_CARD": ("CREDIT_CARD", _credit_card),
@@ -183,6 +185,10 @@ NEGATIVES: dict[str, tuple[str, Callable[[random.Random], str]]] = {
     "SKU": ("DECOY_NUMBER", lambda r: f"SKU-{_digits(r, 9)}"),
     "VERSION": ("DECOY_NUMBER", lambda r: f"{r.randint(1, 20)}.{r.randint(0, 99)}.{r.randint(0, 999)}"),
     "TRACKING": ("DECOY_NUMBER", lambda r: f"1Z{_digits(r, 16)}"),
+    "CASE_NUMBER": ("DECOY_NUMBER", lambda r: f"CS-{r.randint(2020, 2026)}-{_digits(r, 6)}"),
+    "GENERIC_HEALTH": ("GENERIC_ATTRIBUTE", lambda r: r.choice(pools.GENERIC_HEALTH)),
+    "GENERIC_RELIGION": ("GENERIC_ATTRIBUTE", lambda r: r.choice(pools.GENERIC_RELIGIONS)),
+    "GENERIC_POLITICS": ("GENERIC_ATTRIBUTE", lambda r: r.choice(pools.GENERIC_POLITICS)),
 }
 
 
@@ -234,10 +240,25 @@ def render(template: Template, rng: random.Random, example_id: str) -> Example:
     )
 
 
-def generate(n_per_template: int = 10, seed: int = 0) -> list[Example]:
-    rng = random.Random(seed)
+SPLITS = ("dev", "test")
+
+
+def split_of(template: Template) -> str:
+    """Templates, not examples, are split, so no template appears in both dev and test."""
+    return "dev" if zlib.crc32(template.id.encode()) % 3 == 0 else "test"
+
+
+def all_templates() -> list[Template]:
+    return TEMPLATES + load_llm_templates()
+
+
+def generate(split: str | None = None, n_per_template: int = 5, seed: int = 0) -> list[Example]:
     examples = []
-    for t in TEMPLATES:
+    for t in all_templates():
+        if split is not None and split_of(t) != split:
+            continue
+        # One RNG per template, so adding or removing a template leaves the others unchanged.
+        rng = random.Random(f"{seed}:{t.id}")
         for i in range(n_per_template):
             examples.append(render(t, rng, f"{t.id}-{i:03d}"))
     return examples
