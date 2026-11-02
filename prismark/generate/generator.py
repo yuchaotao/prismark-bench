@@ -99,8 +99,16 @@ def _credit_card(p: Persona) -> tuple[str, list[str]]:
     return p.rng.choice([" ".join(num[i : i + 4] for i in range(0, 16, 4)), "-".join(num[i : i + 4] for i in range(0, 16, 4)), num]), []
 
 
+def _iban_check(country: str, bban: str) -> str:
+    # ISO 13616 mod-97: move country + "00" to the end, map letters to 10..35.
+    rearranged = bban + "".join(str(ord(c) - 55) for c in country) + "00"
+    return f"{98 - int(rearranged) % 97:02d}"
+
+
 def _iban(p: Persona) -> tuple[str, list[str]]:
-    return f"DE{_digits(p.rng, 2)} {_digits(p.rng, 4)} {_digits(p.rng, 4)} {_digits(p.rng, 4)} {_digits(p.rng, 4)} {_digits(p.rng, 2)}", []
+    bban = _digits(p.rng, 18)
+    iban = f"DE{_iban_check('DE', bban)}{bban}"
+    return " ".join(iban[i : i + 4] for i in range(0, len(iban), 4)), []
 
 
 def _address(p: Persona) -> tuple[str, list[str]]:

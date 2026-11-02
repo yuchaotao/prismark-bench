@@ -60,7 +60,17 @@ Scores are also broken down by tier, by label, and by tag (`obfuscated`, `lowerc
 
 | Tool | Protected recall ↑ | Char precision ↑ | Privacy F1 ↑ | Hard-neg FP ↓ | Leakage ↓ | Fragment leakage ↓ | Utility ↑ |
 |---|---|---|---|---|---|---|---|
-| regex | 0.145 | 0.807 | 0.246 | 0.143 | 0.855 | 0.862 | 0.766 |
+| presidio | 0.596 | 0.691 | 0.640 | 0.357 | 0.328 | 0.410 | 0.786 |
+| regex | 0.136 | 0.800 | 0.233 | 0.143 | 0.864 | 0.870 | 0.764 |
+
+Protected recall by tier:
+
+| Tool | T1 Direct | T2 Quasi | T3 Sensitive | T4 Contextual |
+|---|---|---|---|---|
+| presidio | 0.739 | 0.562 | 0.164 | 0.000 |
+| regex | 0.229 | 0.000 | 0.000 | 0.000 |
+
+Presidio 2.2.365 with `en_core_web_lg` 3.8.0, default recognizers, score threshold 0.35.
 
 ## Adding a tool
 

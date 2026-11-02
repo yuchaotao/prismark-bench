@@ -1,4 +1,4 @@
-from prismark.generate.generator import _luhn_complete, generate
+from prismark.generate.generator import _iban_check, _luhn_complete, generate
 from prismark.metrics import Prediction, redact_with_spans, score, value_leaked
 from prismark.schema import Example, Span
 from prismark.taxonomy import LABELS, NEGATIVE_LABELS
@@ -23,6 +23,11 @@ def test_generation_is_deterministic():
 
 def test_luhn():
     assert _luhn_complete("411111111111111") == "4111111111111111"
+
+
+def test_iban_check_digits():
+    # Example IBAN from the ISO 13616 / ECBS documentation.
+    assert _iban_check("DE", "370400440532013000") == "89"
 
 
 def _example():

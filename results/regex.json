@@ -1,23 +1,23 @@
 {
   "tool": "regex",
   "data": "data/v0/test.jsonl",
-  "seconds_per_example": 2.411111102749904e-05,
+  "seconds_per_example": 2.2099405555625e-05,
   "scores": {
     "n_examples": 180,
     "n_spans": 690,
     "n_negatives": 210,
-    "protected_recall": 0.14492753623188406,
-    "char_precision": 0.8070739549839229,
-    "char_recall": 0.159736953754773,
-    "privacy_f1": 0.24572911057809976,
-    "exact_f1": 0.24096385542168677,
+    "protected_recall": 0.13623188405797101,
+    "char_precision": 0.8004434589800443,
+    "char_recall": 0.15369877594465142,
+    "privacy_f1": 0.23283610764227194,
+    "exact_f1": 0.22815533980582522,
     "negative_fp_rate": 0.14285714285714285,
-    "leakage_rate": 0.855072463768116,
-    "fragment_leakage_rate": 0.8623188405797102,
+    "leakage_rate": 0.863768115942029,
+    "fragment_leakage_rate": 0.8695652173913043,
     "negative_keep": 0.8523809523809524,
-    "utility": 0.7656791284275588,
+    "utility": 0.7641207208252859,
     "by_tier": {
-      "T1": 0.24390243902439024,
+      "T1": 0.22926829268292684,
       "T2": 0.0,
       "T3": 0.0,
       "T4": 0.0
@@ -44,13 +44,13 @@
       "POLITICAL_AFFILIATION": 0.0,
       "RELIGION": 0.0,
       "SEXUAL_ORIENTATION": 0.0,
-      "SSN": 0.5,
+      "SSN": 0.2,
       "STREET_ADDRESS": 0.0,
       "USERNAME": 0.0,
       "ZIP_CODE": 0.0
     },
     "by_tag": {
-      "form": 0.15384615384615385,
+      "form": 0.1076923076923077,
       "hard_negative": 0.25,
       "lowercase": 0.5,
       "multi_person": 0.10714285714285714,
@@ -857,18 +857,13 @@
     "hr-onboarding-001": {
       "spans": [
         {
-          "start": 41,
-          "end": 52,
-          "label": "SSN"
-        },
-        {
-          "start": 161,
-          "end": 180,
+          "start": 153,
+          "end": 172,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 156,
-          "end": 183,
+          "start": 148,
+          "end": 175,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -877,18 +872,13 @@
     "hr-onboarding-002": {
       "spans": [
         {
-          "start": 41,
-          "end": 52,
-          "label": "SSN"
-        },
-        {
-          "start": 152,
-          "end": 171,
+          "start": 163,
+          "end": 182,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 147,
-          "end": 174,
+          "start": 158,
+          "end": 185,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -897,13 +887,13 @@
     "hr-onboarding-003": {
       "spans": [
         {
-          "start": 154,
-          "end": 173,
+          "start": 155,
+          "end": 174,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 149,
-          "end": 176,
+          "start": 150,
+          "end": 177,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -912,13 +902,13 @@
     "hr-onboarding-004": {
       "spans": [
         {
-          "start": 154,
-          "end": 173,
+          "start": 156,
+          "end": 175,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 149,
-          "end": 176,
+          "start": 151,
+          "end": 178,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -927,13 +917,13 @@
     "hr-onboarding-005": {
       "spans": [
         {
-          "start": 162,
-          "end": 181,
+          "start": 153,
+          "end": 172,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 157,
-          "end": 184,
+          "start": 148,
+          "end": 175,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -942,18 +932,13 @@
     "hr-onboarding-006": {
       "spans": [
         {
-          "start": 43,
-          "end": 54,
-          "label": "SSN"
-        },
-        {
-          "start": 162,
-          "end": 181,
+          "start": 153,
+          "end": 172,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 157,
-          "end": 184,
+          "start": 148,
+          "end": 175,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -962,13 +947,13 @@
     "hr-onboarding-007": {
       "spans": [
         {
-          "start": 148,
-          "end": 167,
+          "start": 156,
+          "end": 175,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 143,
-          "end": 170,
+          "start": 151,
+          "end": 178,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -977,13 +962,13 @@
     "hr-onboarding-008": {
       "spans": [
         {
-          "start": 160,
-          "end": 179,
+          "start": 159,
+          "end": 178,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 155,
-          "end": 182,
+          "start": 154,
+          "end": 181,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -992,18 +977,13 @@
     "hr-onboarding-009": {
       "spans": [
         {
-          "start": 43,
-          "end": 54,
-          "label": "SSN"
-        },
-        {
-          "start": 159,
-          "end": 178,
+          "start": 151,
+          "end": 170,
           "label": "CREDIT_CARD"
         },
         {
-          "start": 154,
-          "end": 181,
+          "start": 146,
+          "end": 173,
           "label": "BANK_ACCOUNT"
         }
       ],
@@ -1052,41 +1032,29 @@
     "finance-kyc-000": {
       "spans": [
         {
-          "start": 98,
-          "end": 109,
+          "start": 99,
+          "end": 110,
           "label": "SSN"
         }
       ],
       "redacted": null
     },
     "finance-kyc-001": {
-      "spans": [
-        {
-          "start": 99,
-          "end": 110,
-          "label": "SSN"
-        }
-      ],
+      "spans": [],
       "redacted": null
     },
     "finance-kyc-002": {
       "spans": [
         {
-          "start": 98,
-          "end": 109,
+          "start": 100,
+          "end": 111,
           "label": "SSN"
         }
       ],
       "redacted": null
     },
     "finance-kyc-003": {
-      "spans": [
-        {
-          "start": 99,
-          "end": 110,
-          "label": "SSN"
-        }
-      ],
+      "spans": [],
       "redacted": null
     },
     "finance-kyc-004": {
@@ -1094,17 +1062,17 @@
       "redacted": null
     },
     "finance-kyc-005": {
-      "spans": [],
-      "redacted": null
-    },
-    "finance-kyc-006": {
       "spans": [
         {
-          "start": 97,
-          "end": 108,
+          "start": 99,
+          "end": 110,
           "label": "SSN"
         }
       ],
+      "redacted": null
+    },
+    "finance-kyc-006": {
+      "spans": [],
       "redacted": null
     },
     "finance-kyc-007": {
@@ -1112,24 +1080,24 @@
       "redacted": null
     },
     "finance-kyc-008": {
+      "spans": [],
+      "redacted": null
+    },
+    "finance-kyc-009": {
       "spans": [
         {
-          "start": 97,
-          "end": 108,
+          "start": 99,
+          "end": 110,
           "label": "SSN"
         }
       ],
       "redacted": null
     },
-    "finance-kyc-009": {
-      "spans": [],
-      "redacted": null
-    },
     "support-ticket-000": {
       "spans": [
         {
-          "start": 35,
-          "end": 53,
+          "start": 38,
+          "end": 57,
           "label": "EMAIL"
         },
         {
@@ -1138,8 +1106,8 @@
           "label": "PHONE"
         },
         {
-          "start": 115,
-          "end": 128,
+          "start": 119,
+          "end": 132,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1149,7 +1117,7 @@
       "spans": [
         {
           "start": 40,
-          "end": 59,
+          "end": 60,
           "label": "EMAIL"
         },
         {
@@ -1158,8 +1126,8 @@
           "label": "PHONE"
         },
         {
-          "start": 121,
-          "end": 134,
+          "start": 122,
+          "end": 132,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1169,7 +1137,7 @@
       "spans": [
         {
           "start": 39,
-          "end": 63,
+          "end": 57,
           "label": "EMAIL"
         },
         {
@@ -1178,8 +1146,8 @@
           "label": "PHONE"
         },
         {
-          "start": 126,
-          "end": 136,
+          "start": 119,
+          "end": 133,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1198,8 +1166,8 @@
           "label": "PHONE"
         },
         {
-          "start": 130,
-          "end": 141,
+          "start": 131,
+          "end": 145,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1208,7 +1176,7 @@
     "support-ticket-004": {
       "spans": [
         {
-          "start": 37,
+          "start": 40,
           "end": 58,
           "label": "EMAIL"
         },
@@ -1228,8 +1196,8 @@
     "support-ticket-005": {
       "spans": [
         {
-          "start": 39,
-          "end": 65,
+          "start": 40,
+          "end": 64,
           "label": "EMAIL"
         },
         {
@@ -1238,8 +1206,8 @@
           "label": "PHONE"
         },
         {
-          "start": 128,
-          "end": 138,
+          "start": 127,
+          "end": 137,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1249,7 +1217,7 @@
       "spans": [
         {
           "start": 40,
-          "end": 56,
+          "end": 58,
           "label": "EMAIL"
         },
         {
@@ -1258,8 +1226,8 @@
           "label": "PHONE"
         },
         {
-          "start": 119,
-          "end": 132,
+          "start": 120,
+          "end": 134,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1268,8 +1236,8 @@
     "support-ticket-007": {
       "spans": [
         {
-          "start": 39,
-          "end": 63,
+          "start": 40,
+          "end": 61,
           "label": "EMAIL"
         },
         {
@@ -1278,8 +1246,8 @@
           "label": "PHONE"
         },
         {
-          "start": 124,
-          "end": 138,
+          "start": 122,
+          "end": 135,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1288,8 +1256,8 @@
     "support-ticket-008": {
       "spans": [
         {
-          "start": 41,
-          "end": 60,
+          "start": 40,
+          "end": 67,
           "label": "EMAIL"
         },
         {
@@ -1298,8 +1266,8 @@
           "label": "PHONE"
         },
         {
-          "start": 123,
-          "end": 134,
+          "start": 129,
+          "end": 140,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1308,7 +1276,7 @@
     "support-ticket-009": {
       "spans": [
         {
-          "start": 40,
+          "start": 37,
           "end": 57,
           "label": "EMAIL"
         },
@@ -1318,8 +1286,8 @@
           "label": "PHONE"
         },
         {
-          "start": 119,
-          "end": 132,
+          "start": 120,
+          "end": 133,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1328,8 +1296,8 @@
     "log-auth-000": {
       "spans": [
         {
-          "start": 60,
-          "end": 73,
+          "start": 61,
+          "end": 70,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1338,8 +1306,8 @@
     "log-auth-001": {
       "spans": [
         {
-          "start": 59,
-          "end": 70,
+          "start": 61,
+          "end": 74,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1348,8 +1316,8 @@
     "log-auth-002": {
       "spans": [
         {
-          "start": 62,
-          "end": 76,
+          "start": 61,
+          "end": 74,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1359,7 +1327,7 @@
       "spans": [
         {
           "start": 62,
-          "end": 75,
+          "end": 73,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1368,7 +1336,7 @@
     "log-auth-004": {
       "spans": [
         {
-          "start": 62,
+          "start": 58,
           "end": 72,
           "label": "IP_ADDRESS"
         }
@@ -1378,8 +1346,8 @@
     "log-auth-005": {
       "spans": [
         {
-          "start": 57,
-          "end": 68,
+          "start": 61,
+          "end": 71,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1389,7 +1357,7 @@
       "spans": [
         {
           "start": 62,
-          "end": 73,
+          "end": 75,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1398,8 +1366,8 @@
     "log-auth-007": {
       "spans": [
         {
-          "start": 58,
-          "end": 70,
+          "start": 62,
+          "end": 74,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1409,7 +1377,7 @@
       "spans": [
         {
           "start": 62,
-          "end": 73,
+          "end": 75,
           "label": "IP_ADDRESS"
         }
       ],
@@ -1418,8 +1386,8 @@
     "log-auth-009": {
       "spans": [
         {
-          "start": 60,
-          "end": 73,
+          "start": 61,
+          "end": 71,
           "label": "IP_ADDRESS"
         }
       ],

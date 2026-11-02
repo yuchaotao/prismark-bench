@@ -97,7 +97,7 @@ recall (T1 > T3 > T2 > T4?), or a combination of leakage and utility.
 | Tool | Type | Status |
 |---|---|---|
 | Regex baseline | span | done |
-| Microsoft Presidio | span | adapter written, not yet run |
+| Microsoft Presidio | span | done |
 | Claude (LLM as detector) | span | adapter written, not yet run |
 | Google Cloud DLP, AWS Comprehend, Azure AI Language PII | span | planned |
 | spaCy / GLiNER / fine-tuned NER models | span | planned |
